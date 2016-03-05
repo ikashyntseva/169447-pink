@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>HTML Academy: Пинк</title>
   </head>
-  <body>
+  <body><!-- темно-серая картинка со зданием будет фоном у body, исходя из того, что она присутствует на одном и том де месте на всех страницах -->
     <header class="page-header">
       <div class="container clearfix">
         <div class="logo">
@@ -25,29 +25,30 @@
         </nav>
       </div>
     </header>
-    <div class="intro">
+    <div class="promo">
       <div class="container">
-        <h1 class="intro__title">Взгляните на жизнь иначе!</h1>
-        <div class="application">
-          <div class="container">
-            <h2 class="application__title">Скачать приложение</h2>
-            <div class="application__list clearfix">
-              <div class="application__item application__item--ios"><a href="#" class="application__link">Download for IOS</a></div>
-              <div class="application__item application__item--android"><a href="#" class="application__link">Download for Android</a></div>
-              <div class="application__item application__item--microsoft"><a href="#" class="application__link">Download for Microsoft</a></div>
-            </div>
-            <p class="application__info">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
-          </div>
-        </div>
+        <h1 class="promo__slogan">Взгляните на жизнь иначе!</h1>
+        <img src="http://placehold.it/258x286" alt="" class="promo__picture">
       </div>
     </div>
-    <div class="info">
-      <div class="container"><!-- Планирую использовать короткий каскад-->
-        <h2 class="info__title"><!-- Не знаю стоило ли разбивать заголовок на 2 части. Сделала так исходя из макета -->>
-          <p class="info__question">Устали от серости мегаполиса?</p>
-          <p class="info__answer">Нам есть, что вам  предложить!</p>
+    <div class="application">
+      <div class="container">
+        <h2 class="application__title">Скачать приложение</h2>
+        <div class="application__list clearfix">
+          <div class="application__item application__item--ios"><a href="#" class="application__link">Download for IOS</a></div>
+          <div class="application__item application__item--android"><a href="#" class="application__link">Download for Android</a></div>
+          <div class="application__item application__item--microsoft"><a href="#" class="application__link">Download for Microsoft</a></div>
+        </div>
+        <p class="application__info">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
+      </div>
+  </div>
+    <div class="features">
+      <div class="container">
+        <h2 class="features__slogan"><!-- Не знаю стоило ли разбивать заголовок на 2 части. Сделала так исходя из макета. Планирую использовать короткий каскад -->>
+          <p class="question">Устали от серости мегаполиса?</p>
+          <p class="answer">Нам есть, что вам  предложить!</p>
         </h2>
-        <div class="features clearfix">
+        <div class="features__list clearfix">
           <div class="feature__item">
             <p class="feature__title">Поднимает настроение</p>
             <p class="feature__description">Приложение позволит вам победить осеннюю хандру и деперессию буквально в

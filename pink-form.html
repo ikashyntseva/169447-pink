@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Пинк</title>
+  </head>
+  <body><!-- темно-серая картинка со зданием будет фоном у body, исходя из того, что она присутствует на одном и том де месте на всех страницах -->
+    <header class="page-header">
+      <div class="container clearfix">
+        <div class="logo">
+          <a href="#" class="logo-link">
+            <img src="http://placehold.it/75x22" alt="" class="logo__picture" />
+          </a>
+        </div>
+        <nav class="menu">
+          <a href="#" class="menu__button menu__button--open">
+            <span class="hidden">Menu button</span>
+          </a>
+          <ul class="menu__list">
+            <li class="menu__item">
+              <a href="#" class="menu__link">Главная</a>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__link">Фотографии
+              </a>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__link">Конкурс
+              </a>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__link">HTML Academy
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div class="promo">
+      <div class="container">
+        <h1 class="promo__slogan">Конкурс на самое безбашеное путешествие с Пинк</h1>
+      </div>
+    </div>
+    <div class="contest">
+      <div class="container">
+        <h2 class="contest__description">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! Пожалуйста, заполните форму ниже:</h2>
+        <form action="echo" class="contest__form" method="post">
+          <div class="form__field form__field--member">
+            <div class="row row--name">
+              <label>
+                Имя: <input type="text" name="name" placeholder="Введите ваше имя">
+              </label>
+            </div>
+            <div class="row row--surname">
+              <label>
+                Имя: <input type="text" name="surname" placeholder="Укажите фамилию">
+              </label>
+            </div>
+            <div class="row row--midname">
+              <label>
+                Имя: <input type="text" name="midname" placeholder="Ну и отчество тоже">
+              </label>
+            </div>
+          </div>
+          <div class="form__field form__field--trip-achivements">
+            <h2 class="title">Ваши безбашенные достижения в путешествии</h2>
+            <ul class="trip-achivements__list">
+              <li><input type="checkbox" name="selfie" checked><label for="">Сделал селфи с акулой</label></li>
+              <li><input type="checkbox" name="sunburned" checked><label for="">Обгорел на пляже</label></li>
+              <li><input type="checkbox" name="norris"><label for="">Видел Чака Норриса</label></li>
+              <li><input type="checkbox" name="souvenir"><label for="">Накупил сувениров</label></li>
+              <li><input type="checkbox" name="castle" checked><label for="">Удержал башню</label></li>
+              <li><input type="checkbox" name="hotel"><label for="">Разгромил отель</label></li>
+            </ul>
+          </div>
+          <div class="form__field form__field--contacts">
+            <div class="row row--phone">
+              <label>
+                Номерок телефончика <input type="tel" name="phone" placeholder="Номер, пожалуйста">
+              </label>
+            </div>
+            <div class="row row--email">
+              <label>
+                Адресок почты <input type="email" name="email" placeholder="E-mail, пожалуйста">
+              </label>
+            </div>
+          </div>
+          <div class="form__field form__field--trip-app">
+            <h2 class="title">С каким приложением путешествовали?</h2>
+            <ul class="trip-app__list">
+              <li>
+                <input type="radio" id="app-ios" value="ios" checked>
+                <label for="app-ios">Pink для iOS</label>
+              </li>
+              <li>
+                <input type="radio" id="app-android" value="android">
+                <label for="app-android">Pink на Android</label>
+              </li>
+              <li>
+                <input type="radio" id="app-microsoft" value="microsoft">
+                <label for="app-microsoft">Windows Phone</label></li>
+            </ul>
+          </div>
+          <div class="form__field form__field--emotions">
+            <h2 class="title">Опишите свои эмоции</h2>
+            <textarea name="emotions" cols="30" rows="10" class="emotions__description" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+          </div>
+          <div class="form__field form__field--submit">
+            <div class="row row--btn">
+              <input type="submit" value="Отправить форму" class="btn btn--submit">
+            </div>
+            <p class="hint"><span class="required-sign">*</span> — обязательные поля</p>
+          </div>
+        </form>
+      </div>
+    </div>
+    <footer class="page-footer">
+      <div class="container">
+        <div class="logo">
+          <a href="#" class="logo-link">
+            <img src="http://placehold.it/150x40" alt="PINK" class="logo__picture" />
+          </a>
+        </div>
+        <div class="social">
+          <ul class="social__list">
+            <li class="social__item social__item--twitter">
+              <a href="#" class="social__item--link">
+                <img src="#" alt="Twitter" class="social__item--icon" />
+              </a>
+            </li>
+            <li class="social__item social__item--facebook">
+              <a href="#" class="social__item--link">
+                <img src="#" alt="Facebook" class="social__item--icon" />
+              </a>
+            </li>
+            <li class="social__item social__item--youtube">
+              <a href="#" class="social__item--link">
+                <img src="#" alt="YouTube" class="social__item--icon">
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="author">
+          <span class="author__text">Разработано</span>
+          <a href="http://htmlacademy.ru" class="author-logo__link">
+            <img src="" alt="HTML Academy" class="author-logo__picture" />
+          </a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
