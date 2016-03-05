@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Пинк</title>
+  </head>
+  <body>
+    <header class="page-header">
+      <div class="container clearfix">
+        <div class="logo">
+          <a href="#" class="logo-link">
+            <img src="http://placehold.it/75x22" alt="" class="logo__picture">
+          </a>
+        </div>
+        <nav class="menu">
+          <a href="#" class="menu__button menu__button--open">
+            <span class="hidden">Menu button</span>
+          </a>
+          <ul class="menu__list">
+            <li class="menu__item"><a href="#" class="menu__link">Информация</a></li>
+            <li class="menu__item"><a href="#" class="menu__link">Возможности</a></li>
+            <li class="menu__item"><a href="#" class="menu__link">Отзывы</a></li>
+            <li class="menu__item"><a href="#" class="menu__link">Стоимость</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div class="intro">
+      <div class="container">
+        <h1 class="intro__title">Взгляните на жизнь иначе!</h1>
+        <div class="application">
+          <div class="container">
+            <h2 class="application__title">Скачать приложение</h2>
+            <div class="application__list clearfix">
+              <div class="application__item application__item--ios"><a href="#" class="application__link">Download for IOS</a></div>
+              <div class="application__item application__item--android"><a href="#" class="application__link">Download for Android</a></div>
+              <div class="application__item application__item--microsoft"><a href="#" class="application__link">Download for Microsoft</a></div>
+            </div>
+            <p class="application__info">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="info">
+      <div class="container"><!-- Планирую использовать короткий каскад-->
+        <h2 class="info__title"><!-- Не знаю стоило ли разбивать заголовок на 2 части. Сделала так исходя из макета -->>
+          <p class="info__question">Устали от серости мегаполиса?</p>
+          <p class="info__answer">Нам есть, что вам  предложить!</p>
+        </h2>
+        <div class="features clearfix">
+          <div class="feature__item">
+            <p class="feature__title">Поднимает настроение</p>
+            <p class="feature__description">Приложение позволит вам победить осеннюю хандру и деперессию буквально в
+              несколько кликов!</p>
+          </div>
+          <div class="feature__item">
+            <p class="feature__title">Меняет мир вокруг</p>
+            <p class="feature__description">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить
+              эффект</p>
+          </div>
+          <div class="feature__item">
+            <p class="feature__title">Заводит новых друзей</p>
+            <p class="feature__description">Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="reviews">
+      <h2 class="reviews__title">Всем привет!</h2><!-- заголовку будет добавлен псевдо-элемент со смайликом -->
+      <section class="reviews__list">
+        <div class="container">
+          <div class="review review--active">
+            <p class="review__author">Николай Петров</p>
+            <p class="review__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые
+              вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+          </div>
+          <div class="review">
+            <p class="review__author">Иван Иванов</p>
+            <p class="review__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые
+              вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+          </div>
+          <div class="review">
+            <p class="review__author">Виктор Сидоров</p>
+            <p class="review__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+          </div>
+        </div>
+      </section>
+      <ul class="pagination">
+        <li class="pagination__item pagination__item--active">
+          <a href="#" class="pagination__link"><img src="#" alt="" class="pagination__icon"></a>
+        </li>
+        <li class="pagination__item">
+          <a href="#" class="pagination__link"><img src="#" alt="" class="pagination__icon"></a>
+        </li>
+        <li class="pagination__item">
+          <a href="#" class="pagination__link"><img src="#" alt="" class="pagination__icon"></a>
+        </li>
+      </ul>
+    </div>
+    <div class="price">
+      <section class="packages__list">
+        <div class="package">
+          <div class="package__header">
+            <div class="package__title"></div>
+            <div class="package__price">
+              <div class="package__price--amount"></div>
+              <div class="package__price--currency"></div>
+            </div>
+          </div>
+          <div class="package__features">
+            <div class="feature__name">Розовый фильтр</div>
+            <div class="feature__presence feature__presence--no"><img src="#" alt="" class="feature__presence-icon"></div>
+            <div class="feature__name">Смайлики</div>
+            <div class="feature__presence feature__presence--no"><img src="#" alt="" class="feature__presence-icon"></div>
+            <div class="feature__name">Комментарии</div>
+            <div class="feature__presence feature__presence--no"><img src="#" alt="" class="feature__presence-icon"></div>
+          </div>
+        </div>
+        <div class="package package--hit package--active">
+          <div class="package__header">
+            <div class="package__title">Стандарт</div>
+            <div class="package__price">
+              <div class="package__price--amount">3,99</div>
+              <div class="package__price--currency">USD</div>
+            </div>
+          </div>
+          <div class="package__features">
+            <div class="feature__name">Розовый фильтр</div>
+            <div class="feature__presence feature__presence--yes"><img src="#" alt="" class="feature__presence-icon"></div>
+            <div class="feature__name">Смайлики</div>
+            <div class="feature__presence feature__presence--yes"><img src="#" alt="" class="feature__presence-icon"></div>
+            <div class="feature__name">Комментарии</div>
+            <div class="feature__presence feature__presence--no"><img src="#" alt="" class="feature__presence-icon"></div>
+          </div>
+        </div>
+        <div class="package">
+          <div class="package__header">
+            <div class="package__title">Премиум</div>
+            <div class="package__price">
+              <div class="package__price--amount">5,99</div>
+              <div class="package__price--currency">USD</div>
+            </div>
+          </div>
+          <div class="package__features">
+            <div class="feature__name">Розовый фильтр</div>
+            <div class="feature__presence feature__presence--yes"><img src="#" alt="" class="feature__presence-icon"></div>
+            <div class="feature__name">Смайлики</div>
+            <div class="feature__presence feature__presence--yes"><img src="#" alt="" class="feature__presence-icon"></div>
+            <div class="feature__name">Комментарии</div>
+            <div class="feature__presence feature__presence--yes"><img src="#" alt="" class="feature__presence-icon"></div>
+          </div>
+        </div>
+      </section>
+      <ul class="pagination">
+        <li class="pagination__item">
+          <a href="#" class="pagination__link"><img src="#" alt="" class="pagination__icon"></a>
+        </li>
+        <li class="pagination__item pagination__item--active">
+          <a href="#" class="pagination__link"><img src="#" alt="" class="pagination__icon"></a>
+        </li>
+        <li class="pagination__item">
+          <a href="#" class="pagination__link"><img src="#" alt="" class="pagination__icon"></a>
+        </li>
+      </ul>
+    </div>
+    <footer class="page-footer">
+      <div class="contacts">
+        <div class="container">
+          <h2 class="contacts__title">Остались вопросы? Свяжитесь с нами!</h2>
+          <div class="contacts__item contacts__item--phone">
+            <span class="title">Звоните:</span>
+            <p class="description">+7 (812) 555-66-66</p>
+          </div>
+          <div class="contacts__item contacts__item--email">
+            <span class="title">Пишите:</span>
+            <p class="description">mail@htmlacademy.ru</p>
+          </div>
+          <div class="contacts__item contacts__item--address">
+            <span class="title">Приезжайте в гости:</span>
+            <p class="description">ул. Большая Конюшенная, 19/8 </p>
+          </div>
+        </div>
+        <img src="#" alt="" class="contacts__map" />
+      </div>
+    </footer>
+  </body>
+</html>
