@@ -96,6 +96,7 @@
           <div class="price-slider__wrapper">
             <ul class="package">
               <li class="package__header">
+                <input type="radio" class="pagination-block__input" id="slide-price-1" name="pagination">
                 <div class="package__title">Базовый</div>
                 <div class="package__price">
                   <div class="package__price--amount">1,99</div>
@@ -119,6 +120,7 @@
             </ul>
             <ul class="package package--hit package--active">
               <li class="package__header">
+                <input type="radio" class="pagination-block__input" id="slide-price-2" name="pagination" checked>
                 <div class="package__title">Стандарт</div>
                 <div class="package__price">
                   <div class="package__price--amount">3,99</div>
@@ -142,6 +144,7 @@
             </ul>
             <ul class="package">
               <li class="package__header">
+                <input type="radio" class="pagination-block__input" id="slide-price-3" name="pagination">
                 <div class="package__title">Премиум</div>
                 <div class="package__price">
                   <div class="package__price--amount">5,99</div>
@@ -164,15 +167,10 @@
               </li>
             </ul>
           <div class="pagination"><!--Есть определенные сомнения по этой части. Нужна ли обертка для инпутов-->
-            <div class="pagination-block">
-              <input type="radio" class="pagination-block__input" id="page-1" name="pagination">
-              <input type="radio" class="pagination-block__input" id="page-2" name="pagination">
-              <input type="radio" class="pagination-block__input" id="page-3" name="pagination">
-            </div>
             <div class="controls">
-              <label for="page-1" class="pagination-block__label"></label>
-              <label for="page-2" class="pagination-block__label"></label>
-              <label for="page-3" class="pagination-block__label"></label>
+              <label for="slide-price-1" class="pagination-block__label"></label>
+              <label for="slide-price-2" class="pagination-block__label"></label>
+              <label for="slide-price-3" class="pagination-block__label"></label>
             </div>
           </div>
         </section>
