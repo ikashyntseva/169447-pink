@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Пинк - Form</title>
+  </head>
+  <body><!-- темно-серая картинка со зданием будет фоном у header, исходя из того, что она присутствует на одном и том де месте на всех страницах. -->
+    <header class="page-header">
+      <div class="container clearfix">
+        <div class="logo">
+          <a href="#" class="logo__link">
+            <img src="http://placehold.it/75x22" alt="" class="logo__picture" />
+          </a>
+        </div>
+        <nav class="menu">
+          <a href="#" class="menu__button menu__button--open">
+            <span class="hidden">Menu button</span>
+          </a>
+          <ul class="menu__list">
+            <li class="menu__item">
+              <a href="#" class="menu__link">Главная</a>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__link">Фотографии
+              </a>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__link">Конкурс
+              </a>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__link">HTML Academy
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="promo">
+          <p class="promo-text">Конкурс на самое безбашеное путешествие с Пинк</p>
+      </div>
+    </header>
+    <main class="main">
+      <div class="container">
+        <h2 class="contest__description">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! Пожалуйста, заполните форму ниже:</h2>
+        <form action="https://echo.htmlacademy.ru/adaptive" id="contest__form" method="post">
+          <fieldset class="form__block form__block--member">
+            <div class="form__block-wrapper">
+              <div class="form-block__field">
+                <label class="form-block__label">
+                  Имя: <input class="form-block__input" type="text" name="name" placeholder="Введите ваше имя">
+                </label>
+              </div>
+            </div>
+            <div class="form__block-wrapper">
+              <div class="form-block__field">
+                <label class="form-block__label">
+                  Фамилия: <input class="form-block__input" type="text" name="surname" placeholder="Укажите фамилию">
+                </label>
+              </div>
+            </div>
+            <div class="form__block-wrapper">
+              <div class="form-block__field">
+                <label class="form-block__label">
+                  Отчество: <input class="form-block__input" type="text" name="midname" placeholder="Ну и отчество тоже">
+                </label>
+              </div>
+            </div>
+          </fieldset>
+          <fieldset class="form__block form__block--trip-achivements">
+            <legend class="form-block__title">Ваши безбашенные достижения в путешествии</legend>
+            <ul class="filedset__list">
+              <li class="form__block-wrapper">
+                <input class="form-block__input" type="checkbox" id="selfie" name="selfie" checked>
+                <label class="form-block__label" for="selfie">Сделал селфи с акулой</label>
+              </li>
+              <li class="form__block-wrapper">
+                <div class="form-block__field">
+                  <input class="form-block__input" type="checkbox" id="sunburned" name="sunburned" checked>
+                  <label class="form-block__label" for="sunburned">Обгорел на пляже</label>
+                </div>
+              </li>
+              <li class="form__block-wrapper">
+                <div class="form-block__field">
+                  <input class="form-block__input" type="checkbox" id="norris" name="norris">
+                  <label class="form-block__label" for="norris">Видел Чака Норриса</label>
+                </div>
+              </li>
+              <li class="form__block-wrapper">
+                <div class="form-block__field">
+                  <input class="form-block__input" type="checkbox" id="souvenir" name="souvenir">
+                  <label class="form-block__label" for="souvenir">Накупил сувениров</label>
+                </div>
+              </li>
+              <li class="form__block-wrapper">
+                <div class="form-block__field">
+                  <input class="form-block__input" type="checkbox" id="castle" name="castle" checked>
+                  <label class="form-block__label" for="castle">Удержал башню</label>
+                </div>
+              </li>
+              <li class="form__block-wrapper">
+                <div class="form-block__field">
+                  <input class="form-block__input" type="checkbox" id="hotel" name="hotel">
+                  <label class="form-block__label" for="hotel">Разгромил отель</label>
+                </div>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="form__block form__block--contacts">
+            <div class="form__block-wrapper">
+              <label class="form-block__label">
+                Номерок телефончика <input class="form-block__input" type="tel" name="phone" placeholder="Номер, пожалуйста">
+              </label>
+            </div>
+            <div class="form__block-wrapper">
+              <label class="form-block__label">
+                Адресок почты <input class="form-block__input" type="email" name="email" placeholder="E-mail, пожалуйста">
+              </label>
+            </div>
+          </fieldset>
+          <fieldset class="form__block form__block--trip-app">
+            <legend class="form__block-title">С каким приложением путешествовали?</legend>
+            <ul class="fieldset__list">
+              <li class="form__block-wrapper">
+                <div class="form-block__field">
+                  <input class="form-block__input" type="radio" id="app-ios" name="trip-app" value="ios" checked>
+                  <label class="form-block__label" for="app-ios">Pink для iOS</label>
+                </div>
+              </li>
+              <li class="form__block-wrapper">
+                <div class="form-block__field">
+                  <input class="form-block__input" type="radio" id="app-android" name="trip-app" value="android">
+                  <label class="form-block__label" for="app-android">Pink на Android</label>
+                </div>
+              </li>
+              <li class="form__block-wrapper">
+                <div class="form-block__field">
+                  <input class="form-block__input" type="radio" id="app-microsoft" name="trip-app" value="microsoft">
+                  <label class="form-block__label" for="app-microsoft">Windows Phone</label>
+                </div>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="form__block form__block--emotions">
+            <legend class="title">Опишите свои эмоции</legend>
+            <textarea name="emotions" cols="30" rows="10" class="form-block__textarea" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+          </fieldset>
+          <fieldset class="btn-submit-wrapper">
+            <button class="btn btn--submit" type="submit">Отправить форму</button>
+            <p class="hint"><span class="required-sign">*</span> — обязательные поля</p>
+          </fieldset>
+        </form>
+      </div>
+    </main>
+    <footer class="page-footer">
+      <div class="container">
+        <div class="logo logo--bottom">
+          <a href="#" class="logo__link">
+            <img src="http://placehold.it/150x40" alt="PINK" class="logo__picture" />
+          </a>
+        </div>
+        <div class="social">
+          <ul class="social__list">
+            <li class="social__item social__item--twitter">
+              <a href="#" class="social__item--link">
+                <img src="#" alt="Twitter" class="social__item--icon" />
+              </a>
+            </li>
+            <li class="social__item social__item--facebook">
+              <a href="#" class="social__item--link">
+                <img src="#" alt="Facebook" class="social__item--icon" />
+              </a>
+            </li>
+            <li class="social__item social__item--youtube">
+              <a href="#" class="social__item--link">
+                <img src="#" alt="YouTube" class="social__item--icon">
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="author">
+          <span class="author__text">Разработано</span>
+          <a href="http://htmlacademy.ru" class="author-logo__link">
+            <img src="http://placehold.it/" alt="HTML Academy" class="author-logo__picture" />
+          </a>
+        </div>
+      </div>
+    </footer>
+    <div class="popup-success">
+      <div class="popup__wrapper">
+        <b class="popup__title">Что-то пошло не так!</b>
+        <p class="popup__description">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+        <div class="popup__btn-wrapper">
+          <button class="btn btn--popup">Ок</button>
+        </div>
+      </div>
+    </div>
+    <div class="popup-failure">
+      <div class="popup__wrapper">
+        <b class="popup__title">Ваша заявка отправлена</b>
+        <p class="popup__description">Спасибо за ваше участие, ваша заявка уже поступила к нам. В ближайшее время мы рассмотрим ее и оповестим вас.</p>
+        <div class="popup__btn-wrapper">
+          <button class="btn btn--popup">Закрыть окно</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
