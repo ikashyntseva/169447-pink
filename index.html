@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>HTML Academy: Пинк - Index</title>
   </head>
-  <body><!-- темно-серая картинка со зданием будет фоном у body, исходя из того, что она присутствует на одном и том де месте на всех страницах -->
+  <body><!-- темно-серая картинка со зданием будет фоном у header, исходя из того, что она присутствует на одном и том де месте на всех страницах -->
     <header class="page-header">
       <div class="container clearfix">
         <div class="logo">
@@ -24,165 +24,181 @@
           </ul>
         </nav>
       </div>
-    </header>
-    <div class="promo">
-      <div class="container">
+      <div class="promo">
         <h1 class="promo__slogan">Взгляните на жизнь иначе!</h1>
-        <img src="http://placehold.it/258x286" alt="iPhone" class="promo__picture" />
       </div>
-    </div>
-    <div class="application">
-      <div class="container">
-        <button class="btn btn--app">Скачать приложение</button>
-        <div class="application__list clearfix">
-          <div class="application__item application__item--ios"><a href="#" class="application__link">Download for IOS</a></div>
-          <div class="application__item application__item--android"><a href="#" class="application__link">Download for Android</a></div>
-          <div class="application__item application__item--microsoft"><a href="#" class="application__link">Download for Microsoft</a></div>
+      <div class="application">
+        <div class="container">
+          <button class="btn btn--app">Скачать приложение</button>
+          <div class="application__list clearfix">
+            <a href="#" class="application__item application__item--ios">Download for IOS</a>
+            <a href="#" class="application__item application__item--android">Download for Android</a>
+            <a href="#" class="application__item application__item--microsoft">Download for Microsoft</a>
+          </div>
+          <p class="application__info">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
         </div>
-        <p class="application__info">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
       </div>
-  </div>
-    <div class="features">
+    </header>
+    <main class="main">
       <div class="container">
-        <h2 class="features__slogan"><!-- Не знаю стоило ли разбивать заголовок на 2 части. Сделала так исходя из макета. Планирую использовать короткий каскад -->>
-          <p class="question">Устали от серости мегаполиса?</p>
-          <p class="answer">Нам есть, что вам  предложить!</p>
-        </h2>
-        <div class="features__list clearfix">
-          <div class="feature__item">
-            <p class="feature__title">Поднимает настроение</p>
-            <p class="feature__description">Приложение позволит вам победить осеннюю хандру и деперессию буквально в
+        <div class="promo-text">
+          <p>Устали от серости мегаполиса?</p>
+          <p>Нам есть, что вам  предложить!</p>
+        </div>
+        <section class="features">
+          <div class="features__item">
+            <h2 class="features__title">Поднимает настроение</h2>
+            <p class="features__description">Приложение позволит вам победить осеннюю хандру и деперессию буквально в
               несколько кликов!</p>
           </div>
-          <div class="feature__item">
-            <p class="feature__title">Меняет мир вокруг</p>
-            <p class="feature__description">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить
-              эффект</p>
+          <div class="features__item">
+            <h2 class="features__title">Меняет мир вокруг</p>
+            <p class="features__description">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить
+              эффект</h2>
           </div>
-          <div class="feature__item">
-            <p class="feature__title">Заводит новых друзей</p>
-            <p class="feature__description">Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых</p>
+          <div class="features__item">
+            <h2 class="features__title">Заводит новых друзей</p>
+            <p class="features__description">Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых</h2>
           </div>
-        </div>
+          <div class="fetaures__picture-wrapper">
+            <img src="#" class="features__picture" alt="Всем привет! :)" .>
+          </div>
+        </section>
+        <section class="reviews">
+          <div class="container">
+            <div class="review-item review-item--active">
+              <input type="radio" class="pagination-block__input" id="page-1" name="pagination" checked>
+              <div class="review__author">Николай Петров</div>
+              <blockquote class="review__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые
+                вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</blockquote>
+            </div>
+            <div class="review-item">
+              <input type="radio" class="pagination-block__input" id="page-2" name="pagination">
+              <div class="review__author">Иван Иванов</div>
+              <blockquote class="review__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые
+                вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</blockquote>
+            </div>
+            <div class="review-item">
+              <input type="radio" class="pagination-block__input" id="page-3" name="pagination">
+              <div class="review__author">Виктор Сидоров</div>
+              <blockquote class="review__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</blockquote>
+            </div>
+          </div>
+          <div class="pagination"><!--Есть определенные сомнения по этой части и по пагинации в общем-->
+            <div class="controls">
+              <label for="page-1" class="pagination-block__label"></label>
+              <label for="page-2" class="pagination-block__label"></label>
+              <label for="page-3" class="pagination-block__label"></label>
+            </div>
+          </div>
+        </section>
+        <section class="price-slider">
+          <div class="price-slider__wrapper">
+            <ul class="package">
+              <li class="package__header">
+                <div class="package__title">Базовый</div>
+                <div class="package__price">
+                  <div class="package__price--amount">1,99</div>
+                  <div class="package__price--currency">USD</div>
+                </li>
+              </div>
+              <li class="package__features">
+                <div class="feature__name">Розовый фильтр</div>
+                <div class="feature__presence feature__presence--yes">
+                  <img src="#" alt="" class="feature__presence-icon">
+                </div>
+                <div class="feature__name">Смайлики</div>
+                <div class="feature__presence feature__presence--no">
+                  <img src="#" alt="" class="feature__presence-icon">
+                </div>
+                <div class="feature__name">Комментарии</div>
+                <div class="feature__presence feature__presence--no">
+                  <img src="#" alt="" class="feature__presence-icon">
+                </div>
+              </li>
+            </ul>
+            <ul class="package package--hit package--active">
+              <li class="package__header">
+                <div class="package__title">Стандарт</div>
+                <div class="package__price">
+                  <div class="package__price--amount">3,99</div>
+                  <div class="package__price--currency">USD</div>
+                </li>
+              </div>
+              <li class="package__features">
+                <div class="feature__name">Розовый фильтр</div>
+                <div class="feature__presence feature__presence--yes">
+                  <img src="#" alt="" class="feature__presence-icon">
+                </div>
+                <div class="feature__name">Смайлики</div>
+                <div class="feature__presence feature__presence--yes">
+                  <img src="#" alt="" class="feature__presence-icon">
+                </div>
+                <div class="feature__name">Комментарии</div>
+                <div class="feature__presence feature__presence--no">
+                  <img src="#" alt="" class="feature__presence-icon">
+                </div>
+              </li>
+            </ul>
+            <ul class="package">
+              <li class="package__header">
+                <div class="package__title">Премиум</div>
+                <div class="package__price">
+                  <div class="package__price--amount">5,99</div>
+                  <div class="package__price--currency">USD</div>
+                </li>
+              </div>
+              <li class="package__features">
+                <div class="feature__name">Розовый фильтр</div>
+                <div class="feature__presence feature__presence--yes">
+                  <img src="#" alt="" class="feature__presence-icon">
+                </div>
+                <div class="feature__name">Смайлики</div>
+                <div class="feature__presence feature__presence--yes">
+                  <img src="#" alt="" class="feature__presence-icon">
+                </div>
+                <div class="feature__name">Комментарии</div>
+                <div class="feature__presence feature__presence--yes">
+                  <img src="#" alt="" class="feature__presence-icon">
+                </div>
+              </li>
+            </ul>
+          <div class="pagination"><!--Есть определенные сомнения по этой части. Нужна ли обертка для инпутов-->
+            <div class="pagination-block">
+              <input type="radio" class="pagination-block__input" id="page-1" name="pagination">
+              <input type="radio" class="pagination-block__input" id="page-2" name="pagination">
+              <input type="radio" class="pagination-block__input" id="page-3" name="pagination">
+            </div>
+            <div class="controls">
+              <label for="page-1" class="pagination-block__label"></label>
+              <label for="page-2" class="pagination-block__label"></label>
+              <label for="page-3" class="pagination-block__label"></label>
+            </div>
+          </div>
+        </section>
       </div>
-    </div>
-    <div class="reviews">
-      <h2 class="reviews__title">Всем привет!</h2><!-- заголовку будет добавлен псевдо-элемент со смайликом -->
-      <section class="reviews__list">
-        <div class="container">
-          <div class="review review--active">
-            <p class="review__author">Николай Петров</p>
-            <blockquote class="review__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые
-              вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</blockquote>
-          </div>
-          <div class="review">
-            <p class="review__author">Иван Иванов</p>
-            <blockquote class="review__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые
-              вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</blockquote>
-          </div>
-          <div class="review">
-            <p class="review__author">Виктор Сидоров</p>
-            <blockquote class="review__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</blockquote>
-          </div>
-        </div>
-      </section>
-      <ul class="pagination">
-        <li class="pagination__item pagination__item--active">
-          <a href="#" class="pagination__link"><img src="#" alt="" class="pagination__icon"></a>
-        </li>
-        <li class="pagination__item">
-          <a href="#" class="pagination__link"><img src="#" alt="" class="pagination__icon"></a>
-        </li>
-        <li class="pagination__item">
-          <a href="#" class="pagination__link"><img src="#" alt="" class="pagination__icon"></a>
-        </li>
-      </ul>
-    </div>
-    <div class="price">
-      <section class="packages__list">
-        <div class="package">
-          <div class="package__header">
-            <div class="package__title"></div>
-            <div class="package__price">
-              <div class="package__price--amount"></div>
-              <div class="package__price--currency"></div>
-            </div>
-          </div>
-          <div class="package__features">
-            <div class="feature__name">Розовый фильтр</div>
-            <div class="feature__presence feature__presence--no"><img src="#" alt="" class="feature__presence-icon"></div>
-            <div class="feature__name">Смайлики</div>
-            <div class="feature__presence feature__presence--no"><img src="#" alt="" class="feature__presence-icon"></div>
-            <div class="feature__name">Комментарии</div>
-            <div class="feature__presence feature__presence--no"><img src="#" alt="" class="feature__presence-icon"></div>
-          </div>
-        </div>
-        <div class="package package--hit package--active">
-          <div class="package__header">
-            <div class="package__title">Стандарт</div>
-            <div class="package__price">
-              <div class="package__price--amount">3,99</div>
-              <div class="package__price--currency">USD</div>
-            </div>
-          </div>
-          <div class="package__features">
-            <div class="feature__name">Розовый фильтр</div>
-            <div class="feature__presence feature__presence--yes"><img src="#" alt="" class="feature__presence-icon"></div>
-            <div class="feature__name">Смайлики</div>
-            <div class="feature__presence feature__presence--yes"><img src="#" alt="" class="feature__presence-icon"></div>
-            <div class="feature__name">Комментарии</div>
-            <div class="feature__presence feature__presence--no"><img src="#" alt="" class="feature__presence-icon"></div>
-          </div>
-        </div>
-        <div class="package">
-          <div class="package__header">
-            <div class="package__title">Премиум</div>
-            <div class="package__price">
-              <div class="package__price--amount">5,99</div>
-              <div class="package__price--currency">USD</div>
-            </div>
-          </div>
-          <div class="package__features">
-            <div class="feature__name">Розовый фильтр</div>
-            <div class="feature__presence feature__presence--yes"><img src="#" alt="" class="feature__presence-icon"></div>
-            <div class="feature__name">Смайлики</div>
-            <div class="feature__presence feature__presence--yes"><img src="#" alt="" class="feature__presence-icon"></div>
-            <div class="feature__name">Комментарии</div>
-            <div class="feature__presence feature__presence--yes"><img src="#" alt="" class="feature__presence-icon"></div>
-          </div>
-        </div>
-      </section>
-      <ul class="pagination">
-        <li class="pagination__item">
-          <a href="#" class="pagination__link"><img src="#" alt="" class="pagination__icon"></a>
-        </li>
-        <li class="pagination__item pagination__item--active">
-          <a href="#" class="pagination__link"><img src="#" alt="" class="pagination__icon"></a>
-        </li>
-        <li class="pagination__item">
-          <a href="#" class="pagination__link"><img src="#" alt="" class="pagination__icon"></a>
-        </li>
-      </ul>
-    </div>
+    </main>
     <footer class="page-footer">
-      <div class="contacts">
+      <section class="contacts">
         <div class="container">
-          <h2 class="contacts__title">Остались вопросы? Свяжитесь с нами!</h2>
+          <h2 class="contacts__item-title">Остались вопросы? Свяжитесь с нами!</h2>
           <div class="contacts__item contacts__item--phone">
             <span class="title">Звоните:</span>
-            <p class="description">+7 (812) 555-66-66</p>
+            <a class="contacts__item-info" href="tel:+7(812)555-66-66">+7(812)555-66-66</a>
           </div>
           <div class="contacts__item contacts__item--email">
             <span class="title">Пишите:</span>
-            <p class="description">mail@htmlacademy.ru</p>
+            <a class="contacts__item-info" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
           </div>
           <div class="contacts__item contacts__item--address">
             <span class="title">Приезжайте в гости:</span>
             <p class="description">ул. Большая Конюшенная, 19/8 </p>
           </div>
         </div>
-        <img src="#" alt="" class="contacts__map" />
-      </div>
+        <div class="map">
+          <img src="#" alt="" class="contacts__map" />
+        </div>
+      </section>
     </footer>
   </body>
 </html>

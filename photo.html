@@ -4,172 +4,182 @@
     <meta charset="utf-8">
     <title>HTML Academy: Пинк - Photo</title>
   </head>
-  <body><!-- темно-серая картинка со зданием будет фоном у body, исходя из того, что она присутствует на одном и том де месте на всех страницах -->
-      <header class="page-header">
-        <div class="container clearfix">
-          <div class="logo">
-            <a href="#" class="logo-link">
-              <img src="http://placehold.it/75x22" alt="" class="logo__picture" />
-            </a>
-          </div>
-          <nav class="menu">
-            <a href="#" class="menu__button menu__button--open">
-              <span class="hidden">Menu button</span>
-            </a>
-            <ul class="menu__list">
-              <li class="menu__item">
-                <a href="#" class="menu__link">Главная</a>
-              </li>
-              <li class="menu__item">
-                <a href="#" class="menu__link">Фотографии
-                </a>
-              </li>
-              <li class="menu__item">
-                <a href="#" class="menu__link">Конкурс
-                </a>
-              </li>
-              <li class="menu__item">
-                <a href="#" class="menu__link">HTML Academy
-                </a>
-              </li>
-            </ul>
-          </nav>
+  <body><!-- темно-серая картинка со зданием будет фоном у header, исходя из того, что она присутствует на одном и том де месте на всех страницах -->
+    <header class="page-header">
+      <div class="container clearfix">
+        <div class="logo">
+          <a href="#" class="logo__link">
+            <img src="http://placehold.it/75x22" alt="" class="logo__picture" />
+          </a>
         </div>
-      </header>
+        <nav class="menu">
+          <a href="#" class="menu__button menu__button--open">
+            <span class="hidden">Menu button</span>
+          </a>
+          <ul class="menu__list">
+            <li class="menu__item">
+              <a href="#" class="menu__link">Главная</a>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__link">Фотографии
+              </a>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__link">Конкурс
+              </a>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__link">HTML Academy
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
       <div class="promo">
         <div class="container">
           <h1 class="promo__slogan">Фотографии пользователей</h1>
         </div>
       </div>
-      <div class="photos">
-        <div class="container">
-          <h1 class="photos_slogan">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</h1>
-          <ul class="photos__list">
-            <li class="photo__item photo__item--pano photo__item--best"><!--Ярлык с надписью Панорама дня будет псевдоэлементом-->
-              <img src="http://placehold.it/320x137" alt="Photo" class="photo" />
-              <div class="photo__info">
-                <span class="photo__author"></span>
-                <span class="photo__date"></span>
-                <blockquote class="photo__comment"></blockquote>
-                <div class="photo__like"><a href="#" class="like__btn"></a><span class="like__quantity"></span></div>
-              </div>
-            </li>
-            <li class="photo__item">
-              <img src="http://placehold.it/280x180" alt="Photo" class="photo" />
-              <div class="photo__info">
-                <span class="photo__author"></span>
-                <span class="photo__date"></span>
-                <blockquote class="photo__comment"></blockquote>
-                <div class="photo__like"><a href="#" class="like__btn"></a><span class="like__quantity"></span></div>
-              </div>
-            </li>
-            <li class="photo__item">
-              <img src="http://placehold.it/280x180" alt="Photo" class="photo" />
-              <div class="photo__info">
-                <span class="photo__author"></span>
-                <span class="photo__date"></span>
-                <blockquote class="photo__comment"></blockquote>
-                <div class="photo__like"><a href="#" class="like__btn"></a><span class="like__quantity"></span></div>
-              </div>
-            </li>
-            <li class="photo__item">
-              <img src="http://placehold.it/280x180" alt="Photo" class="photo" />
-              <div class="photo__info">
-                <span class="photo__author"></span>
-                <span class="photo__date"></span>
-                <blockquote class="photo__comment"></blockquote>
-                <div class="photo__like"><a href="#" class="like__btn"></a><span class="like__quantity"></span></div>
-              </div>
-            </li>
-            <li class="photo__item">
-              <img src="http://placehold.it/280x180" alt="Photo" class="photo" />
-              <div class="photo__info">
-                <span class="photo__author"></span>
-                <span class="photo__date"></span>
-                <blockquote class="photo__comment"></blockquote>
-                <div class="photo__like"><a href="#" class="like__btn"></a><span class="like__quantity"></span></div>
-              </div>
-            </li>
-            <li class="photo__item">
-              <img src="http://placehold.it/280x180" alt="Photo" class="photo" />
-              <div class="photo__info">
-                <span class="photo__author"></span>
-                <span class="photo__date"></span>
-                <blockquote class="photo__comment"></blockquote>
-                <div class="photo__like"><a href="#" class="like__btn"></a><span class="like__quantity"></span></div>
-              </div>
-            </li>
-            <li class="photo__item">
-              <img src="http://placehold.it/280x180" alt="Photo" class="photo" />
-              <div class="photo__info">
-                <span class="photo__author"></span>
-                <span class="photo__date"></span>
-                <blockquote class="photo__comment"></blockquote>
-                <div class="photo__like"><a href="#" class="like__btn"></a><span class="like__quantity"></span></div>
-              </div>
-            </li>
-          </ul>
-          <div class="photos__upload">
-            <div class="container">
-              <div class="photo__item">
-                <img src="http://placehold.it/280x375" alt="Photo" class="photo">
-              </div>
-              <div class="photo__edit">
-                <ul class="control__panel">
-                  <li class="control control--selected control--crop">
-                    <a href="#" class="control__icon"></a>
-                  </li>
-                  <li class="control control--fill">
-                    <a href="#" class="control__icon"></a>
-                  </li>
-                  <li class="controlm control--contrast">
-                    <a href="#" class="control__icon"></a>
-                  </li>
-                </ul>
-                <div class="edit__tab edit__tab--crop edit__tab--active"></div>
-                <div class="edit__tab edit__tab--fill"></div>
-                <div class="edit__tab edit__tab--contrast"></div>
-              </div>
-              <div class="upload__buttons clearfix">
-                <button class="btn btn--post">Запостить</button>
-                <button class="btn btn--cancel btn--disabled">Отмена</button></div>
+    </header>
+    <main class="main">
+      <div class="container">
+        <p class="promo-text">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</p>
+        <ul class="photo-list">
+          <li class="photo-item photo-item--pano photo-item--best"><!--Ярлык с надписью Панорама дня будет псевдоэлементом-->
+            <img src="http://placehold.it/320x137" alt="Photo" class="photo" />
+            <div class="photo__info">
+              <span class="photo__author">Анна</span>
+              <span class="photo__date">(5 минут назад)</span>
+              <blockquote class="photo__comment">Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую транслацию в перископе, задавайте свои вопросы!</blockquote>
+              <div class="photo-like"><a href="#" class="photo-like__btn"></a><span class="photo-like__quantity">Нравится: 215</span></div>
             </div>
+          </li>
+          <li class="photo-item">
+            <img src="http://placehold.it/280x180" alt="Photo" class="photo" />
+            <div class="photo__info">
+              <span class="photo__author">Левон</span>
+              <span class="photo__date">(5 часов назад)</span>
+              <blockquote class="photo__comment">Вчера он на луну летал, сегодня в руки к нам попал.</blockquote>
+              <div class="photo-like"><a href="#" class="photo-like__btn"></a><span class="photo-like__quantity">Нравится: 356</span></div>
+            </div>
+          </li>
+          <li class="photo-item">
+            <img src="http://placehold.it/280x180" alt="Photo" class="photo" />
+            <div class="photo__info">
+              <span class="photo__author">Антон</span>
+              <span class="photo__date">(12 часов назад)</span>
+              <blockquote class="photo__comment">Соседи будут рады!</blockquote>
+              <div class="photo-like"><a href="#" class="photo-like__btn"></a><span class="photo-like__quantity">Нравится: 666</span></div>
+            </div>
+          </li>
+          <li class="photo-item">
+            <img src="http://placehold.it/280x180" alt="Photo" class="photo" />
+            <div class="photo__info">
+              <span class="photo__author">Борис</span>
+              <span class="photo__date">(20 часов назад)</span>
+              <blockquote class="photo__comment">Здесь могла быть ваша цитата о высоком и вечном.</blockquote>
+              <div class="photo-like"><a href="#" class="photo-like__btn"></a><span class="photo-like__quantity">Нравится: 215</span></div>
+            </div>
+          </li>
+          <li class="photo-item">
+            <img src="http://placehold.it/280x180" alt="Photo" class="photo" />
+            <div class="photo__info">
+              <span class="photo__author">Сергей</span>
+              <span class="photo__date">(25 часов назад)</span>
+              <blockquote class="photo__comment">Самая кубанская в мире!</blockquote>
+              <div class="photo-like"><a href="#" class="photo-like__btn"></a><span class="photo-like__quantity">Нравится: 4</span></div>
+            </div>
+          </li>
+          <li class="photo-item">
+            <img src="http://placehold.it/280x180" alt="Photo" class="photo" />
+            <div class="photo__info">
+              <span class="photo__author">Максим</span>
+              <span class="photo__date">(40 часов назад)</span>
+              <blockquote class="photo__comment">Где снег-то?</blockquote>
+              <div class="photo-like"><a href="#" class="photo-like__btn"></a><span class="photo-like__quantity">Нравится: 150</span></div>
+            </div>
+          </li>
+          <li class="photo-item">
+            <img src="http://placehold.it/280x180" alt="Photo" class="photo" />
+            <div class="photo__info">
+              <span class="photo__author">Надежда</span>
+              <span class="photo__date">(45 часов назад)</span>
+              <blockquote class="photo__comment">Всем GM и взаимные лайки!</blockquote>
+              <div class="photo-like"><a href="#" class="photo-like__btn"></a><span class="photo-like__quantity">Нравится: 2560</span></div>
+            </div>
+          </li>
+        </ul>
+        <p class="promo-text promo-text--bottom">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</p>
+        <div class="photos-upload">
+          <div class="container">
+            <div class="photos-upload-item">
+              <img src="http://placehold.it/280x375" alt="Photo" class="photo">
+            </div>
+            <div class="photos-upload__edit">
+              <ul class="upload-control">
+                <li class="upload-control__option upload-control__option--selected upload-control__option--crop">
+                  <a href="#" class="control__icon"></a>
+                </li>
+                <li class="upload-control__option upload-control__option--fill">
+                  <a href="#" class="control__icon"></a>
+                </li>
+                <li class="upload-control__option upload-control__option--contrast">
+                  <a href="#" class="control__icon"></a>
+                </li>
+              </ul>
+              <div class="edit__tab edit__tab--crop edit__tab--active">
+                <div class="range-filter">
+                  <div class="range-controls">
+                      <div class="scale">
+                          <div class="bar"></div>
+                      </div>
+                      <div class="toggle"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="edit__tab edit__tab--fill"></div>
+              <div class="edit__tab edit__tab--contrast"></div>
+            </div>
+            <div class="upload__buttons clearfix">
+              <button class="btn btn--post">Запостить</button>
+              <button class="btn btn--cancel btn--disabled">Отмена</button></div>
           </div>
         </div>
       </div>
-      <footer class="page-footer">
-        <div class="container">
-          <div class="logo">
-            <a href="#" class="logo-link">
-              <img src="http://placehold.it/150x40" alt="PINK" class="logo__picture" />
-            </a>
-          </div>
-          <div class="social">
-            <ul class="social__list">
-              <li class="social__item social__item--twitter">
-                <a href="#" class="social__item--link">
-                  <img src="http://placehold.it/20x20" alt="Twitter" class="social__item--icon" />
-                </a>
-              </li>
-              <li class="social__item social__item--facebook">
-                <a href="#" class="social__item--link">
-                  <img src="http://placehold.it/20x20" alt="Facebook" class="social__item--icon" />
-                </a>
-              </li>
-              <li class="social__item social__item--youtube">
-                <a href="#" class="social__item--link">
-                  <img src="http://placehold.it/20x20" alt="YouTube" class="social__item--icon">
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div class="author">
-            <span class="author__text">Разработано</span>
-            <a href="http://htmlacademy.ru" class="author-logo__link">
-              <img src="http://placehold.it/27x34" alt="HTML Academy" class="author-logo__picture" />
-            </a>
-          </div>
+    </main>
+    <footer class="page-footer">
+      <div class="container">
+        <div class="logo">
+          <a href="#" class="logo__link">
+            <img src="http://placehold.it/150x40" alt="PINK" class="logo__picture" />
+          </a>
         </div>
-      </footer>
+        <div class="social">
+          <ul class="social__list">
+            <li class="social__item social__item--twitter">
+              <a href="#" class="social__item--link">
+                <img src="http://placehold.it/20x20" alt="Twitter" class="social__item--icon" />
+              </a>
+            </li>
+            <li class="social__item social__item--facebook">
+              <a href="#" class="social__item--link">
+                <img src="http://placehold.it/20x20" alt="Facebook" class="social__item--icon" />
+              </a>
+            </li>
+            <li class="social__item social__item--youtube">
+              <a href="#" class="social__item--link">
+                <img src="http://placehold.it/20x20" alt="YouTube" class="social__item--icon">
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="author">
+          <span class="author__text">Разработано</span>
+          <a href="http://htmlacademy.ru" class="author-logo__link">
+            <img src="http://placehold.it/27x34" alt="HTML Academy" class="author-logo__picture" />
+          </a>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
