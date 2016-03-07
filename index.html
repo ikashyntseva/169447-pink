@@ -66,25 +66,23 @@
         </section>
         <section class="reviews">
           <div class="container">
+            <input type="radio" class="pagination-block__input" id="page-1" name="pagination" checked>
+            <input type="radio" class="pagination-block__input" id="page-2" name="pagination">
+            <input type="radio" class="pagination-block__input" id="page-3" name="pagination">
             <div class="review-item review-item--active">
-              <input type="radio" class="pagination-block__input" id="page-1" name="pagination" checked>
               <div class="review__author">Николай Петров</div>
               <blockquote class="review__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые
                 вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</blockquote>
             </div>
             <div class="review-item">
-              <input type="radio" class="pagination-block__input" id="page-2" name="pagination">
               <div class="review__author">Иван Иванов</div>
               <blockquote class="review__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые
                 вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</blockquote>
             </div>
             <div class="review-item">
-              <input type="radio" class="pagination-block__input" id="page-3" name="pagination">
               <div class="review__author">Виктор Сидоров</div>
               <blockquote class="review__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</blockquote>
             </div>
-          </div>
-          <div class="pagination"><!--Есть определенные сомнения по этой части и по пагинации в общем-->
             <div class="controls">
               <label for="page-1" class="pagination-block__label"></label>
               <label for="page-2" class="pagination-block__label"></label>
@@ -94,25 +92,31 @@
         </section>
         <section class="price-slider">
           <div class="price-slider__wrapper">
+            <input type="radio" class="pagination-block__input" id="slide-price-1" name="pagination">
+            <input type="radio" class="pagination-block__input" id="slide-price-2" name="pagination" checked>
+            <input type="radio" class="pagination-block__input" id="slide-price-3" name="pagination">
             <ul class="package">
               <li class="package__header">
-                <input type="radio" class="pagination-block__input" id="slide-price-1" name="pagination">
                 <div class="package__title">Базовый</div>
                 <div class="package__price">
                   <div class="package__price--amount">1,99</div>
                   <div class="package__price--currency">USD</div>
                 </li>
               </div>
-              <li class="package__features">
-                <div class="feature__name">Розовый фильтр</div>
+              <li class="package__feature-item">
+                <span class="feature__name">Розовый фильтр</div>
                 <div class="feature__presence feature__presence--yes">
                   <img src="#" alt="" class="feature__presence-icon">
                 </div>
-                <div class="feature__name">Смайлики</div>
+              </li>
+              <li class="package__feature-item">
+                <span class="feature__name">Смайлики</div>
                 <div class="feature__presence feature__presence--no">
                   <img src="#" alt="" class="feature__presence-icon">
                 </div>
-                <div class="feature__name">Комментарии</div>
+              </li>
+              <li class="package__feature-item">
+                <span class="feature__name">Комментарии</span>
                 <div class="feature__presence feature__presence--no">
                   <img src="#" alt="" class="feature__presence-icon">
                 </div>
@@ -127,16 +131,20 @@
                   <div class="package__price--currency">USD</div>
                 </li>
               </div>
-              <li class="package__features">
-                <div class="feature__name">Розовый фильтр</div>
+              <li class="package__feature-item">
+                <span class="feature__name">Розовый фильтр</span>
                 <div class="feature__presence feature__presence--yes">
                   <img src="#" alt="" class="feature__presence-icon">
                 </div>
-                <div class="feature__name">Смайлики</div>
+              </li>
+              <li class="package__feature-item">
+                <span class="feature__name">Смайлики</span>
                 <div class="feature__presence feature__presence--yes">
                   <img src="#" alt="" class="feature__presence-icon">
                 </div>
-                <div class="feature__name">Комментарии</div>
+              </li>
+              <li class="package__feature-item">
+                <span class="feature__name">Комментарии</span>
                 <div class="feature__presence feature__presence--no">
                   <img src="#" alt="" class="feature__presence-icon">
                 </div>
@@ -144,29 +152,31 @@
             </ul>
             <ul class="package">
               <li class="package__header">
-                <input type="radio" class="pagination-block__input" id="slide-price-3" name="pagination">
                 <div class="package__title">Премиум</div>
                 <div class="package__price">
                   <div class="package__price--amount">5,99</div>
                   <div class="package__price--currency">USD</div>
                 </li>
               </div>
-              <li class="package__features">
-                <div class="feature__name">Розовый фильтр</div>
+              <li class="package__feature">
+                <span class="feature__name">Розовый фильтр</div>
                 <div class="feature__presence feature__presence--yes">
                   <img src="#" alt="" class="feature__presence-icon">
                 </div>
-                <div class="feature__name">Смайлики</div>
+              </li>
+              <li class="package__feature">
+                <span class="feature__name">Смайлики</div>
                 <div class="feature__presence feature__presence--yes">
                   <img src="#" alt="" class="feature__presence-icon">
                 </div>
-                <div class="feature__name">Комментарии</div>
+              </li>
+              <li class="package__feature">
+                <span class="feature__name">Комментарии</div>
                 <div class="feature__presence feature__presence--yes">
                   <img src="#" alt="" class="feature__presence-icon">
                 </div>
               </li>
             </ul>
-          <div class="pagination"><!--Есть определенные сомнения по этой части. Нужна ли обертка для инпутов-->
             <div class="controls">
               <label for="slide-price-1" class="pagination-block__label"></label>
               <label for="slide-price-2" class="pagination-block__label"></label>
