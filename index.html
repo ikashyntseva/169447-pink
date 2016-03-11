@@ -2,6 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>HTML Academy: Пинк - Index</title>
     <link rel="stylesheet" href="css/style.css">
   </head>
@@ -17,10 +18,21 @@
           <a href="#" class="menu__button menu__button--open"></a>
           <nav class="menu">
             <ul class="menu__list">
-              <li class="menu__item"><a href="#" class="menu__link">Информация</a></li>
-              <li class="menu__item"><a href="#" class="menu__link">Возможности</a></li>
-              <li class="menu__item"><a href="#" class="menu__link">Отзывы</a></li>
-              <li class="menu__item"><a href="#" class="menu__link">Стоимость</a></li>
+              <li class="menu__item">
+                <a href="index.html" class="menu__link">Главная</a>
+              </li>
+              <li class="menu__item">
+                <a href="photo.html" class="menu__link">Фотографии
+                </a>
+              </li>
+              <li class="menu__item">
+                <a href="form.html" class="menu__link">Конкурс
+                </a>
+              </li>
+              <li class="menu__item">
+                <a href="http://htmlacademy.ru" class="menu__link">HTML Academy
+                </a>
+              </li>
             </ul>
           </nav>
         </div>
@@ -29,7 +41,7 @@
           <div class="intro__app">
             <div class="container">
               <a class="btn btn--app" href="#">Скачать приложение</a>
-              <div class="aintro__app-list">
+              <div class="intro__app-list clearfix">
                 <a href="#" class="application__item application__item--ios">Download for IOS</a>
                 <a href="#" class="application__item application__item--android">Download for Android</a>
                 <a href="#" class="application__item application__item--microsoft">Download for Microsoft</a>
@@ -66,10 +78,10 @@
         </div>
       </section>
       <section class="reviews">
-        <div class="container">
-          <input type="radio" class="pagination-block__input" id="page-1" name="reviews-pagination" checked>
-          <input type="radio" class="pagination-block__input" id="page-2" name="reviews-pagination">
-          <input type="radio" class="pagination-block__input" id="page-3" name="reviews-pagination">
+        <input type="radio" class="pagination-block__input" id="review-1" name="reviews-pagination" checked>
+        <input type="radio" class="pagination-block__input" id="review-2" name="reviews-pagination">
+        <input type="radio" class="pagination-block__input" id="review-3" name="reviews-pagination">
+        <div class="reviews__wrapper">
           <blockquote class="review__item review__item--active">
             <cite class="review__item-author">Николай Петров</cite>
             <p class="reviews__item-text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые
@@ -84,99 +96,96 @@
             <cite class="review__item-author">Виктор Сидоров</cite>
             <p class="reviews__item-text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
           </blockquote>
-          <div class="reviews__controls">
-            <label for="page-1" class="pagination-block__label"></label>
-            <label for="page-2" class="pagination-block__label"></label>
-            <label for="page-3" class="pagination-block__label"></label>
-          </div>
+        </div>
+        <div class="reviews__controls">
+          <label for="review-1" class="pagination-block__label"></label>
+          <label for="review-2" class="pagination-block__label"></label>
+          <label for="review-3" class="pagination-block__label"></label>
         </div>
       </section>
       <section class="price-slider">
-          <div class="price-slider__wrapper">
-            <input type="radio" class="pagination-block__input" id="slide-price-1" name="pagination">
-            <input type="radio" class="pagination-block__input" id="slide-price-2" name="pagination" checked>
-            <input type="radio" class="pagination-block__input" id="slide-price-3" name="pagination">
-            <ul class="price-slider__list">
-              <li class="price-slider__list-header">
-                <div class="price-slider__list-title">Базовый</div>
-                <div class="price-slider__cost">
-                  1,99 USD
-                </div>
-              </li>
-              <li class="price-slider__item">
-                Розовый фильтр
-              </li>
-              <li class="price-slider__item">
-                Смайлики
-              </li>
-              <li class="price-slider__item">
-                Комментарии
-              </li>
-            </ul>
-            <ul class="package package--hit package--active">
-              <li class="price-slider__list-header">
-                <div class="price-slider__list-title">Стандарт</div>
-                <div class="price-slider__cost">
-                  3,99 USD
-                </div>
-              </li>
-              <li class="price-slider__item">
-                Розовый фильтр
-              </li>
-              <li class="price-slider__item">
-                Смайлики
-              </li>
-              <li class="price-slider__item">
-                Комментарии
-              </li>
-            </ul>
-            <ul class="package">
-              <li class="price-slider__list-header">
-                <div class="price-slider__list-title">Премиум</div>
-                <div class="price-slider__cost">
-                  5,99 USD
-                </div>
-              </li>
-              <li class="package__feature">
-                Розовый фильтр
-              </li>
-              <li class="package__feature">
-                Смайлики
-                <div class="feature__presence feature__presence--yes">
-                  <img src="#" alt="" class="feature__presence-icon">
-                </div>
-              </li>
-              <li class="package__feature">
-                Комментарии
-              </li>
-            </ul>
-            <div class="price-slider__controls">
-              <label for="slide-price-1" class="pagination-block__label"></label>
-              <label for="slide-price-2" class="pagination-block__label"></label>
-              <label for="slide-price-3" class="pagination-block__label"></label>
-            </div>
+        <input type="radio" class="pagination-block__input" id="slide-price-1" name="pagination">
+        <input type="radio" class="pagination-block__input" id="slide-price-2" name="pagination" checked>
+        <input type="radio" class="pagination-block__input" id="slide-price-3" name="pagination">
+        <div class="price-slider__wrapper clearfix">
+          <ul class="price-slider__list">
+            <li class="price-slider__list-header">
+              <div class="price-slider__list-title">Базовый</div>
+              <div class="price-slider__cost">
+                1,99 USD
+              </div>
+            </li>
+            <li class="price-slider__item">
+              Розовый фильтр
+            </li>
+            <li class="price-slider__item">
+              Смайлики
+            </li>
+            <li class="price-slider__item">
+              Комментарии
+            </li>
+          </ul>
+          <ul class="price-slider__list price-slider__list--hit price-slider__list--active">
+            <li class="price-slider__list-header">
+              <div class="price-slider__list-title">Стандарт</div>
+              <div class="price-slider__cost">
+                3,99 USD
+              </div>
+            </li>
+            <li class="price-slider__item">
+              Розовый фильтр
+            </li>
+            <li class="price-slider__item">
+              Смайлики
+            </li>
+            <li class="price-slider__item">
+              Комментарии
+            </li>
+          </ul>
+          <ul class="price-slider__list">
+            <li class="price-slider__list-header">
+              <div class="price-slider__list-title">Премиум</div>
+              <div class="price-slider__cost">
+                5,99 USD
+              </div>
+            </li>
+            <li class="price-slider__item">
+              Розовый фильтр
+            </li>
+            <li class="price-slider__item">
+              Смайлики
+            </li>
+            <li class="price-slider__item">
+              Комментарии
+            </li>
+          </ul>
+        </div>
+        <div class="price-slider__controls">
+          <label for="slide-price-1" class="pagination-block__label"></label>
+          <label for="slide-price-2" class="pagination-block__label"></label>
+          <label for="slide-price-3" class="pagination-block__label"></label>
+        </div>
+      </section>
+      <section class="contacts">
+        <div class="container">
+          <h2 class="contacts__text">Остались вопросы? Свяжитесь с нами!</h2>
+          <div class="contacts__item contacts__item--phone">
+            <b class="contacts__item-title">Звоните:</b>
+            <a class="contacts__item-info" href="tel:+7(812)555-66-66">+7(812)555-66-66</a>
           </div>
-        </section>
-        <section class="contacts">
-          <div class="container">
-            <h2 class="contacts__text">Остались вопросы? Свяжитесь с нами!</h2>
-            <div class="contacts__item contacts__item--phone">
-              <b class="contacts__item-title">Звоните:</b>
-              <a class="contacts__item-info" href="tel:+7(812)555-66-66">+7(812)555-66-66</a>
-            </div>
-            <div class="contacts__item contacts__item--email">
-              <b class="contacts__item-title">Пишите:</b>
-              <a class="contacts__item-info" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
-            </div>
-            <div class="contacts__item contacts__item--address">
-              <b class="contacts__item-title">Приезжайте в гости:</b>
-              <p class="contacts__item-text">ул. Большая Конюшенная, 19/8 </p>
-            </div>
+          <div class="contacts__item contacts__item--email">
+            <b class="contacts__item-title">Пишите:</b>
+            <a class="contacts__item-info" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
           </div>
-          <div class="map">
-            <img src="http://placehold.it/320x203" alt="Map" width="320" height="203" class="contacts__map" />
+          <div class="contacts__item contacts__item--address">
+            <b class="contacts__item-title">Приезжайте в гости:</b>
+            <p class="contacts__item-text">ул. Большая Конюшенная, 19/8 </p>
           </div>
-        </section>
+        </div>
+        <div class="map">
+          <img src="http://placehold.it/320x203" alt="Map" width="100%" height="203" class="contacts__map" />
+        </div>
+      </section>
     </main>
   </body>
 </html>

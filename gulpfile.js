@@ -35,3 +35,14 @@ gulp.task("serve", ["style"], function() {
   gulp.watch("sass/**/*.{scss,sass}", ["style"]);
   gulp.watch("*.html").on("change", server.reload);
 });
+gulp.task('sass', function () {
+  gulp.src('sass/style.scss')
+    .pipe(sass({
+      // includePaths: require('node-normalize-scss').with('other/path', 'another/path')
+      // - or -
+      includePaths: require('node-normalize-scss').includePaths
+    }))
+    .pipe(gulp.dest('css'));
+});
+
+
