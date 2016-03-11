@@ -1,0 +1,19 @@
+.page-header {
+  background-color: #abc;
+
+  .page-header__bar {
+    background-color: #aaf;
+  }
+  .menu {
+    background-color: #aef;
+  }
+  .intro {
+    background-color: #fee;
+    &__slogan {
+      background-color: pink;
+    }
+    &__app {
+      background-color: violet;
+    }
+  }
+}
