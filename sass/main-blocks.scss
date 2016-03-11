@@ -1,0 +1,57 @@
+@media (min-width: 320px) {
+  .promo-text,
+  .promo-big-text {
+    text-align: center;
+  }
+  .promo-big-text {
+    width: 72%;
+    margin: 0 auto;
+  }
+  .features {
+    background-color: #f2f2f2;
+    text-align: center;
+    &__wrapper {
+      padding: 6.25%;
+    }
+  }
+  /* Reviews begin */
+  .reviews {
+    background-color: #8AC5F2;
+  }
+  #review-1:checked ~ .reviews__wrapper >.review__item:nth-of-type(1),
+  #review-2:checked ~ .reviews__wrapper >.review__item:nth-of-type(2),
+  #review-3:checked ~ .reviews__wrapper >.review__item:nth-of-type(3) {
+    background: red;
+  }
+  /* Reviews end */
+
+  /* Price slider begins */
+  .price-slider {
+    background-color: #0BBFB6;
+    &__list {
+      width: 33.3333%;
+      float:left;
+      background-color: darken(#0BBFB6, 20%);
+      padding: 0;
+    }
+    &__list-header,
+    &__item {
+      list-style: none;
+    }
+  }
+  /* Price slider ends */
+
+  /* Contacts begin */
+  .contacts {
+    background-color: #260D80;
+  }
+  /* Contacts end */
+
+  /* Photos begin */
+  .photo-post {
+    background-color: #077FF7;
+  }
+  .photos-upload {
+    background-color: #B8A0B7;
+  }
+}
