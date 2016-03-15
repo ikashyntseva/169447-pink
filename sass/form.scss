@@ -1,3 +1,81 @@
-#contest-form {
-  background-color: #8A77F7;
+@media (min-width: 320px) {
+  #contest-form {
+    background-color: #8A77F7;
+    width: 280px;
+    margin: 0 auto;
+    .form-block {
+      &--member,
+      &--contacts {
+        label,
+        input {
+          display: block;
+        }
+      }
+    }
+  }
+}
+@media (min-width: 700px) {
+  #contest-form {
+    width: 620px;
+    display: flex;
+    flex-direction: column;
+    .form-block {
+      &--member {
+        label,
+        input {
+          display: inline-block;
+        }
+      }
+      &--contacts {
+        order: 3;
+        .form-block__label {
+          display: flex;
+          flex-direction: column-reverse;
+        }
+      }
+      &--trip-achivements {
+        order: 4;
+      }
+      &--emotions {
+        order: 5;
+        .form-block__textarea {
+          width: 500px;
+          margin: 0 auto;
+          display: block;
+        }
+      }
+      &__title {
+        text-align: center;
+      }
+    }
+    .form__btns {
+      order: 6;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}
+@media (min-width: 1200px) {
+  #contest-form {
+    width: 940px;
+    flex-flow: row wrap;
+    .form-block,
+    .form__btns {
+      flex: 100%;
+      &--member,
+      &--trip-app {
+        flex: 1;
+      }
+      &--trip-achivements {
+        .filedset__list{
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          .form-block__wrapper {
+            width: 30%;
+          }
+        }
+      }
+    }
+  }
 }

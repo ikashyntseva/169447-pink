@@ -1,3 +1,29 @@
-.social {
-  background-color: #88F7F7;
+@media (min-width: 320px) {
+  .social {
+    background-color: #88F7F7;
+    &__list {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+    }
+    &__item {
+      list-style: none;
+      margin-right: 12px;
+      &:last-child {
+        margin: 0;
+      }
+    }
+    &__link {
+      display: block;
+      width: 51px;
+      height: 51px;
+    }
+  }
+}
+
+@media (min-width: 700px) {
+  .social {
+    width: 320px;
+  }
 }

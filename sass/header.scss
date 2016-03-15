@@ -1,19 +1,116 @@
-.page-header {
-  background-color: #abc;
+@media (min-width: 320px) {
+  .page-header {
+    background-color: #abc;
 
-  .page-header__bar {
-    background-color: #aaf;
-  }
-  .menu {
-    background-color: #aef;
-  }
-  .intro {
-    background-color: #fee;
-    &__slogan {
-      background-color: pink;
+    &__bar {
+      background-color: #aaf;
+      padding: 20px 0;
+      .container {
+        display: flex;
+        justify-content: space-between;
+      }
     }
-    &__app {
-      background-color: violet;
+    .menu__button {
+      display: block;
+      width: 50px;
+      height: 25px;
+      background: #fff;
+    }
+    .menu {
+      background-color: #aef;
+      display: none;
+    }
+    .container {
+      width: 280px;
+      margin: 0 auto;
+    }
+    .intro {
+      background-color: #fee;
+      display: flex;
+      flex-wrap: wrap;
+      &__slogan {
+        background-color: pink;
+      }
+      &__app {
+        background-color: violet;
+        width: 100%;
+        align-self: flex-end;
+      }
+      .intro__app-wrapper {
+        padding: 20px;
+      }
+      &__app-list {
+        display: flex;
+        justify-content: space-between;
+      }
+      .application__item {
+        display: block;
+        width: 33.3333%;
+      }
+      &__app-info {
+        text-align: center;
+      }
+    }
+    &--index {
+      .intro {
+        min-height: 664px;
+        position: relative;
+      }
+    }
+  }
+}
+@media (min-width: 700px) {
+  .page-header {
+    &__bar {
+      padding: 40px 0;
+      .container {
+        width: 620px;
+      }
+    }
+    .container {
+      width: 620px;
+    }
+    &--index {
+      .intro {
+        width: 300px;
+        min-height: 618px;
+        &__app {
+          margin-bottom: 105px;
+        }
+        .container {
+          padding: 40px;
+        }
+      }
+    }
+  }
+}
+@media (min-width: 1200px) {
+  .page-header {
+    &__bar {
+      padding: 27px 0;
+      .container {
+        width: 940px;
+      }
+      .menu {
+        display: block;
+        width: 640px;
+        &__list {
+          display: flex;
+          justify-content: space-between;
+        }
+      }
+      .menu__button {
+        display: none;
+      }
+    }
+    .container {
+      width: 940px;
+    }
+    .intro {
+      height: 288px;
+      &__app {
+        margin-bottom: 110px;
+      }
     }
   }
 }
