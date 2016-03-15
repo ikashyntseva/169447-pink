@@ -7,12 +7,12 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body><!-- темно-серая картинка со зданием будет фоном у header, исходя из того, что она присутствует на одном и том де месте на всех страницах -->
-    <header class="page-header">
-      <div class="container">
-        <div class="page-header__bar clearfix">
+    <header class="page-header page-header--index">
+      <div class="page-header__bar">
+        <div class="container">
           <div class="logo">
             <a href="#" class="logo-link">
-              <img src="http://placehold.it/75x22" alt="" class="logo__picture">
+              <img src="http://placehold.it/75x22" alt="Pink" class="logo__picture">
             </a>
           </div>
           <a href="#" class="menu__button menu__button--open"></a>
@@ -36,12 +36,14 @@
             </ul>
           </nav>
         </div>
+      </div>
+      <div class="container">
         <div class="intro">
           <h1 class="intro__slogan">Взгляните на жизнь иначе!</h1>
           <div class="intro__app">
-            <div class="container">
+            <div class="intro__app-wrapper">
               <a class="btn btn--app" href="#">Скачать приложение</a>
-              <div class="intro__app-list clearfix">
+              <div class="intro__app-list">
                 <a href="#" class="application__item application__item--ios">Download for IOS</a>
                 <a href="#" class="application__item application__item--android">Download for Android</a>
                 <a href="#" class="application__item application__item--microsoft">Download for Microsoft</a>
@@ -54,27 +56,46 @@
     </header>
     <main class="main">
       <p class="promo-big-text">
-        Устали от серости мегаполиса?
-        Нам есть, что вам  предложить!
+        <span class="line">Устали от серости мегаполиса?</span>
+        <span class="line">Нам есть, что вам  предложить!</span>
       </p>
       <section class="features">
-        <div class="features__wrapper">
-          <div class="features__item">
-            <h2 class="features__title">Поднимает настроение</h2>
-            <p class="features__text">Приложение позволит вам победить осеннюю хандру и деперессию буквально в
-              несколько кликов!</p>
+        <div class="container">
+          <div class="features__wrapper">
+            <div class="features__item">
+              <h2 class="features__title">Поднимает настроение</h2>
+              <p class="features__text">Приложение позволит вам победить осеннюю хандру и деперессию буквально в
+                несколько кликов!</p>
+            </div>
+            <div class="features__item">
+              <h2 class="features__title">Меняет мир вокруг</h2>
+              <p class="features__text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+            </div>
+            <div class="features__item">
+              <h2 class="features__title">Заводит новых друзей</h2>
+              <p class="features__text">Ставьте лайки, комментируете, делитесь фотографиями с друзьями и заводите новых</p>
+            </div>
           </div>
-          <div class="features__item">
-            <h2 class="features__title">Меняет мир вокруг</h2>
-            <p class="features__text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+          <div class="features__picture-wrapper">
+            <img src="img/iphone-screen-mobile.png" class="features__picture" width="100%" height="100%" alt="Всем привет! :)"/>
           </div>
-          <div class="features__item">
-            <h2 class="features__title">Заводит новых друзей</h2>
-            <p class="features__text">Ставьте лайки, комментируете, делитесь фотографиями с друзьями и заводите новых</p>
+          <div class="features__picture-wrapper">
+            <img src="img/iphone-screen-mobile.png" class="features__picture" width="100%" height="100%" alt="Всем привет! :)"/>
+          </div>
+          <div class="features__picture-wrapper">
+            <img src="img/iphone-screen-mobile.png" class="features__picture" width="100%" height="100%" alt="Всем привет! :)"/>
           </div>
         </div>
-        <div class="fetaures__picture-wrapper">
-          <img src="http://placehold.it/155x278" class="features__picture" width="155" height="278" alt="Всем привет! :)"/>
+
+      </section>
+      <section class="ad">
+        <div class="ad__picture-wrapper">
+          <img src="http://placehold.it/240x277" class="ad__picture" alt="ad__picture" />
+        </div>
+        <div class="ad__item">
+          <p class="ad__title">Эффект на 24 часа!</p>
+          <p class="ad__text">Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!</p>
+          <a href="#" class="ad__link">Узнать больше об исследовании</a>
         </div>
       </section>
       <section class="reviews">
@@ -83,17 +104,26 @@
         <input type="radio" class="pagination-block__input" id="review-3" name="reviews-pagination">
         <div class="reviews__wrapper">
           <blockquote class="review__item review__item--active">
-            <cite class="review__item-author">Николай Петров</cite>
+            <cite class="review__item-author">
+              Николай Петров
+              <p class="review__item-author-info">25 лет, водитель трамвая</p>
+            </cite>
             <p class="reviews__item-text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые
               вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
           </blockquote>
           <blockquote class="review__item">
-            <cite class="review__item-author">Иван Иванов</cite>
+            <cite class="review__item-author">
+              Иван Иванов
+              <p class="review__item-author-info">25 лет, водитель трамвая</p>
+            </cite>
             <p class="reviews__item-text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые
               вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
           </blockquote>
           <blockquote class="review__item">
-            <cite class="review__item-author">Виктор Сидоров</cite>
+            <cite class="review__item-author">
+              Виктор Сидоров
+              <p class="review__item-author-info">25 лет, водитель трамвая</p>
+            </cite>
             <p class="reviews__item-text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
           </blockquote>
         </div>
@@ -108,6 +138,18 @@
         <input type="radio" class="pagination-block__input" id="slide-price-2" name="pagination" checked>
         <input type="radio" class="pagination-block__input" id="slide-price-3" name="pagination">
         <div class="price-slider__wrapper clearfix">
+          <ul class="price-slider__list">
+            <li class="price-slider__list-header"></li>
+            <li class="price-slider__item">
+              Розовый фильтр
+            </li>
+            <li class="price-slider__item">
+              Смайлики
+            </li>
+            <li class="price-slider__item">
+              Комментарии
+            </li>
+          </ul>
           <ul class="price-slider__list">
             <li class="price-slider__list-header">
               <div class="price-slider__list-title">Базовый</div>
@@ -167,8 +209,8 @@
         </div>
       </section>
       <section class="contacts">
-        <div class="container">
-          <h2 class="contacts__text">Остались вопросы? Свяжитесь с нами!</h2>
+        <h2 class="contacts__text">Остались вопросы? Свяжитесь с нами!</h2>
+        <div class="container">          
           <div class="contacts__item contacts__item--phone">
             <b class="contacts__item-title">Звоните:</b>
             <a class="contacts__item-info" href="tel:+7(812)555-66-66">+7(812)555-66-66</a>
@@ -183,9 +225,43 @@
           </div>
         </div>
         <div class="map">
-          <img src="http://placehold.it/320x203" alt="Map" width="100%" height="203" class="contacts__map" />
+          <img src="img/bg-map.png" alt="Map" width="100%" height="100%" class="contacts__map" />
         </div>
       </section>
     </main>
+    <footer class="page-footer page-footer--index">
+      <div class="container">
+        <div class="logo">
+          <a href="#" class="logo__link">
+            <img src="http://placehold.it/150x40" alt="PINK" class="logo__picture" />
+          </a>
+        </div>
+        <div class="social">
+          <ul class="social__list">
+            <li class="social__item social__item--twitter">
+              <a href="#" class="social__link">
+                <img src="http://placehold.it/51x51" width="100%" height="100%" alt="Twitter" class="social__item--icon" />
+              </a>
+            </li>
+            <li class="social__item social__item--facebook">
+              <a href="#" class="social__link">
+                <img src="http://placehold.it/51x51" width="100%" height="100%" alt="Facebook" class="social__item--icon" />
+              </a>
+            </li>
+            <li class="social__item social__item--youtube">
+              <a href="#" class="social__link">
+                <img src="http://placehold.it/251x510x20" width="100%" height="100%" alt="YouTube" class="social__item--icon">
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="author">
+          <span class="author__text">Разработано</span>
+          <a href="http://htmlacademy.ru" class="author-logo__link">
+            <img src="http://placehold.it/27x34" alt="HTML Academy" class="author-logo__picture" />
+          </a>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

@@ -1,4 +1,18 @@
 @media (min-width: 320px) {
+  body {
+    margin: 0;
+  }
+  a {
+    text-decoration: none;
+    outline: none;
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+    li {
+      list-style: none;
+    }
+  }
   img {
     vertical-align: bottom;
   }

@@ -2,23 +2,27 @@
   .page-header {
     background-color: #abc;
 
-    .page-header__bar {
+    &__bar {
       background-color: #aaf;
-      padding: 6.25%;
-    }
-    .logo {
-      float: left;
+      padding: 20px 0;
+      .container {
+        display: flex;
+        justify-content: space-between;
+      }
     }
     .menu__button {
       display: block;
       width: 50px;
       height: 25px;
       background: #fff;
-      float: right;
     }
     .menu {
       background-color: #aef;
-      clear: both;
+      display: none;
+    }
+    .container {
+      width: 280px;
+      margin: 0 auto;
     }
     .intro {
       background-color: #fee;
@@ -27,18 +31,82 @@
       }
       &__app {
         background-color: violet;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
       }
-      .container {
-        padding: 6.25%;
+      .intro__app-wrapper {
+        padding: 20px;
+      }
+      &__app-list {
+        display: flex;
+        justify-content: space-between;
       }
       .application__item {
-        width: 33.3333%;
         display: block;
-        float: left;
+        width: 33.3333%;
       }
       &__app-info {
         text-align: center;
       }
+    }
+    &--index {
+      .intro {
+        min-height: 664px;
+        position: relative;
+      }
+    }
+  }
+}
+@media (min-width: 700px) {
+  .page-header {
+    &__bar {
+      padding: 40px 0;
+      .container {
+        width: 620px;
+      }
+    }
+    .container {
+      width: 620px;
+    }
+    &--index {
+      .intro {
+        width: 300px;
+        min-height: 618px;
+        &__app {
+          bottom: 110px;
+        }
+        .container {
+          padding: 40px;
+        }
+      }
+    }
+  }
+}
+@media (min-width: 1200px) {
+  .page-header {
+    &__bar {
+      padding: 27px 0;
+      .container {
+        width: 940px;
+      }
+      .menu {
+        display: block;
+        width: 640px;
+        &__list {
+          display: flex;
+          justify-content: space-between;
+        }
+      }
+      .menu__button {
+        display: none;
+      }
+    }
+    .container {
+      width: 940px;
+    }
+    .intro {
+      height: 288px;
     }
   }
 }

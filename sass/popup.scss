@@ -1,6 +1,32 @@
-.popup--failure {
-  background-color: #FC3A54;
+@media (min-width: 320px) {
+  .popup--failure {
+    .popup__wrapper {
+      background-color: #FC3A54;
+      text-align: center;
+    }
+
+  }
+  .popup--success {
+    .popup__wrapper {
+      background-color: #98FAA9;
+      text-align: center;
+    }
+  }
+  .btn--popup {
+    display: inline-block;
+  }
 }
-.popup--success {
-  background-color: #98FAA9;
+@media (min-width: 700px) {
+  .popup__wrapper {
+    width: 460px;
+    margin: 0 auto;
+
+  }
+}
+@media (min-width: 1200px) {
+  .popup--success {
+    .popup__wrapper {
+      width: 780px;
+    }
+  }
 }

@@ -8,11 +8,11 @@
   </head>
   <body><!-- темно-серая картинка со зданием будет фоном у header, исходя из того, что она присутствует на одном и том де месте на всех страницах -->
     <header class="page-header">
-      <div class="container">
-        <div class="page-header__bar clearfix">
+      <div class="page-header__bar">
+        <div class="container">
           <div class="logo">
-            <a href="#" class="logo__link">
-              <img src="http://placehold.it/75x22" alt="" class="logo__picture" />
+            <a href="#" class="logo-link">
+              <img src="http://placehold.it/75x22" alt="Pink" class="logo__picture">
             </a>
           </div>
           <a href="#" class="menu__button menu__button--open"></a>
@@ -36,7 +36,9 @@
             </ul>
           </nav>
         </div>
-        <div class="into">
+      </div>
+      <div class="container">
+        <div class="intro">
           <h1 class="intro__slogan">Фотографии пользователей</h1>
         </div>
       </div>
@@ -44,110 +46,126 @@
     <main class="main">
       <div class="container">
         <p class="promo-text">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</p>
-        <article class="photo-post photo-post--pano photo-post--best"><!--Ярлык с надписью Панорама дня будет псевдоэлементом-->
-          <div class="photo-post__picture-wrapper">
-            <a href="#" class="photo-post__picture-link">
-              <img src="http://placehold.it/280x180" alt="Photo" class="photo" />
-            </a>
-          </div>
-          <blockquote class="photo__info">
-            <cite class="photo__author">Анна</cite>
-            <time class="photo__date" datetime="">(5 минут назад)</time>
-            <p class="photo__comment">Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую транслацию в перископе, задавайте свои вопросы!</p>
-            <a href="#" class="photo-like__btn"></a>
-            <span class="photo-like__quantity">Нравится: 215</span>
-          </blockquote>
-        </article>
-        <article class="photo-post">
-          <div class="photo-post__picture-wrapper">
-            <a href="#" class="photo-post__picture-link">
-              <img src="http://placehold.it/280x180" alt="Photo" class="photo" />
-            </a>
-          </div>
-          <blockquote class="photo__info">
-            <cite class="photo__author">Левон</cite>
-            <time class="photo__date" datetime="">(5 часов назад)</time>
-            <p class="photo__comment">Вчера он на луну летал, сегодня в руки к нам попал.</p>
-            <a href="#" class="photo-like__btn"></a>
-            <span class="photo-like__quantity">Нравится: 356</span>
-          </blockquote>
-        </article>
-        <article class="photo-post">
-          <div class="photo-post__picture-wrapper">
-            <a href="#" class="photo-post__picture-link">
-              <img src="http://placehold.it/280x180" alt="Photo" class="photo" />
-            </a>
-          </div>
-          <blockquote class="photo__info">
-            <cite class="photo__author">Антон</cite>
-            <time class="photo__date" datetime="">(12 часов назад)</time>
-            <p class="photo__comment">Соседи будут рады!</p>
-            <a href="#" class="photo-like__btn"></a>
-            <span class="photo-like__quantity">Нравится: 666</span>
-          </blockquote>
-        </article>
-        <article class="photo-post">
-          <div class="photo-post__picture-wrapper">
-            <a href="#" class="photo-post__picture-link">
-              <img src="http://placehold.it/280x180" alt="Photo" class="photo" />
-            </a>
-          </div>
-          <blockquote class="photo__info">
-            <cite class="photo__author">Борис</cite>
-            <time class="photo__date" datetime="">(20 часов назад)</time>
-            <p class="photo__comment">Здесь могла быть ваша цитата о высоком и вечном.</p>
-            <a href="#" class="photo-like__btn"></a>
-            <span class="photo-like__quantity">Нравится: 215</span>
-          </blockquote>
-        </article>
-        <article class="photo-post">
-          <div class="photo-post__picture-wrapper">
-            <a href="#" class="photo-post__picture-link">
-              <img src="http://placehold.it/280x180" alt="Photo" class="photo" />
-            </a>
-          </div>
-          <blockquote class="photo__info">
-            <cite class="photo__author">Сергей</cite>
-            <time class="photo__date" datetime="">(25 часов назад)</time>
-            <p class="photo__comment">Самая кубанская в мире!</p>
-            <a href="#" class="photo-like__btn"></a>
-            <span class="photo-like__quantity">Нравится: 4</span>
-          </blockquote>
-        </article>
-        <article class="photo-post">
-          <div class="photo-post__picture-wrapper">
-            <a href="#" class="photo-post__picture-link">
-              <img src="http://placehold.it/280x180" alt="Photo" class="photo" />
-            </a>
-          </div>
-          <blockquote class="photo__info">
-            <cite class="photo__author">Максим</cite>
-            <time class="photo__date" datetime="">(40 часов назад)</time>
-            <p class="photo__comment">Где снег-то?</p>
-            <a href="#" class="photo-like__btn"></a>
-            <span class="photo-like__quantity">Нравится: 150</span>
-          </blockquote>
-        </article>
-        <article class="photo-post">
-          <div class="photo-post__picture-wrapper">
-            <a href="#" class="photo-post__picture-link">
-              <img src="http://placehold.it/280x180" alt="Photo" class="photo" />
-            </a>
-          </div>
-          <blockquote class="photo__info">
-            <cite class="photo__author">Надежда</cite>
-            <time class="photo__date" datetime="">(45 часов назад)</time>
-            <p class="photo__comment">Всем GM и взаимные лайки!</p>
-            <a href="#" class="photo-like__btn"></a>
-            <span class="photo-like__quantity">Нравится: 2560</span>
-          </blockquote>
-        </article>
+        <div class="photos">
+          <article class="photo-post photo-post--pano photo-post--best"><!--Ярлык с надписью Панорама дня будет псевдоэлементом-->
+            <div class="photo-post__picture-wrapper">
+              <a href="#" class="photo-post__picture-link">
+                <img src="http://placehold.it/320x140" width="100%" height="100%" alt="Photo" class="photo" />
+              </a>
+            </div>
+            <blockquote class="photo__info">
+              <cite class="photo__author">Анна</cite>
+              <time class="photo__date" datetime="">(5 минут назад)</time>
+              <p class="photo__comment">Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую транслацию в перископе, задавайте свои вопросы!</p>
+              <a href="#" class="photo-like__btn">
+                <img src="img/icon-heart.svg" alt="Like" />
+                <span class="photo-like__quantity">Нравится: 215</span>
+              </a>
+            </blockquote>
+          </article>
+          <article class="photo-post">
+            <div class="photo-post__picture-wrapper">
+              <a href="#" class="photo-post__picture-link">
+                <img src="http://placehold.it/280x180" width="100%" height="100%" alt="Photo" class="photo" />
+              </a>
+            </div>
+            <blockquote class="photo__info">
+              <cite class="photo__author">Левон</cite>
+              <time class="photo__date" datetime="">(5 часов назад)</time>
+              <p class="photo__comment">Вчера он на луну летал, сегодня в руки к нам попал.</p>
+              <a href="#" class="photo-like__btn">
+                <img src="img/icon-heart.svg" alt="Like" />
+                <span class="photo-like__quantity">Нравится: 356</span>
+              </a>
+            </blockquote>
+          </article>
+          <article class="photo-post">
+            <div class="photo-post__picture-wrapper">
+              <a href="#" class="photo-post__picture-link">
+                <img src="http://placehold.it/280x180" width="100%" height="100%" alt="Photo" class="photo" />
+              </a>
+            </div>
+            <blockquote class="photo__info">
+              <cite class="photo__author">Антон</cite>
+              <time class="photo__date" datetime="">(12 часов назад)</time>
+              <p class="photo__comment">Соседи будут рады!</p>
+              <a href="#" class="photo-like__btn">
+                <img src="img/icon-heart.svg" alt="Like" />
+                <span class="photo-like__quantity">Нравится: 666</span>
+              </a>
+            </blockquote>
+          </article>
+          <article class="photo-post">
+            <div class="photo-post__picture-wrapper">
+              <a href="#" class="photo-post__picture-link">
+                <img src="http://placehold.it/280x180" width="100%" height="100%" alt="Photo" class="photo" />
+              </a>
+            </div>
+            <blockquote class="photo__info">
+              <cite class="photo__author">Борис</cite>
+              <time class="photo__date" datetime="">(20 часов назад)</time>
+              <p class="photo__comment">Здесь могла быть ваша цитата о высоком и вечном.</p>
+              <a href="#" class="photo-like__btn">
+                <img src="img/icon-heart.svg" alt="Like" />
+                <span class="photo-like__quantity">Нравится: 215</span>
+              </a>
+            </blockquote>
+          </article>
+          <article class="photo-post">
+            <div class="photo-post__picture-wrapper">
+              <a href="#" class="photo-post__picture-link">
+                <img src="http://placehold.it/280x180" width="100%" height="100%" alt="Photo" class="photo" />
+              </a>
+            </div>
+            <blockquote class="photo__info">
+              <cite class="photo__author">Сергей</cite>
+              <time class="photo__date" datetime="">(25 часов назад)</time>
+              <p class="photo__comment">Самая кубанская в мире!</p>
+              <a href="#" class="photo-like__btn">
+                <img src="img/icon-heart.svg" alt="Like" />
+                <span class="photo-like__quantity">Нравится: 4</span>
+              </a>
+            </blockquote>
+          </article>
+          <article class="photo-post">
+            <div class="photo-post__picture-wrapper">
+              <a href="#" class="photo-post__picture-link">
+                <img src="http://placehold.it/280x180" width="100%" height="100%" alt="Photo" class="photo" />
+              </a>
+            </div>
+            <blockquote class="photo__info">
+              <cite class="photo__author">Максим</cite>
+              <time class="photo__date" datetime="">(40 часов назад)</time>
+              <p class="photo__comment">Где снег-то?</p>
+              <a href="#" class="photo-like__btn">
+                <img src="img/icon-heart.svg" alt="Like" />
+                <span class="photo-like__quantity">Нравится: 150</span>
+              </a>
+            </blockquote>
+          </article>
+          <article class="photo-post">
+            <div class="photo-post__picture-wrapper">
+              <a href="#" class="photo-post__picture-link">
+                <img src="http://placehold.it/280x180" width="100%" height="100%" alt="Photo" class="photo" />
+              </a>
+            </div>
+            <blockquote class="photo__info">
+              <cite class="photo__author">Надежда</cite>
+              <time class="photo__date" datetime="">(45 часов назад)</time>
+              <p class="photo__comment">Всем GM и взаимные лайки!</p>
+              <a href="#" class="photo-like__btn">
+                <img src="img/icon-heart.svg" alt="Like" />
+                <span class="photo-like__quantity">Нравится: 2560</span>
+              </a>
+            </blockquote>
+          </article>
+        </div>
         <p class="promo-text promo-text--bottom">Затмите их всех!
 Выкладывайте все, что накопилось в телефоне!</p>
         <form action="" method="" class="photos-upload">
           <div class="container">
             <div class="photos-upload-item">
-              <img src="http://placehold.it/280x375" alt="Photo" class="photo">
+              <img src="http://placehold.it/280x375" width="100%" height="100%" alt="Photo" class="photo">
             </div>
             <div class="photos-upload__edit">
               <ul class="upload-control">
@@ -174,7 +192,7 @@
               <div class="edit__tab edit__tab--fill"></div>
               <div class="edit__tab edit__tab--contrast"></div>
             </div>
-            <div class="upload__buttons clearfix">
+            <div class="upload__buttons">
               <button class="btn btn--post" type="submit">Запостить</button>
               <button class="btn btn--cancel btn--disabled" type="reset">Отмена</button></div>
           </div>
@@ -191,18 +209,18 @@
         <div class="social">
           <ul class="social__list">
             <li class="social__item social__item--twitter">
-              <a href="#" class="social__item--link">
-                <img src="http://placehold.it/20x20" alt="Twitter" class="social__item--icon" />
+              <a href="#" class="social__link">
+                <img src="http://placehold.it/51x51" width="100%" height="100%" alt="Twitter" class="social__item--icon" />
               </a>
             </li>
             <li class="social__item social__item--facebook">
-              <a href="#" class="social__item--link">
-                <img src="http://placehold.it/20x20" alt="Facebook" class="social__item--icon" />
+              <a href="#" class="social__link">
+                <img src="http://placehold.it/51x51" width="100%" height="100%" alt="Facebook" class="social__item--icon" />
               </a>
             </li>
             <li class="social__item social__item--youtube">
-              <a href="#" class="social__item--link">
-                <img src="http://placehold.it/20x20" alt="YouTube" class="social__item--icon">
+              <a href="#" class="social__link">
+                <img src="http://placehold.it/251x510x20" width="100%" height="100%" alt="YouTube" class="social__item--icon">
               </a>
             </li>
           </ul>

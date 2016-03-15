@@ -6,17 +6,49 @@
   .promo-big-text {
     width: 72%;
     margin: 0 auto;
+    .line {
+      display: block;
+    }
   }
   .features {
     background-color: #f2f2f2;
     text-align: center;
     &__wrapper {
-      padding: 6.25%;
+
     }
+    &__picture-wrapper {
+      display: none;
+      overflow: hidden;
+      max-height: 282px;
+      .features__picture {
+        width: 157px;
+        height: 320px;
+      }
+      &:last-child {
+        display: block;
+      }
+    }
+  }
+  .ad {
+    display: none;
   }
   /* Reviews begin */
   .reviews {
     background-color: #8AC5F2;
+    text-align: center;
+    width: 280px;
+    margin: 45px auto;
+    .review__item {
+      margin: 0;
+      display: flex;
+      flex-flow: row wrap;
+      &-author {
+        flex: 1 100%;
+      }
+      &-author-info {
+        display: none;
+      }
+    }
   }
   #review-1:checked ~ .reviews__wrapper >.review__item:nth-of-type(1),
   #review-2:checked ~ .reviews__wrapper >.review__item:nth-of-type(2),
@@ -28,8 +60,22 @@
   /* Price slider begins */
   .price-slider {
     background-color: #0BBFB6;
+    &__wrapper {
+      width: 840px;
+      margin-left: 0;
+      transition: margin-left 1s ease-out 0.5s;
+    }
+    #slide-price-2:checked ~ &__wrapper {
+      margin-left: -260px;
+    }
+    #slide-price-3:checked ~ &__wrapper {
+      margin-left: -520px;
+    }
     &__list {
-      width: 33.3333%;
+      &:first-of-type {
+        display: none;
+      }
+      width: 280px;
       float:left;
       background-color: darken(#0BBFB6, 20%);
       padding: 0;
@@ -44,14 +90,292 @@
   /* Contacts begin */
   .contacts {
     background-color: #260D80;
+    text-align: center;
+    .container {
+      width: 280px;
+      margin: 0 auto;
+    }
+    .contacts__item-title {
+      display: block;
+    }
+    .map {
+      width: 100%;
+      height: 200px;
+    }
   }
   /* Contacts end */
 
   /* Photos begin */
+
   .photo-post {
-    background-color: #077FF7;
+    width: 280px;
+    margin: 0 auto 20px;
+    &__picture-link {
+      display: block;
+      height: 100%;
+    }
+    .photo-post__picture-wrapper {
+      width: 100%;
+      height: 140px;
+    }
+    .photo__info {
+      background-color: #077FF7;
+      margin: 0;
+      padding: 15px;
+    }
+    .photo-like__btn {
+      display: flex;
+    }
+    &--pano {
+      width: 100%;
+      .photo-post__picture-wrapper {
+        height: auto;
+      }
+      .photo__info {
+        width: 250px;
+        margin: 0 auto;
+      }
+    }
   }
   .photos-upload {
     background-color: #B8A0B7;
+    padding: 20px;
+    .upload__buttons {
+      .btn {
+        width: 100%;
+      }
+    }
+  }
+}
+@media (min-width: 700px) {
+  .promo-big-text {
+    width: 72%;
+    margin: 0 auto;
+    .line {
+      display: block;
+    }
+  }
+  .features {
+    .container {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      width: 620px;
+      margin: 0 auto;
+    }
+    &__wrapper {
+      text-align: left;
+      width: 320px;
+    }
+    &__picture-wrapper {
+      max-height: 482px;
+      .features__picture {
+        width: 269px;
+        height: 548px;
+      }
+    }
+  }
+  .ad {
+    display: flex;
+    justify-content: space-between;
+    width: 620px;
+    margin: 0 auto;
+  }
+  /* Reviews begin */
+  .reviews {
+    width: 620px;
+    .review__item {
+      flex-direction: column-reverse;
+    }
+    .review__item-author-info {
+      display: block;
+    }
+  }
+  /* Reviews end */
+
+  /* Price slider begins */
+  .price-slider {
+
+  }
+  /* Price slider ends */
+
+  /* Contacts begin */
+  .contacts {
+    .container {
+      display: flex;
+      flex-flow: row wrap;
+      width: 620px;
+    }
+    &__text {
+
+    }
+    &__item  {
+      width: 50%;
+      &--address {
+        width: 100%;
+      }
+      &-title {
+        display: block;
+      }
+    }
+    .map {
+      height: 380px;
+    }
+  }
+  /* Contacts end */
+
+  /* Photos begin */
+  .photos {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+  }
+  .photo-post {
+    width: 300px;
+    margin: 0 10px;
+    min-height: 457px;
+    .photo-post__picture-wrapper {
+      height: 300px;
+    }
+    &.photo-post--pano {
+      flex: 1 100%;
+      margin: 0 0 50px;
+
+      .photo-post__picture-wrapper {
+        height: 512px;
+      }
+      .photo__info {
+        display: flex;
+        flex-wrap: wrap;
+        width: 570px;
+        padding: 25px;
+        .photo__author {
+          order: 1;
+        }
+        .photo__date {
+          order: 2;
+        }
+        .photo-like__btn {
+          order: 3;
+        }
+        .photo__comment {
+          order: 4;
+        }
+      }
+    }
+    .photo-like__btn {
+      flex-direction: row-reverse;
+      justify-content: space-between;
+    }
+  }
+  .photos-upload {
+    padding: 40px;
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 400px;
+    }
+    &-item {
+      margin-right: 45px;
+      width: 300px;
+      height: 100%;
+    }
+    &__edit {
+      background: #000;
+      width: 44.3549%;
+      height: 220px;
+    }
+    .upload__buttons {
+      width: 44.3549%;
+    }
+  }
+}
+@media (min-width: 1200px) {
+  .features {
+    .container {
+      flex-wrap: wrap;
+      width: 940px;
+    }
+
+    &__wrapper {
+      display: flex;
+      justify-content: space-between;
+      order: 1;
+      width: 100%;
+      text-align: center;
+    }
+    &__item {
+      width: 300px;
+    }
+    &__picture-wrapper {
+      display: block;
+      width: 300px;
+      max-height: 300px;
+      .features__picture {
+        width: 187px;
+        height: 380px;
+      }
+    }
+  }
+  .ad {
+    width: 940px;
+  }
+  .reviews {
+    width: 940px;
+  }
+  .contacts {
+    .container {
+      width: 940px;
+      justify-content: space-around;
+    }
+    &__item {
+      width: auto;
+      &--phone {
+        order: 1;
+      }
+      &--email {
+        order: 3;
+      }
+      &--address {
+        order: 2;
+      }
+    }
+  }
+  /* Photos begin */
+  .photo-post {
+    margin-bottom: 20px;
+    .photo-post__picture-wrapper {
+      height: 400px;
+    }
+    &.photo-post--pano {
+      .photo-post__picture-wrapper {
+        height: 506px;
+      }
+      .photo__info {
+        width: 900px;
+        padding: 20px;
+      }
+    }
+  }
+  .container {
+    justify-content: flex-start;
+  }
+  .photos-upload {
+    margin: 0 130px;
+    padding: 60px 60px 60px 80px;
+
+    &-item {
+      margin-right: 90px;
+    }
+    &__edit {
+      width: 51.25%;
+    }
+    .upload__buttons {
+      display: flex;
+      justify-content: space-between;
+      width: 51.25%;
+    }
   }
 }
