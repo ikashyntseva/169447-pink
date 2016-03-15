@@ -26,14 +26,15 @@
     }
     .intro {
       background-color: #fee;
+      display: flex;
+      flex-wrap: wrap;
       &__slogan {
         background-color: pink;
       }
       &__app {
         background-color: violet;
-        position: absolute;
-        bottom: 0;
         width: 100%;
+        align-self: flex-end;
       }
       .intro__app-wrapper {
         padding: 20px;
@@ -74,7 +75,7 @@
         width: 300px;
         min-height: 618px;
         &__app {
-          bottom: 110px;
+          margin-bottom: 105px;
         }
         .container {
           padding: 40px;
@@ -107,6 +108,9 @@
     }
     .intro {
       height: 288px;
+      &__app {
+        margin-bottom: 110px;
+      }
     }
   }
 }
