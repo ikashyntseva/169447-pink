@@ -1,0 +1,11 @@
+@import "variables";
+
+@mixin set-color($color) {
+  background: $color;
+  @if lightness($color) <= 50% {
+    color: $light-text-color;
+  }
+  @else {
+    color: $dark-text-color;
+  }
+}

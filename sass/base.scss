@@ -1,10 +1,40 @@
+@import "variables";
+
 @media (min-width: 320px) {
+
   body {
     margin: 0;
+    font: 400 14px/24px 'Open Sans';
+    color: $base-text-color;
+  }
+  h1,
+  h2 {
+    margin: 0;
+  }
+  h1,
+  .promo-big-text,
+  .contacts__text,
+  .contacts__item-info,
+  .price-slider__cost {
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 28px;
+  }
+  h2,
+  cite,
+  .price-slider__list-title,
+  .contacts__item-title,
+  .ad__title {
+    font-size: 18px;
+    font-weight: 700;
+    color: $dark-text-color;
   }
   a {
     text-decoration: none;
     outline: none;
+  }
+  cite {
+    font-style: normal;
   }
   ul {
     margin: 0;
@@ -20,4 +50,17 @@
     display: block;
     text-align: center;
   }
+}
+@media (min-width: 320px) {
+
+  h1,
+  .promo-big-text,
+  .contacts__text,
+  .contacts__item-info,
+  .price-slider__list-cost {
+    font-size: 40px;
+    line-height: 48px;
+  }
+}
+@media (min-width: 1200px) {
 }
