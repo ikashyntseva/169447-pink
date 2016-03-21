@@ -131,7 +131,7 @@
       &__app-list {
         display: flex;
         justify-content: space-between;
-        margin: 32px 37px 21px;
+        margin: 33px 37px 20px;
         align-items: baseline;
       }
       .application__item {
@@ -139,13 +139,13 @@
         width: 57px;
         height: 57px;
         &--ios {
-          background: url('../img/logo-apple.svg') no-repeat 1px 1px;
+          background: url('../img/logo-apple.svg') no-repeat 0px -1px;
         }
         &--android {
-          background: url('../img/logo-android.svg') no-repeat 7px 8px;
+          background: url('../img/logo-android.svg') no-repeat 7px 7px;
         }
         &--microsoft {
-          background: url('../img/logo-microsoft.svg') no-repeat 9px 13px;
+          background: url('../img/logo-microsoft.svg') no-repeat 12px 11px;
         }
       }
       &__app-info {
@@ -155,7 +155,7 @@
     }
     &--index {
       .intro {
-        min-height: 728px;
+        min-height: 729px;
       }
       & ~ .main .promo-big-text {
         padding: 41px 0 34px;
@@ -186,11 +186,19 @@
           font-size: 18px;
         }
       }
+      .application__item {
+        &--ios {
+          background-position: 1px 1px;
+        }
+        &--microsoft {
+          background-position: 9px 13px;
+        }
+      }
     }
 
     &--index {
       .intro {
-        padding-top: 114px;
+        padding-top: 118px;
         margin: 0 40px;
         width: 300px;
         min-height: 611px;
@@ -213,9 +221,14 @@
   .page-header {
     &__bar {
       padding: 27px 130px;
+      .logo {
+        width: 150px;
+        height: 45px;
+        align-self: flex-start;
+      }
       .menu {
         display: block;
-        width: 640px;
+        width: 622px;
         position: relative;
         &__list {
           background: none;
@@ -224,10 +237,16 @@
           display: flex;
           justify-content: space-between;
         }
+        &__item {
+          &:first-child {
+            margin-left: 0;
+          }
+        }
         &__link {
           border: none;
           font-weight: 300;
           text-transform: capitalize;
+          padding: 15px 0;
           &:before {
             display: none;
           }
@@ -239,9 +258,25 @@
     }
     .intro {
       margin: 0 130px;
-      height: 288px;
+      &__slogan {
+        margin: 101px 30px 52px;
+      }
       &__app {
-        margin-bottom: 110px;
+        margin-top: 0;
+        margin-bottom: 103px;
+        .btn--download {
+          font-size: 22px;
+          padding: 10px 0 15px;
+        }
+        &-list {
+          margin: 66px 45px 56px;
+        }
+      }
+    }
+    &--index {
+      & ~ .main .promo-big-text {
+        width: auto;
+        padding: 67px 0 58px;
       }
     }
   }

@@ -13,6 +13,7 @@
   .features {
     background-color: #f2f2f2;
     text-align: center;
+    overflow: hidden;
     position: relative;
     padding: 80px 20px 0;
     &:before {
@@ -112,6 +113,8 @@
       margin-left: 20px;
       margin-bottom: 40px;
       transition: margin-left 1s ease-out 0.5s;
+      border-left: 1px solid #e5e5e5;
+      border-right: 1px solid #e5e5e5;
     }
     &__list-header {
       @include set-color($base-text-color);
@@ -133,8 +136,9 @@
       margin-left: -540px;
     }
     &__list {
+
+      border-left: 1px solid #e5e5e5;
       border-right: 1px solid #e5e5e5;
-      border-left: 1px solid #e5e5e5;;
       box-sizing: border-box;
       text-transform: uppercase;
       &--column {
@@ -305,7 +309,10 @@
       margin-bottom: 0;
     }
     &__item {
-      margin-bottom: 32px;
+      margin-bottom: 34px;
+    }
+    &__title {
+      margin-bottom: -2px;
     }
     &__picture-wrapper {
       max-height: 482px;
@@ -316,11 +323,16 @@
     }
   }
   .ad {
-    display: flex;
-    justify-content: space-between;
-    width: 620px;
-    margin: 0 auto;
+    display: block;
     padding: 57px 0 0;
+    .container {
+      display: flex;
+      width: 620px;
+      margin: 0 auto;
+    }
+    &__picture-wrapper {
+      margin-right: 69px;
+    }
     &__item {
       width: 310px;
     }
@@ -328,6 +340,7 @@
       font-size: 30px;
       line-height: 36px;
       margin: 38px 0 0;
+      width: 170px;
     }
     &__text {
       margin: 10px 0;
@@ -367,9 +380,10 @@
 
   /* Price slider begins */
   .price-slider {
-    padding-top: 90px;
+    padding: 90px 0 68px;
     &__wrapper {
       width: 620px;
+      border: none;
       & + .price-slider__controls {
         display: none;
       }
@@ -381,8 +395,28 @@
         margin: 0 auto;
       }
     }
-
+    &__item {
+      height: 25px;
+      text-transform: capitalize;
+      padding: 10px 14px;
+      border-left: 2px solid #e5e5e5;
+      background: $light-text-color;
+      span {
+        display: none;
+      }
+    }
     &__list {
+      border: 0;
+      &:not(:nth-of-type(1)):not(:nth-of-type(2)) {
+        .price-slider__list-header {
+          border-left: 2px solid #e5e5e5;
+        }
+      }
+      &:last-child {
+        .price-slider__item {
+          border-right: 2px solid #e5e5e5;
+        }
+      }
       &-header {
         padding: 15px 0 13px;
       }
@@ -406,39 +440,37 @@
       }
     }
 
-
-    &__item {
-      //height: 10px;
-      text-transform: capitalize;
-      padding: 10px 16px;
-      span {
-        display: none;
-      }
-    }
   }
   /* Price slider ends */
 
   /* Contacts begin */
   .contacts {
+    padding: 46px 0 0;
     .container {
       display: flex;
       flex-flow: row wrap;
-      width: 620px;
+      width: 640px;
     }
     &__text {
-
+      width: 380px;
+      margin: 0 auto 43px;
     }
     &__item  {
       width: 50%;
+      margin-bottom: 43px;
       &--address {
         width: 100%;
+        .contacts__item-info {
+          width: 295px;
+          margin: 0 auto;
+        }
       }
       &-title {
-        display: block;
+        margin-bottom: 7px;
       }
     }
     .map {
-      height: 380px;
+      height: 363px;
     }
   }
   /* Contacts end */
@@ -520,13 +552,20 @@
 
     &__wrapper {
       display: flex;
-      justify-content: space-between;
+      justify-content: space-around;;
       order: 1;
       width: 100%;
       text-align: center;
+      padding-top: 57px;
     }
     &__item {
-      width: 300px;
+      width: 240px;
+      margin-bottom: 30px;
+    }
+    &__text {
+      font-size: 18px;
+      line-height: 30px;
+      margin: 24px 0;
     }
     &__picture-wrapper {
       display: block;
@@ -539,18 +578,98 @@
     }
   }
   .ad {
-    width: 940px;
+
+    .container{
+      width: 940px;
+    }
+    padding: 10px 0 68px;
+    background: #f2f2f2;
+    &__picture-wrapper {
+      width: 300px;
+      height: 345px;
+      margin-right: 65px;
+      img {
+        height: 100%;
+        width: 100%;
+      }
+    }
+    &__item {
+      width: 525px;
+    }
+    &__title {
+      line-height: 36px;
+      margin: 92px 0 0;
+      width: auto;
+    }
+    &__text {
+      font-size: 18px;
+      line-height: 30px;
+      margin: 20px 0 33px;
+    }
+    &__link {
+      font-size: 18px;
+      line-height: 30px;
+    }
   }
   .reviews {
-    width: 940px;
+    width: 690px;
+    margin: 167px auto 19px;
+    .review__item {
+      &-author {
+        font-size: 24px;
+        margin: 17px 0 0;
+        &-info {
+          font-size: 18px;
+          line-height: 30px;
+          margin-top: 2px;
+        }
+      }
+    }
+  }
+  .price-slider {
+    padding: 128px 0 95px;
+    &__wrapper {
+      width: 940px;
+    }
+    &__list {
+      &-header {
+        padding-bottom: 24px;
+      }
+      &-title {
+        font-size: 18px;
+      }
+      &-cost {
+        font-size: 24px;
+      }
+
+      &--column {
+        .price-slider__list-header {
+          height: 57px;
+        }
+      }
+    }
+    &__item {
+      font-size: 18px;
+      padding: 17px 22px;
+    }
   }
   .contacts {
+    padding-top: 64px;
+    &__text {
+      width: 470px;
+      margin-bottom: 53px;
+    }
     .container {
       width: 940px;
       justify-content: space-around;
     }
     &__item {
-      width: auto;
+      width: 33.3333%;
+      &-title {
+        font-size: 18px;
+        line-height: 30px;
+        margin-bottom: 22px;
+      }
       &--phone {
         order: 1;
       }
@@ -560,6 +679,10 @@
       &--address {
         order: 2;
       }
+    }
+    .map {
+      height: 500px;
+      margin-top: 6px;
     }
   }
   /* Photos begin */
