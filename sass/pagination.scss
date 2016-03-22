@@ -1,12 +1,23 @@
 @media (min-width: 320px) {
   div[class*='__controls'] {
     text-align: center;
+    margin: 18px auto;
+    display: flex;
+    justify-content: center;
   }
   .pagination-block__label {
-    width: 20px;
-    height: 20px;
-    background: #ccc;
-    display: inline-flex;
+    width: 6px;
+    height: 6px;
+    border-radius: 6px;
+    background-color: rgba($base-text-color, 0.3);
+    margin: 0 9.5px;
+    align-self: center;
+    &:hover {
+      background-color: rgba($base-text-color, 0.6);
+    }
+    &:active {
+      background-color: rgba($base-text-color, 0.1);
+    }
 
   }
   .pagination-block__input {
@@ -15,6 +26,13 @@
   .pagination-block__input:nth-of-type(1):checked ~ div[class*='__controls'] .pagination-block__label:nth-of-type(1),
   .pagination-block__input:nth-of-type(2):checked ~ div[class*='__controls'] .pagination-block__label:nth-of-type(2),
   .pagination-block__input:nth-of-type(3):checked ~ div[class*='__controls'] .pagination-block__label:nth-of-type(3) {
-    background-color: darken(#ccc,40%);
+    background-color: $light-text-color;
+    border: 3px solid $base-text-color;
+    margin: 0 6.5px
+  }
+}
+@media (min-width: 700px) {
+  div.reviews__controls {
+    margin: 29px 0 0;
   }
 }
