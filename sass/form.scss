@@ -1,18 +1,57 @@
-@media (min-width: 320px) {
-  #contest-form {
-    background-color: #8A77F7;
-    width: 280px;
-    margin: 0 auto;
-    .form-block {
-      &--member,
-      &--contacts {
-        label,
-        input {
-          display: block;
-        }
+@import "variables";
+.container {
+  width: 100%;
+  max-width: 959px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+#contest-form {
+  .form-block {
+    border: none;
+    padding: 0 20px;
+    margin: 0;
+
+    &__wrapper {
+      margin-bottom: 20px;
+    }
+
+    &--member,
+    &--contacts {
+      label,
+      input {
+        display: block;
+      }
+      label {
+        color: $accent-color;
+        text-transform: uppercase;
+      }
+      input {
+        margin-top: 8px;
       }
     }
+    &__title {
+      color: $accent-color;
+      text-transform: uppercase;
+      text-align: center;
+    }
+
+    &__input[type="text"] {
+      font: 400 14px/24px 'Open Sans';
+      border: 2px solid $base-border-color;
+      padding: 17px 20px 18px;
+      font-size: 18px;
+      border-radius: 3px;
+      width: 100%;
+      box-sizing: border-box;
+      &::placeholder {
+        color: $base-color;
+      }
+    }
+    &--trip-achivements {
+      background: $light-bg-color;
+    }
   }
+
 }
 @media (min-width: 700px) {
   #contest-form {

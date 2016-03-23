@@ -1,15 +1,13 @@
-@media (min-width: 320px) {
-  .page-footer {
-    display: block;
-    &--index {
-      display: none;
-    }
-    .container {
-      width: 280px;
-      margin: 0 auto;
-      padding: 47px 0;
-      text-align: center;
-    }
+.page-footer {
+  display: block;
+  &--index {
+    display: none;
+  }
+  .container {
+    width: 280px;
+    margin: 0 auto;
+    padding: 47px 0;
+    text-align: center;
   }
 }
 

@@ -1,177 +1,203 @@
 @import "variables";
 @import "mixins";
 
-@media (min-width: 320px) {
-  .page-header {
-    //background: url('../img/bg-back-mobile.jpg') no-repeat -190px 0;
-    background-color: #8CC0D4;
-
-    &__bar {
-      background: rgba(#000, 0.3);
+.page-header {
+  //background: url('../img/bg-back-mobile.jpg') no-repeat -190px 0;
+  background-color: #8CC0D4;
+  //margin-bottom: 41px;
+  &__bar {
+    background: rgba($dark-color, 0.3);
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .logo {
+    z-index: 2;
+  }
+  .logo-link {
+    display: block;
+  }
+  .menu__button {
+    position: relative;
+    z-index: 2;
+    display: block;
+    width: 50px;
+    height: 25px;
+    &:before {
+      content: "";
       position: absolute;
-      z-index: 999;
-      width: 100%;
-      padding: 20px;
-      box-sizing: border-box;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .logo {
-      z-index: 2;
-    }
-    .logo-link {
-      display: block;
-    }
-    .menu__button {
-      position: relative;
-      z-index: 2;
-      display: block;
-      width: 50px;
-      height: 25px;
-      &:before {
-        content: "";
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 4px;
-        //transition: background-color 0.5s ease-out 0.5s, box-shadow 0.5s ease-out 0.5s;
-        background-color: $light-text-color;
-        box-shadow:
-          0 10px 0 0 $light-text-color,
-          0 20px 0 0 $light-text-color;
-      }
-      &:hover {
-        &:before {
-          background-color: $accent-text-color;
-          box-shadow:
-            0 10px 0 0 $accent-text-color,
-            0 20px 0 0 $accent-text-color;
-        }
-      }
-      &:active {
-        &:before {
-          background-color: rgba($accent-text-color, 0.3);
-          box-shadow:
-            0 10px 0 0 rgba($accent-text-color, 0.3),
-            0 20px 0 0 rgba($accent-text-color, 0.3);
-        }
-      }
-    }
-    .menu {
-      position: absolute;
-      width: inherit;
-      z-index: 1;
-      top: 0;
       left: 0;
-      display: none;
-      &__list {
-        padding-top: 70px;
-        background-color: #283645;
-        border-bottom: 1px solid #000;
-      }
-      &__link {
-        position: relative;
-        font-size: 18px;
-        font-weight: 700;
-        color: #fff;
-        padding: 19px 15px;
-        display: block;
-        text-align: center;
-        text-transform: uppercase;
-        &:before {
-          content: '';
-          display: block;
-          width: 100%;
-          height: 1px;
-          border-bottom: 1px solid rgba(255, 255, 255, 0.15);
-          border-top: 1px solid #000;
-          box-sizing: border-box;
-          position: absolute;
-          top: -2px;
-          left: 0;
-        }
+      top: 0;
+      width: 100%;
+      height: 4px;
+      //transition: background-color 0.5s ease-out 0.5s, box-shadow 0.5s ease-out 0.5s;
+      background-color: $light-color;
+      box-shadow:
+        0 10px 0 0 $light-color,
+        0 20px 0 0 $light-color;
+    }
+    &:hover {
+      &:before {
+        background-color: $accent-color;
+        box-shadow:
+          0 10px 0 0 $accent-color,
+          0 20px 0 0 $accent-color;
       }
     }
-    .intro {
-      display: flex;
-      flex-wrap: wrap;
-      &__slogan {
-        color: $light-text-color;
-        text-align: center;
-        align-self: flex-start;
-        margin: 85px 30px;
-      }
-      &__app {
-        @include set-color(#1d2631);
-        width: 100%;
-        align-self: flex-end;
-      }
-      &__app-wrapper {
-        margin: 28px 20px 30px;
-      }
-      .btn--download {
-        background-color: transparent;
-        transition: background-color 0.2s ease-out 0.2s, color 0.2s ease-out 0.2s;
-        color: $light-text-color;
-        font-size: 18px;
-        font-weight: 700;
-        border: 3px solid $light-text-color;
-        border-radius: 50px;
-        padding: 11px 0 14px;
-        &:hover {
-          background: $light-text-color;
-          color: $accent-text-color;
-        }
-        &:active {
-          color: rgba($accent-text-color, .3);
-        }
-      }
-      &__app-list {
-        display: flex;
-        justify-content: space-between;
-        margin: 33px 37px 20px;
-        align-items: baseline;
-      }
-      .application__item {
-        display: block;
-        width: 57px;
-        height: 57px;
-        &--ios {
-          background: url('../img/logo-apple.svg') no-repeat 0px -1px;
-        }
-        &--android {
-          background: url('../img/logo-android.svg') no-repeat 7px 7px;
-        }
-        &--microsoft {
-          background: url('../img/logo-microsoft.svg') no-repeat 12px 11px;
-        }
-      }
-      &__app-info {
-        text-align: center;
-        font-weight: 300;
-      }
-    }
-    &--index {
-      .intro {
-        min-height: 729px;
-      }
-      & ~ .main .promo-big-text {
-        padding: 41px 0 34px;
-        .line:first-child {
-          margin-bottom: 31px;
-        }
+    &:active {
+      &:before {
+        background-color: rgba($accent-color, 0.3);
+        box-shadow:
+          0 10px 0 0 rgba($accent-color, 0.3),
+          0 20px 0 0 rgba($accent-color, 0.3);
       }
     }
   }
+  .menu {
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    display: none;
+    &__list {
+      padding-top: 70px;
+      background-color: $base-color;
+      border-bottom: 1px solid $dark-color;
+    }
+    &__link {
+      position: relative;
+      font-size: 18px;
+      font-weight: 700;
+      color: $light-color;
+      padding: 19px 15px;
+      display: block;
+      text-align: center;
+      text-transform: uppercase;
+      &:before {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 1px;
+        border-bottom: 1px solid rgba($light-color, 0.15);
+        border-top: 1px solid $dark-color;
+        box-sizing: border-box;
+        position: absolute;
+        top: -2px;
+        left: 0;
+      }
+    }
+  }
+  .intro {
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      min-height: 237px;
+    }
+    &--index {
+         .container {
+           min-height: 729px;
+         }
+        .intro__slogan {
+          margin: 86px 30px;
+        }
+        & ~ .main .promo-big-text {
+          width: auto;
+          padding: 49px 0 34px;
+          .line:first-child {
+            margin: 0
+          }
+        .line:last-child {
+          width: 55%;
+          margin: 0 auto;
+        }
+      }
+    }
+    &__slogan {
+      color: $light-color;
+      text-align: center;
+      align-self: flex-start;
+      margin: 97px 30px 56px;
+    }
+
+    &__app {
+    //  @include set-color(spin(darken($base-color, 0.065), 2) + 1);
+      @include set-color($base-color);
+      width: 100%;
+      align-self: flex-end;
+    }
+    &__app-wrapper {
+      margin: 28px 20px 30px;
+    }
+    .btn--download {
+      background-color: transparent;
+      transition: background-color 0.2s ease-out 0.2s, color 0.2s ease-out 0.2s;
+      color: $light-color;
+      font-size: 18px;
+      font-weight: 700;
+      border: 3px solid $light-color;
+      border-radius: 50px;
+      padding: 11px 0 14px;
+      &:hover {
+        background: $light-color;
+        color: $accent-color;
+      }
+      &:active {
+        color: rgba($accent-color, .3);
+      }
+    }
+    &__app-list {
+      display: flex;
+      justify-content: space-between;
+      margin: 33px 37px 20px;
+      align-items: baseline;
+    }
+    .application__item {
+      display: block;
+      width: 57px;
+      height: 57px;
+      &--ios {
+        background: url('../img/logo-apple.svg') no-repeat 0px -1px;
+      }
+      &--android {
+        background: url('../img/logo-android.svg') no-repeat 7px 7px;
+      }
+      &--microsoft {
+        background: url('../img/logo-microsoft.svg') no-repeat 12px 11px;
+      }
+    }
+    &__app-info {
+      text-align: center;
+      font-weight: 300;
+    }
+  }
+
+  &--contest {
+    & ~ .main .promo-text {
+      width: 280px;
+      margin: 45px auto 36px;
+    }
+  }
 }
-@media (min-width: 700px) {
+
+@media (min-width: 620px) {
   .page-header {
     &__bar {
       padding: 40px;
     }
     .intro {
+      padding-top: 118px;
+      margin: 0 40px;
+      width: 300px;
+      .container {
+        min-height: 611px;
+      }
       &__app {
         margin-bottom: 92px;
         margin-top: -55px;
@@ -196,25 +222,7 @@
       }
     }
 
-    &--index {
-      .intro {
-        padding-top: 118px;
-        margin: 0 40px;
-        width: 300px;
-        min-height: 611px;
-      }
-      & ~ .main .promo-big-text {
-        width: auto;
-        padding: 49px 0 34px;
-        .line:first-child {
-          margin: 0
-        }
-        .line:last-child {
-          width: 55%;
-          margin: 0 auto;
-        }
-      }
-    }
+
   }
 }
 @media (min-width: 1200px) {
