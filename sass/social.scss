@@ -8,9 +8,24 @@
     }
     &__item {
       list-style: none;
-      margin-right: 12px;
+      margin-right: 13spx;
       &:last-child {
         margin: 0;
+      }
+      &--twitter {
+        .social__link {
+          background-image: url(../img/icon-twitter.svg);
+        }
+      }
+      &--facebook {
+        .social__link {
+          background-image: url(../img/icon-facebook.svg);
+        }
+      }
+      &--youtube {
+        .social__link {
+          background-image: url(../img/icon-youtube.svg);
+        }
       }
     }
     &__link {
@@ -21,6 +36,8 @@
       overflow: hidden;
       border: 3px solid rgba($base-color, 0.1);
       box-sizing: border-box;
+      background-repeat: no-repeat;
+      background-position: 50%;
     }
   }
 }

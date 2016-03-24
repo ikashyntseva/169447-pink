@@ -11,7 +11,7 @@
 }
 .promo-big-text {
   margin: 0 auto;
-  padding: 41px 0 34px;
+  padding: 40px 0 34px;
   position: relative;;
   &:after {
     content: "";
@@ -27,7 +27,7 @@
   .line {
     display: block;
     &:first-child {
-      margin-bottom: 31px;
+      margin-bottom: 26px;
     }
   }
 }
@@ -36,10 +36,8 @@
   text-align: center;
   overflow: hidden;
   position: relative;
-
-
   .container {
-    padding: 80px 19px 0;
+    padding: 78px 19px 0;
   }
   &__wrapper {
     margin-bottom: 40px;
@@ -72,8 +70,6 @@
   text-align: center;
   margin: 45px 20px 20px;
   overflow: hidden;
-
-
   &__wrapper {
     display: flex;
     width: 300%;
@@ -147,16 +143,15 @@
   &__list-header {
     @include set-color($base-color);
     position: relative;
-<<<<<<< HEAD
     overflow: hidden;
     text-align: center;
-    padding: 19px 0 21px;
+    padding: 19px 0 20px;
   }
   &__list-title {
     color: inherit;
   }
   &__list-cost {
-    margin-top: 6px;
+    margin-top: 5px;
   }
   #slide-price-2:checked ~ &__wrapper {
     margin-left: -100%;
@@ -177,55 +172,13 @@
         height: 49px;
         border-bottom: 2px solid $base-border-color;
       }
-=======
-    &:before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      background-color: $light-color;
-      padding-bottom: 20%;
-      width: 120%;
-      transform-origin: 0 0;
-      transform: rotate(-1deg) skewX(-85deg);
     }
-    &__wrapper {
-      width: 840px;
-      display: flex;
-      margin-left: 20px;
-      margin-bottom: 40px;
-      transition: margin-left 1s ease-out 0.5s;
-      border-left: 1px solid #e5e5e5;
-      border-right: 1px solid #e5e5e5;
-    }
-    &__list-header {
-      @include set-color($base-color);
-      position: relative;
-      overflow: hidden;
-      text-align: center;
-      padding: 19px 0 21px;
-    }
-    &__list-title {
-      color: inherit;
-    }
-    &__list-cost {
-      margin-top: 6px;
-    }
-    #slide-price-2:checked ~ &__wrapper {
-      margin-left: -260px;
-    }
-    #slide-price-3:checked ~ &__wrapper {
-      margin-left: -540px;
->>>>>>> fd17d00572cd1a3ed9f97dfb7e7eb2b2512ac522
-    }
-
-<<<<<<< HEAD
     &--hit {
       .price-slider__list-header {
         &:before {
           content: 'Хит';
           display: block;
-          background-color: #d22856;
+          background-color: $accent-color;
           transform: rotate(-45deg);
           width: 98px;
           height: 28px;
@@ -234,37 +187,6 @@
           left: -25px;
           line-height: 26px;
           font-weight: 700;
-=======
-      border-left: 1px solid #e5e5e5;
-      border-right: 1px solid #e5e5e5;
-      box-sizing: border-box;
-      text-transform: uppercase;
-      &--column {
-        display: none;
-        .price-slider__list-header {
-          @include set-color(transparent);
-          height: 49px;
-          border-bottom: 2px solid #e5e5e5;
-        }
-      }
-      width: 280px;
-      padding: 0;
-      &--hit {
-        .price-slider__list-header {
-          &:before {
-            content: 'Хит';
-            display: block;
-            background-color: $accent-color;
-            transform: rotate(-45deg);
-            width: 98px;
-            height: 28px;
-            position: absolute;
-            top: 12px;
-            left: -25px;
-            line-height: 26px;
-            font-weight: 700;
-          }
->>>>>>> fd17d00572cd1a3ed9f97dfb7e7eb2b2512ac522
         }
       }
     }
@@ -280,7 +202,7 @@
 .contacts {
 
   text-align: center;
-  padding: 43px 0 0;
+  padding: 41px 0 0;
   .container {
     width: 280px;
     margin: 0 auto;
@@ -296,27 +218,9 @@
     a:active {
       color: rgba($base-color, 0.3);
     }
-<<<<<<< HEAD
     a:hover {
       color: $base-color;
       text-decoration: underline;
-=======
-    &__item {
-      margin-bottom: 19px;
-      &-info {
-        color: $accent-color;
-      }
-      a:active {
-        color: rgba($base-color, 0.3);
-      }
-      a:hover {
-        color: $base-color;
-        text-decoration: underline;
-      }
-      &:last-child {
-        margin-bottom: 0;
-      }
->>>>>>> fd17d00572cd1a3ed9f97dfb7e7eb2b2512ac522
     }
     &:last-child {
       margin-bottom: 0;
@@ -348,36 +252,9 @@
       top: 0;
       left: 0;
       width: 100%;
-<<<<<<< HEAD
-      height: 100%;
+      height: 70px;
       background:url('../img/bg-triangle-white-footer.svg') left top no-repeat;
-      background-size: 100% auto;
-=======
-      height: 200px;
-      margin-top: 40px;
-      position: relative;
-      overflow: hidden;
-      .YMaps-copyrights,
-      .YMaps-logo-link {
-        display: none;
-      }
-      &:after {
-        content: "";
-        position: absolute;
-        z-index: 2;
-        top:1px;
-        left: 0;
-        background-color:$light-color;
-        padding-bottom:17%;
-        width:50.7%;
-        -webkit-transform-origin:0 0;
-        -ms-transform-origin:0 0;
-        transform-origin:0 0;
-        -webkit-transform: rotate(-10deg) skewX(71deg);
-        -ms-transform: rotate(-10deg) skewX(71deg);
-        transform: rotate(-10deg) skewX(71deg);
-      }
->>>>>>> fd17d00572cd1a3ed9f97dfb7e7eb2b2512ac522
+      background-size: 100% 70px;
     }
   }
 }
@@ -434,7 +311,7 @@
     }
     &--index {
       width: auto;
-      padding: 49px 0 34px;
+      padding: 48px 0 34px;
       .line:first-child {
         margin: 0
       }
@@ -449,7 +326,6 @@
     }
   }
   .features {
-
     .container {
       display: flex;
       flex-direction: row-reverse;
@@ -460,7 +336,7 @@
     }
     &__wrapper {
       text-align: left;
-      width: 310px;
+      width: 311px;
       padding-top: 70px;
       margin-bottom: 0;
     }
@@ -553,16 +429,11 @@
       height: 25px;
       text-transform: none;
       padding: 10px 14px;
-<<<<<<< HEAD
       border-left: 2px solid $base-border-color;
       background: $light-color;
       &:first-letter {
         text-transform: capitalize;
       }
-=======
-      border-left: 2px solid #e5e5e5;
-      background: $light-color;
->>>>>>> fd17d00572cd1a3ed9f97dfb7e7eb2b2512ac522
       span {
         display: none;
       }
@@ -574,6 +445,7 @@
           border-left: 2px solid $base-border-color;
         }
       }
+
       &:last-child {
         .price-slider__item {
           border-right: 2px solid $base-border-color;
@@ -601,7 +473,6 @@
         line-height: 24px;
       }
     }
-
   }
   /* Price slider ends */
 
@@ -633,7 +504,7 @@
     }
     .map {
       height: 378px;
-      margin-top: 25px;
+      margin-top: 20px;
     }
   }
   /* Contacts end */
@@ -706,6 +577,7 @@
     }
   }
 }
+
 @media (min-width: 960px) {
   .promo-big-text {
     &--index {
@@ -820,7 +692,7 @@
 
       &--column {
         .price-slider__list-header {
-          height: 58px;
+          height: 59px;
         }
       }
       &--hit {

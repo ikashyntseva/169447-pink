@@ -3,20 +3,10 @@
 .page-header {
   //background: url('../img/bg-back-mobile.jpg') no-repeat -190px 0;
   background-color: #8CC0D4;
-
-<<<<<<< HEAD
-.page-header {
-  //background: url('../img/bg-back-mobile.jpg') no-repeat -190px 0;
-  background-color: #8CC0D4;
   //margin-bottom: 41px;
   &__bar {
     background: rgba($dark-color, 0.3);
     position: fixed;
-=======
-  &__bar {
-    background: rgba($dark-color, 0.3);
-    position: absolute;
->>>>>>> fd17d00572cd1a3ed9f97dfb7e7eb2b2512ac522
     z-index: 999;
     width: 100%;
     padding: 20px;
@@ -27,14 +17,11 @@
   }
   .logo {
     z-index: 2;
-<<<<<<< HEAD
     width: 75px;
     &__picture {
       width: 100%;
       height: 100%;
     }
-=======
->>>>>>> fd17d00572cd1a3ed9f97dfb7e7eb2b2512ac522
   }
   .logo-link {
     display: block;
@@ -57,7 +44,6 @@
       box-shadow:
         0 10px 0 0 $light-color,
         0 20px 0 0 $light-color;
-<<<<<<< HEAD
     }
     &:hover {
       &:before {
@@ -79,29 +65,6 @@
   .menu {
     position: absolute;
     width: 100%;
-=======
-    }
-    &:hover {
-      &:before {
-        background-color: $accent-color;
-        box-shadow:
-          0 10px 0 0 $accent-color,
-          0 20px 0 0 $accent-color;
-      }
-    }
-    &:active {
-      &:before {
-        background-color: rgba($accent-color, 0.3);
-        box-shadow:
-          0 10px 0 0 rgba($accent-color, 0.3),
-          0 20px 0 0 rgba($accent-color, 0.3);
-      }
-    }
-  }
-  .menu {
-    position: absolute;
-    width: inherit;
->>>>>>> fd17d00572cd1a3ed9f97dfb7e7eb2b2512ac522
     z-index: 1;
     top: 0;
     left: 0;
@@ -135,45 +98,19 @@
     }
   }
   .intro {
-<<<<<<< HEAD
-
     .container {
       display: flex;
       flex-wrap: wrap;
       min-height: 236px;
     }
-    &--index {
-         .container {
-           min-height: 729px;
-         }
-        .intro__slogan {
-          margin: 86px 30px;
-        }
-        & ~ .main .promo-big-text {
-          width: auto;
-          padding: 49px 0 34px;
-          .line:first-child {
-            margin: 0
-          }
-        .line:last-child {
-          width: 55%;
-          margin: 0 auto;
-        }
-      }
-    }
-=======
-    display: flex;
-    flex-wrap: wrap;
->>>>>>> fd17d00572cd1a3ed9f97dfb7e7eb2b2512ac522
     &__slogan {
       color: $light-color;
       text-align: center;
       align-self: flex-start;
-      margin: 97px 30px 55px;
+      margin: 95px 30px 52px;
     }
-
     &__app {
-    //  @include set-color(spin(darken($base-color, 0.065), 2) + 1);
+      //@include set-color(spin(darken($base-color, 0.065), 2) + 1);
       @include set-color($base-color);
       align-self: flex-end;
     }
@@ -220,18 +157,14 @@
     &__app-info {
       text-align: center;
       font-weight: 300;
-<<<<<<< HEAD
-=======
     }
     &--index {
-      min-height: 729px;
-      & ~ .main .promo-big-text {
-        padding: 41px 0 34px;
-        .line:first-child {
-          margin-bottom: 31px;
-        }
+      .container {
+        min-height: 728px;
       }
->>>>>>> fd17d00572cd1a3ed9f97dfb7e7eb2b2512ac522
+      .intro__slogan {
+        margin: 84px 30px;
+      }
     }
   }
 }
@@ -278,30 +211,13 @@
           background-position: 9px 13px;
         }
       }
-<<<<<<< HEAD
-    }
-
-
-=======
       &--index {
-        padding-top: 118px;
-        margin: 0 40px;
-        width: 300px;
-        min-height: 611px;
-        & ~ .main .promo-big-text {
-          width: auto;
-          padding: 49px 0 34px;
-          .line:first-child {
-            margin: 0
-          }
-          .line:last-child {
-            width: 55%;
-            margin: 0 auto;
-          }
+        padding-top: 119px;
+        .container {
+          min-height: 611px;
         }
       }
     }
->>>>>>> fd17d00572cd1a3ed9f97dfb7e7eb2b2512ac522
   }
 }
 @media (min-width: 960px) {
@@ -358,14 +274,8 @@
         }
       }
       &--index {
-<<<<<<< HEAD
         .intro__slogan {
           margin: 100px 32px 52px;
-=======
-        & ~ .main .promo-big-text {
-          width: auto;
-          padding: 67px 0 58px;
->>>>>>> fd17d00572cd1a3ed9f97dfb7e7eb2b2512ac522
         }
       }
     }
