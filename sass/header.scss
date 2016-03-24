@@ -18,6 +18,11 @@
   }
   .logo {
     z-index: 2;
+    width: 75px;
+    &__picture {
+      width: 100%;
+      height: 100%;
+    }
   }
   .logo-link {
     display: block;
@@ -98,7 +103,7 @@
     .container {
       display: flex;
       flex-wrap: wrap;
-      min-height: 237px;
+      min-height: 236px;
     }
     &--index {
          .container {
@@ -123,7 +128,7 @@
       color: $light-color;
       text-align: center;
       align-self: flex-start;
-      margin: 97px 30px 56px;
+      margin: 97px 30px 55px;
     }
 
     &__app {
@@ -176,23 +181,24 @@
       text-align: center;
       font-weight: 300;
     }
-  }
-
-  &--contest {
-    & ~ .main .promo-text {
-      width: 280px;
-      margin: 45px auto 36px;
-    }
-  }
+  }  
 }
 
 @media (min-width: 620px) {
   .page-header {
     &__bar {
-      padding: 40px;
+      padding: 26px 40px 43px;
+      .logo {
+        width: 150px;
+      }
+      .menu {
+        &__button {
+          align-self: flex-end;
+        }
+      }
     }
     .intro {
-      padding-top: 118px;
+      padding-top: 117px;
       margin: 0 40px;
       width: 300px;
       .container {
@@ -225,10 +231,10 @@
 
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 960px) {
   .page-header {
     &__bar {
-      padding: 27px 130px;
+      padding: 26px 130px 25px;
       .logo {
         width: 150px;
         height: 45px;
@@ -236,7 +242,7 @@
       }
       .menu {
         display: block;
-        width: 622px;
+        width: 620px;
         position: relative;
         &__list {
           background: none;
@@ -266,25 +272,22 @@
     }
     .intro {
       margin: 0 130px;
-      &__slogan {
-        margin: 101px 30px 52px;
-      }
+
       &__app {
         margin-top: 0;
-        margin-bottom: 103px;
+        margin-bottom: 104px;
         .btn--download {
           font-size: 22px;
           padding: 10px 0 15px;
         }
         &-list {
-          margin: 66px 45px 56px;
+          margin: 66px 43px 55px 48px;
         }
       }
-    }
-    &--index {
-      & ~ .main .promo-big-text {
-        width: auto;
-        padding: 67px 0 58px;
+      &--index {
+        .intro__slogan {
+          margin: 100px 32px 52px;
+        }
       }
     }
   }

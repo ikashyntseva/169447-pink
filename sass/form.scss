@@ -6,13 +6,15 @@
   box-sizing: border-box;
 }
 #contest-form {
-  .form-block {
+  .form-block,
+  .form__btns {
     border: none;
     padding: 0 20px;
     margin: 0;
 
     &__wrapper {
       margin-bottom: 20px;
+
     }
 
     &--member,
@@ -24,18 +26,44 @@
       label {
         color: $accent-color;
         text-transform: uppercase;
+        margin-left: 22px;
       }
       input {
         margin-top: 8px;
       }
     }
+    &--contacts {
+      padding-top: 32px;
+      padding-bottom: 15px;
+    }
     &__title {
       color: $accent-color;
       text-transform: uppercase;
       text-align: center;
+      position: relative;
+      width: 260px;
+      top: 54px;
+      line-height: 18px;
+      margin-bottom: 60px;
+      margin: 0 auto 93px;
     }
 
-    &__input[type="text"] {
+    &__input[type="checkbox"],
+    &__input[type="radio"] {
+      width: 38px;
+      height: 38px;
+      margin: 0;
+    }
+    &__input[type="checkbox"] + label,
+    &__input[type="radio"] + label {
+      font-size: 18px;
+      margin-left: 31px;
+    }
+
+    &__input[type="text"],
+    &__input[type="tel"],
+    &__input[type="email"],
+    textarea {
       font: 400 14px/24px 'Open Sans';
       border: 2px solid $base-border-color;
       padding: 17px 20px 18px;
@@ -49,9 +77,69 @@
     }
     &--trip-achivements {
       background: $light-bg-color;
+      margin-top: 6px;
+      padding-bottom: 6px;
+      .form-block__wrapper {
+        margin-bottom: 44px;
+      }
+      .form-block__field {
+        display: flex;
+        align-items: center;
+      }
+    }
+    &--trip-app {
+      background: $light-bg-color;
+      padding-bottom: 8px;
+      .form-block__title {
+        margin-bottom: 90px;
+      }
+      .form-block__wrapper {
+        margin-bottom: 36px;
+      }
+      .form-block__field {
+        display: flex;
+        align-items: center;
+      }
+    }
+    &--emotions {
+      margin-top: 3px;
+      .form-block__title {
+        margin-bottom: 71px;
+      }
+      textarea {
+        line-height: 30px;
+        padding: 14px 18px;
+        min-height: 201px;
+      }
     }
   }
-
+  .form__btns {
+    margin-top: 40px;
+    .btn--submit {
+      margin: 0 auto;
+      color: $light-color;
+      font: inherit;
+      font-size: 18px;
+      line-height: 30px;
+      font-weight: 700;
+      background: #2aab6d;
+      text-transform: uppercase;
+      padding: 16px 16px 17px;
+      width: 100%;
+    }
+  }
+  .hint {
+    text-align: center;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    margin-top: 38px;
+    .required-sign {
+      color: $accent-color;
+      display: inline-block;
+      margin-right: 5px;
+    }
+  }
 }
 @media (min-width: 700px) {
   #contest-form {

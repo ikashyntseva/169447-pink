@@ -8,11 +8,14 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body><!-- темно-серая картинка со зданием будет фоном у header, исходя из того, что она присутствует на одном и том де месте на всех страницах -->
-    <header class="page-header page-header--contest">
+    <header class="page-header">
       <div class="page-header__bar">
         <div class="logo">
           <a href="#" class="logo-link">
-            <img src="img/logo-pink-white-mobile.svg" alt="Pink" width="75" height="23" class="logo__picture">
+            <picture>
+              <source media="(min-width:620px)" srcset="img/logo-pink-white-tablet.svg">
+              <img src="img/logo-pink-white-mobile.svg" alt="Pink" width="75" height="23" class="logo__picture" />
+            </picture>
           </a>
         </div>
         <a href="#" class="menu__button menu__button--open"></a>
@@ -37,41 +40,48 @@
         </nav>
       </div>
       <div class="intro">
-        <h1 class="intro__slogan">Конкурс на самое безбашеное путешествие с Пинк</h1>
+        <div class="container">
+          <h1 class="intro__slogan">Конкурс на самое безбашеное путешествие с Пинк</h1>
+        </div>
       </div>
     </header>
     <main class="main">
-        <p class="promo-text">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! <!--Пожалуйста, заполните форму ниже:--></p>
+        <p class="promo-text promo-text--contest">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! <!--Пожалуйста, заполните форму ниже:--></p>
         <form action="https://echo.htmlacademy.ru/adaptive" id="contest-form" method="post">
           <fieldset class="form-block form-block--member">
             <div class="form-block__wrapper">
               <div class="form-block__field">
-                <label class="form-block__label">
-                  Имя: <input class="form-block__input" type="text" name="name" placeholder="Введите ваше имя">
+                <label class="form-block__label" for="name">
+                  Имя:
                 </label>
+                <input class="form-block__input" type="text" name="name" placeholder="Введите ваше имя">
               </div>
             </div>
             <div class="form-block__wrapper">
               <div class="form-block__field">
-                <label class="form-block__label">
-                  Фамилия: <input class="form-block__input" type="text" name="surname" placeholder="Укажите фамилию">
+                <label class="form-block__label" for="surname">
+                  Фамилия:
                 </label>
+                <input class="form-block__input" type="text" name="surname" placeholder="Укажите фамилию">
               </div>
             </div>
             <div class="form-block__wrapper">
               <div class="form-block__field">
-                <label class="form-block__label">
-                  Отчество: <input class="form-block__input" type="text" name="midname" placeholder="Ну и отчество тоже">
+                <label class="form-block__label" for="midname">
+                  Отчество:
                 </label>
+                <input class="form-block__input" type="text" name="midname" placeholder="Ну и отчество тоже">
               </div>
             </div>
           </fieldset>
           <fieldset class="form-block form-block--trip-achivements">
-            <legend class="form-block__title">Ваши безбашенные достижения в путешествии</legend>
+            <legend class="form-block__title">Ваши безбашенные достижения&nbsp;в путешествии</legend>
             <ul class="filedset__list">
               <li class="form-block__wrapper">
-                <input class="form-block__input" type="checkbox" id="selfie" name="selfie" checked>
-                <label class="form-block__label" for="selfie">Сделал селфи с акулой</label>
+                <div class="form-block__field">
+                  <input class="form-block__input" type="checkbox" id="selfie" name="selfie" checked>
+                  <label class="form-block__label" for="selfie">Сделал селфи с акулой</label>
+                </div>
               </li>
               <li class="form-block__wrapper">
                 <div class="form-block__field">
@@ -106,16 +116,18 @@
             </ul>
           </fieldset>
           <fieldset class="form-block form-block--contacts">
-            <legend class="form-block__title">Контактные данные</legend>
+            <!--<legend class="form-block__title">Контактные данные</legend>-->
             <div class="form-block__wrapper">
-              <label class="form-block__label">
-                Номерок телефончика <input class="form-block__input" type="tel" name="phone" placeholder="Номер, пожалуйста">
+              <label class="form-block__label" for="phone">
+                Номерок телефончика
               </label>
+              <input class="form-block__input" type="tel" name="phone" placeholder="Номер, пожалуйста">
             </div>
             <div class="form-block__wrapper">
-              <label class="form-block__label">
-                Адресок почты <input class="form-block__input" type="email" name="email" placeholder="E-mail, пожалуйста">
+              <label class="form-block__label" for="email">
+                Адресок почты
               </label>
+              <input class="form-block__input" type="email" name="email" placeholder="E-mail, пожалуйста">
             </div>
           </fieldset>
           <fieldset class="form-block form-block--trip-app">
@@ -143,7 +155,7 @@
           </fieldset>
           <fieldset class="form-block form-block--emotions">
             <legend class="form-block__title">Опишите свои эмоции</legend>
-            <textarea name="emotions" cols="30" rows="10" class="form-block__textarea" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+            <textarea name="emotions" cols="30" rows="5" class="form-block__textarea" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
           </fieldset>
           <div class="form__btns">
             <button class="btn btn--submit" type="submit">Отправить форму</button>
@@ -155,7 +167,10 @@
       <div class="container">
         <div class="logo logo--bottom">
           <a href="#" class="logo__link">
-            <img src="http://placehold.it/150x40" alt="PINK" class="logo__picture" />
+            <picture>
+              <source media="(min-width:620px)" srcset="img/logo-pink-roze-dark-tablet.svg">
+              <img src="img/logo-pink-roze-dark-tablet.svg" alt="Pink" width="75" height="23" class="logo__picture" />
+            </picture>
           </a>
         </div>
         <div class="social">

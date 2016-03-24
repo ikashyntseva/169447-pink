@@ -6,18 +6,40 @@
   .container {
     width: 280px;
     margin: 0 auto;
-    padding: 47px 0;
+    padding: 44px 0 53px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+  }
+  .logo {
+    width: 150px;
+    margin: 0 auto 40px;
+    &__picture {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .author {
+    width: 150px;
+    text-align: right;
+    align-self: center;
+    margin-right: -20px;
+    margin-top: 36px;
+    display: flex;
+    align-items: center;
+    &__text {
+      margin-right: 16px;
+    }
   }
 }
 
-@media (min-width: 700px) {
+@media (min-width: 620px) {
   .page-footer {
     display: block;
     .container {
       width: 620px;
       margin: 0 auto;
-      padding: 36px 0;
+      padding: 35px 0;
       text-align: center;
       display: flex;
       justify-content: space-between;
@@ -25,6 +47,12 @@
     .logo,
     .author {
       width: 150px;
+    }
+    .logo {
+      &__picture {
+        width: 100%;
+        height: 100%;
+      }
     }
     .author {
       text-align: right;
@@ -44,7 +72,7 @@
     }
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 960px) {
   .page-footer {
     .container {
       width: 940px;
