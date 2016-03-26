@@ -8,7 +8,7 @@
     }
     &__item {
       list-style: none;
-      margin-right: 13spx;
+      margin-right: 13px;
       &:last-child {
         margin: 0;
       }
@@ -20,6 +20,7 @@
       &--facebook {
         .social__link {
           background-image: url(../img/icon-facebook.svg);
+          background-position: 17px 12px;
         }
       }
       &--youtube {
@@ -42,8 +43,13 @@
   }
 }
 
-@media (min-width: 700px) {
-  .social {
-    width: 320px;
+@media (min-width: 620px) {
+  .social__list {
+    margin: 3px 0 0 -20px;
+  }
+}
+@media (min-width: 960px) {
+  .social__list {
+    margin: 4px 0 0 11px;
   }
 }

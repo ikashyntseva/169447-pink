@@ -183,12 +183,7 @@
       }
     }
     .intro {
-      padding-top: 117px;
-      margin: 0 40px;
-      width: 300px;
-      .container {
-        min-height: 611px;
-      }
+      padding-top: 110px;
       &__app {
         margin-bottom: 92px;
         margin-top: -55px;
@@ -213,8 +208,17 @@
       }
       &--index {
         padding-top: 119px;
+        margin: 0 40px;
+        width: 300px;
         .container {
           min-height: 611px;
+        }
+      }
+      &--contest {
+        .intro__slogan {
+          font-size: 50px;
+          line-height: 60px;
+          margin: 70px 46px 80px;
         }
       }
     }
@@ -261,7 +265,6 @@
     }
     .intro {
       margin: 0 130px;
-
       &__app {
         margin-top: 0;
         margin-bottom: 104px;
@@ -276,6 +279,15 @@
       &--index {
         .intro__slogan {
           margin: 100px 32px 52px;
+        }
+      }
+      &--contest {
+        padding-top: 105px;
+        .container {
+          min-height: 290px;
+        }
+        .intro__slogan {
+          margin: 67px auto 80px;
         }
       }
     }

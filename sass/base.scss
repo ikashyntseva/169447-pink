@@ -9,7 +9,7 @@ h1,
 h2 {
   margin: 0;
 }
-h1,
+.intro__slogan,
 .promo-big-text,
 .contacts__text,
 .contacts__item-info,
@@ -51,8 +51,11 @@ img {
 .form-block,
 .form__btns {
   border: none;
+  width: 100%;
+  max-width: 959px;
+  box-sizing: border-box;
   padding: 0 20px;
-  margin: 0;
+  margin: 0 auto;
 }
 .form-block {
   &__title {
@@ -61,17 +64,53 @@ img {
     text-align: center;
     line-height: 18px;
     margin: 0 auto;
+    position: relative;
+    top: 54px;
+  }
+  &__input {
+    outline: none;
   }
   &__input[type="checkbox"],
   &__input[type="radio"] {
-    width: 38px;
-    height: 38px;
+    width: 39px;
+    height: 39px;
     margin: 0;
+    position: relative;
+    flex-shrink: 0;
+    &:before, {
+      content: '';
+      width: 100%;
+      height: 100%;
+      display: block;
+      background: $light-color;
+      border-radius: 100%;
+      border: 2px solid $base-border-color;
+      box-sizing: border-box;
+    }
+  }
+  &__input[type="checkbox"] {
+    &:before {
+      border-radius: 3px;
+    }
+  }
+  &__input[type="radio"]:checked {
+    &:after {
+      content: '';
+      width: 15px;
+      height: 15px;
+      display: block;
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      background: $accent-color;
+      border-radius: 100%;
+      box-sizing: border-box;
+    }
   }
   &__input[type="checkbox"] + label,
   &__input[type="radio"] + label {
     font-size: 18px;
-    margin-left: 31px;
+    margin: -2px 0 0 30px;
   }
   &__input[type="text"],
   &__input[type="tel"],
@@ -113,14 +152,36 @@ img {
     width: 100%;
   }
 }
-@media (min-width: 700px) {
-
-  h1,
+@media (min-width: 620px) {
+  .intro__slogan--index,
   .promo-big-text,
   .contacts__text,
   .price-slider__list-cost {
     font-size: 40px;
     line-height: 48px;
+  }
+  form {
+    .form-block {
+      .form-block__title {
+        top: 0;
+        padding: 0 31px;
+        margin-bottom: 0;
+      }
+      &__input[type="checkbox"] + label,
+      &__input[type="radio"] + label {
+        margin: -2px 0 0 21px;
+      }
+      &__input[type="text"],
+      &__input[type="tel"],
+      &__input[type="email"],
+      .form-block__textarea {
+        font: 400 18px/30px 'Open Sans';
+        padding: 14px 21px 15px;
+      }
+      .form-block__textarea {
+        padding: 14px 19px;
+      }
+    }
   }
 }
 @media (min-width: 960px) {

@@ -39,7 +39,7 @@
           </ul>
         </nav>
       </div>
-      <div class="intro">
+      <div class="intro intro--contest">
         <div class="container">
           <h1 class="intro__slogan">Конкурс на самое безбашеное путешествие с Пинк</h1>
         </div>
@@ -49,79 +49,75 @@
         <p class="promo-text promo-text--contest">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! <!--Пожалуйста, заполните форму ниже:--></p>
         <form action="https://echo.htmlacademy.ru/adaptive" id="contest-form" method="post">
           <fieldset class="form-block form-block--member">
-            <div class="container">
-              <div class="form-block__wrapper">
-                <div class="form-block__field">
-                  <label class="form-block__label" for="name">
-                    Имя:
-                  </label>
-                  <input class="form-block__input" type="text" name="name" placeholder="Введите ваше имя">
-                </div>
+            <div class="form-block__wrapper">
+              <div class="form-block__field">
+                <label class="form-block__label" for="name">
+                  Имя:
+                </label>
+                <input class="form-block__input" type="text" name="name" placeholder="Введите ваше имя">
               </div>
-              <div class="form-block__wrapper">
-                <div class="form-block__field">
-                  <label class="form-block__label" for="surname">
-                    Фамилия:
-                  </label>
-                  <input class="form-block__input" type="text" name="surname" placeholder="Укажите фамилию">
-                </div>
+            </div>
+            <div class="form-block__wrapper">
+              <div class="form-block__field">
+                <label class="form-block__label" for="surname">
+                  Фамилия:
+                </label>
+                <input class="form-block__input" type="text" name="surname" placeholder="Укажите фамилию">
               </div>
-              <div class="form-block__wrapper">
-                <div class="form-block__field">
-                  <label class="form-block__label" for="midname">
-                    Отчество:
-                  </label>
-                  <input class="form-block__input" type="text" name="midname" placeholder="Ну и отчество тоже">
-                </div>
+            </div>
+            <div class="form-block__wrapper">
+              <div class="form-block__field">
+                <label class="form-block__label" for="midname">
+                  Отчество:
+                </label>
+                <input class="form-block__input" type="text" name="midname" placeholder="Ну и отчество тоже">
               </div>
             </div>
           </fieldset>
           <fieldset class="form-block form-block--trip-achivements">
-            <div class="container">
-              <legend class="form-block__title">Ваши безбашенные достижения&nbsp;в путешествии</legend>
-              <ul class="filedset__list">
-                <li class="form-block__wrapper">
-                  <div class="form-block__field">
-                    <input class="form-block__input" type="checkbox" id="selfie" name="selfie" checked>
-                    <label class="form-block__label" for="selfie">Сделал селфи с акулой</label>
-                  </div>
-                </li>
-                <li class="form-block__wrapper">
-                  <div class="form-block__field">
-                    <input class="form-block__input" type="checkbox" id="sunburned" name="sunburned" checked>
-                    <label class="form-block__label" for="sunburned">Обгорел на пляже</label>
-                  </div>
-                </li>
-                <li class="form-block__wrapper">
-                  <div class="form-block__field">
-                    <input class="form-block__input" type="checkbox" id="norris" name="norris">
-                    <label class="form-block__label" for="norris">Видел Чака Норриса</label>
-                  </div>
-                </li>
-                <li class="form-block__wrapper">
-                  <div class="form-block__field">
-                    <input class="form-block__input" type="checkbox" id="souvenir" name="souvenir">
-                    <label class="form-block__label" for="souvenir">Накупил сувениров</label>
-                  </div>
-                </li>
-                <li class="form-block__wrapper">
-                  <div class="form-block__field">
-                    <input class="form-block__input" type="checkbox" id="castle" name="castle" checked>
-                    <label class="form-block__label" for="castle">Удержал башню</label>
-                  </div>
-                </li>
-                <li class="form-block__wrapper">
-                  <div class="form-block__field">
-                    <input class="form-block__input" type="checkbox" id="hotel" name="hotel">
-                    <label class="form-block__label" for="hotel">Разгромил отель</label>
-                  </div>
-                </li>
-              </ul>
-            </div>
+            <legend class="form-block__title">Ваши безбашенные достижения&nbsp;в путешествии</legend>
+            <ul class="filedset__list">
+              <li class="form-block__wrapper">
+                <div class="form-block__field">
+                  <input class="form-block__input" type="checkbox" id="selfie" name="selfie" checked>
+                  <label class="form-block__label" for="selfie">Сделал селфи с акулой</label>
+                </div>
+              </li>
+              <li class="form-block__wrapper">
+                <div class="form-block__field">
+                  <input class="form-block__input" type="checkbox" id="sunburned" name="sunburned" checked>
+                  <label class="form-block__label" for="sunburned">Обгорел на пляже</label>
+                </div>
+              </li>
+              <li class="form-block__wrapper">
+                <div class="form-block__field">
+                  <input class="form-block__input" type="checkbox" id="norris" name="norris">
+                  <label class="form-block__label" for="norris">Видел Чака Норриса</label>
+                </div>
+              </li>
+              <li class="form-block__wrapper">
+                <div class="form-block__field">
+                  <input class="form-block__input" type="checkbox" id="souvenir" name="souvenir">
+                  <label class="form-block__label" for="souvenir">Накупил сувениров</label>
+                </div>
+              </li>
+              <li class="form-block__wrapper">
+                <div class="form-block__field">
+                  <input class="form-block__input" type="checkbox" id="castle" name="castle" checked>
+                  <label class="form-block__label" for="castle">Удержал башню</label>
+                </div>
+              </li>
+              <li class="form-block__wrapper">
+                <div class="form-block__field">
+                  <input class="form-block__input" type="checkbox" id="hotel" name="hotel">
+                  <label class="form-block__label" for="hotel">Разгромил отель</label>
+                </div>
+              </li>
+            </ul>
           </fieldset>
           <fieldset class="form-block form-block--contacts">
+            <legend class="form-block__title">Контактная информация</legend>
             <div class="container">
-              <!--<legend class="form-block__title">Контактные данные</legend>-->
               <div class="form-block__wrapper">
                 <label class="form-block__label" for="phone">
                   Номерок телефончика
@@ -137,39 +133,35 @@
             </div>
           </fieldset>
           <fieldset class="form-block form-block--trip-app">
-            <div class="container">
-              <legend class="form-block__title">С каким приложением путешествовали?</legend>
-              <ul class="fieldset__list">
-                <li class="form-block__wrapper">
-                  <div class="form-block__field">
-                    <input class="form-block__input" type="radio" id="app-ios" name="trip-app" value="ios" checked>
-                    <label class="form-block__label" for="app-ios">Pink для iOS</label>
-                  </div>
-                </li>
-                <li class="form-block__wrapper">
-                  <div class="form-block__field">
-                    <input class="form-block__input" type="radio" id="app-android" name="trip-app" value="android">
-                    <label class="form-block__label" for="app-android">Pink на Android</label>
-                  </div>
-                </li>
-                <li class="form-block__wrapper">
-                  <div class="form-block__field">
-                    <input class="form-block__input" type="radio" id="app-microsoft" name="trip-app" value="microsoft">
-                    <label class="form-block__label" for="app-microsoft">Windows Phone</label>
-                  </div>
-                </li>
-              </ul>
-            </div>
+            <legend class="form-block__title">С каким приложением путешествовали?</legend>
+            <ul class="fieldset__list">
+              <li class="form-block__wrapper">
+                <div class="form-block__field">
+                  <input class="form-block__input" type="radio" id="app-ios" name="trip-app" value="ios" checked>
+                  <label class="form-block__label" for="app-ios">Pink для iOS</label>
+                </div>
+              </li>
+              <li class="form-block__wrapper">
+                <div class="form-block__field">
+                  <input class="form-block__input" type="radio" id="app-android" name="trip-app" value="android">
+                  <label class="form-block__label" for="app-android">Pink на Android</label>
+                </div>
+              </li>
+              <li class="form-block__wrapper">
+                <div class="form-block__field">
+                  <input class="form-block__input" type="radio" id="app-microsoft" name="trip-app" value="microsoft">
+                  <label class="form-block__label" for="app-microsoft">Windows Phone</label>
+                </div>
+              </li>
+            </ul>
           </fieldset>
           <fieldset class="form-block form-block--emotions">
-            <div class="container">
-              <legend class="form-block__title">Опишите свои эмоции</legend>
-              <textarea name="emotions" cols="30" rows="5" class="form-block__textarea" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
-            </div>
+            <legend class="form-block__title">Опишите свои эмоции</legend>
+            <textarea name="emotions" cols="30" class="form-block__textarea" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
           </fieldset>
           <div class="form__btns">
             <button class="btn btn--submit" type="submit">Отправить форму</button>
-            <p class="hint"><sup class="required-sign">*</sup> — обязательные поля</p>
+            <p class="hint"><sup class="required-sign">*</sup> — обязательные <span class="desktop">&nbsp;для заполнения&nbsp;</span> поля</p>
           </div>
         </form>
     </main>
@@ -184,7 +176,7 @@
           </a>
         </div>
         <div class="social">
-          <ul class="social__list clearfix">
+          <ul class="social__list">
             <li class="social__item social__item--twitter">
               <a href="#" class="social__link"></a>
             </li>

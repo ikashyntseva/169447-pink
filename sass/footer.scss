@@ -52,12 +52,12 @@
     }
     .author {
       text-align: right;
-      align-self: center;
-      margin-top: 9px;
+      margin-top: 7px;
+      margin-right: -3px;
       &__text {
         line-height: 28px;
         display: inline-block;
-        margin-right: 11px;
+        margin-right: 14px;
       }
       &-logo__link {
         display: inline-block;
@@ -72,7 +72,24 @@
   .page-footer {
     .container {
       width: 940px;
-      padding: 70px 0;
+      padding: 69px 0;
+    }
+    .author {
+      margin-top: 9px;
+      margin-right: 23px;
+      &__text {
+        font-size: 18px;
+        line-height: 30px;
+        display: inline-block;
+        margin-right: 14px;
+        margin-top: -8px;
+      }
+      &-logo__link {
+        display: inline-block;
+        width: 27px;
+        height: 34px;
+        vertical-align: middle;
+      }
     }
   }
 }

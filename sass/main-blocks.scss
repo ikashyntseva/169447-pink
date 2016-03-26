@@ -7,6 +7,10 @@
   &--contest {
     width: 280px;
     margin: 45px auto 37px;
+    &:after {
+      content: 'Пожалуйста, заполните форму ниже:';
+      display: none;
+    }
   }
 }
 .promo-big-text {
@@ -325,6 +329,16 @@
       bottom: -66px;
     }
   }
+  .promo-text {
+    width: 500px;
+    font-size: 18px;
+    &--contest {
+      margin: 92px auto 71px;
+      &:after {
+        display: block;
+      }
+    }
+  }
   .features {
     .container {
       display: flex;
@@ -583,6 +597,15 @@
     &--index {
       width: auto;
       padding: 67px 0 58px;
+    }
+  }
+  .promo-text {
+    &--contest {
+      margin: 91px auto 85px;
+      width: 796px;
+      &:after {
+        display: inline-block;
+      }
     }
   }
   .features {

@@ -3,6 +3,7 @@
   width: 100%;
   top: 0;
   z-index: 1000;
+  display: none;
   &__wrapper {
     background-color: $light-color;
     box-shadow: 0 10px 29px 0 rgba($dark-color, 0.15);
