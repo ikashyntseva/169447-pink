@@ -3,9 +3,7 @@
 body {
   margin: 0;
   color: $base-color;
-  * {
-    font: 400 14px/24px 'Open Sans', sans-serif;
-  }
+  font: $base-font;
 }
 h1,
 h2 {
@@ -52,6 +50,7 @@ img {
   width: 100%;
   margin: 0 auto;
   max-width: 959px;
+  box-sizing: border-box;
 }
 /* Forms */
 
@@ -74,7 +73,8 @@ img {
     position: relative;
     top: 54px;
   }
-  &__input {
+  &__input,
+  &__textarea {
     outline: none;
   }
   &__input[type="checkbox"],
@@ -84,6 +84,17 @@ img {
     margin: 0;
     position: relative;
     flex-shrink: 0;
+    &:hover {
+      cursor: pointer;
+      &:before {
+        border-color: $base-color;
+      }
+    }
+    &:active {
+      &:before {
+        border-color: $accent-color;
+      }
+    }
     &:before,
     &:after {
       content: '';
@@ -135,6 +146,9 @@ img {
   &__input[type="radio"] + label {
     font-size: 18px;
     margin: -2px 0 0 30px;
+    &:hover {
+      cursor: pointer;
+    }
   }
   &__input[type="text"],
   &__input[type="tel"],
@@ -150,6 +164,12 @@ img {
     &::placeholder {
       color: $base-color;
     }
+    &:hover {
+      border-color: $base-color;
+    }
+    &:focus {
+      border-color: $accent-color;
+    }
   }
   .form-block__textarea {
     line-height: 30px;
@@ -160,25 +180,37 @@ img {
   display: block;
   text-align: center;
   outline: none;
+  font: $base-font;
   font-size: 18px;
   line-height: 30px;
   font-weight: 700;
   background: transparent;
   color: $light-color;
-  transition: background-color 0.2s ease-out 0.2s, color 0.2s ease-out 0.2s;
+  //transition: background-color 0.2s ease-out 0.2s, color 0.2s ease-out 0.2s;
   border: 3px solid $light-color;
   border-radius: 50px;
+  &:hover {
+    cursor: pointer;
+  }
   &--submit,
   &--popup {
     margin: 0 auto;
     border: none;
     color: $light-color;
-    font: inherit;
     border-radius: 3px;
-    background: #2aab6d;
+    background-color: $success-color;
     text-transform: uppercase;
     padding: 16px 16px 17px;
     width: 100%;
+    &:hover {
+      background-color: darken($success-color, 4.25%);
+    }
+    &:active {
+      color: rgba($light-color, .3);
+    }
+  }
+  &--inprogress {
+
   }
   &--post,
   &--cancel {

@@ -1,8 +1,10 @@
 @import "variables";
 @import "mixins";
 .page-header {
-  //background: url('../img/bg-back-mobile.jpg') no-repeat -190px 0;
-  background-color: #8CC0D4;
+  background-image: url('../img/bg-back-mobile.jpg');
+  background-repeat: no-repeat;
+  background-position: -189px 0;
+  background-size: 800px auto;
   //margin-bottom: 41px;
   &__bar {
     background: rgba($dark-color, 0.3);
@@ -102,17 +104,20 @@
       display: flex;
       flex-wrap: wrap;
       min-height: 236px;
+      padding: 65px 0 0 0;
     }
     &__slogan {
       color: $light-color;
       text-align: center;
       align-self: flex-start;
-      margin: 95px 30px 52px;
+      margin: 30px 30px 52px;
+      width: 100%;
     }
     &__app {
       //@include set-color(spin(darken($base-color, 0.065), 2) + 1);
       @include set-color($base-color);
       align-self: flex-end;
+      width: 100%;
     }
     &__app-wrapper {
       margin: 28px 20px 30px;
@@ -120,7 +125,7 @@
     .btn--download {
       background-color: transparent;
       color: $light-color;
-      padding: 11px 0 14px;
+      padding: 8px 0 11px;
       &:hover {
         background: $light-color;
         color: $accent-color;
@@ -154,18 +159,31 @@
       font-weight: 300;
     }
     &--index {
+      background-image: url('../img/iphone-hand-mobile.png');
+      background-position: 0 172px;
+      background-repeat: no-repeat;
+      background-size: 258px;
       .container {
-        min-height: 728px;
+        min-height: 729px;
       }
       .intro__slogan {
-        margin: 84px 30px;
+        margin: 20px 30px;
       }
     }
   }
 }
-
+@media (min-resolution: 1.5dppx) {
+  .page-header {
+    background-image: url('../img/bg-back-mobile@2x.jpg');
+    .intro--index {
+      background-image: url('../img/iphone-hand-mobile@2x.png');
+    }
+  }
+}
 @media (min-width: 620px) {
   .page-header {
+    background-image: url('../img/bg-back-tablet@1x.jpg');
+    background-size: 1200px auto;
     &__bar {
       padding: 26px 40px 43px;
       .logo {
@@ -175,13 +193,23 @@
         &__button {
           align-self: flex-end;
         }
+        &__list {
+          padding-top: 110px;
+        }
       }
     }
     .intro {
-      padding-top: 110px;
+      .container {
+        padding-top: 110px;
+      }
+      .intro__slogan {
+        font-size: 40px;
+        line-height: 48px;
+      }
+
       &__app {
         margin-bottom: 92px;
-        margin-top: -55px;
+        margin-top: -58px;
         @include set-color(transparent);
         &-wrapper {
           margin: 0;
@@ -202,11 +230,16 @@
         }
       }
       &--index {
-        padding-top: 119px;
-        margin: 0 40px;
-        width: 300px;
+        background-image: url('../img/iphone-hand-tablet@1x.png');
+        background-size: 700px auto;
+        background-position: 0 184px;
         .container {
-          min-height: 611px;
+          min-height: 619px;
+          width: 300px;
+          margin: 0 40px;
+        }
+        .intro__slogan {
+          margin: 28px 30px 89px;
         }
       }
       &--contest,
@@ -219,16 +252,27 @@
       }
       &--photos {
         .container {
-          min-height: 330px;
+          min-height: 440px;
         }
       }
     }
   }
+  @media (min-resolution: 1.5dppx) {
+    .page-header {
+      background-image: url('../img/bg-back-tablet@2x.jpg');
+      .intro--index {
+        background-image: url('../img/iphone-hand-tablet@2x.png');
+      }
+    }
+  }
 }
+
 @media (min-width: 960px) {
   .page-header {
+    background-image: url('../img/bg-back-desktop.jpg');
+    background-size: 2560px auto;
     &__bar {
-      padding: 26px 130px 25px;
+      padding: 26px 130px 33px;
       .logo {
         width: 150px;
         height: 45px;
@@ -238,6 +282,7 @@
         display: block;
         width: 620px;
         position: relative;
+        margin-top: 5px;
         &__list {
           background: none;
           border: none;
@@ -251,12 +296,19 @@
           }
         }
         &__link {
-          border: none;
+          border-bottom: 2px solid transparent;
           font-weight: 300;
           text-transform: capitalize;
-          padding: 15px 0;
+          padding: 10px 0;
           &:before {
             display: none;
+          }
+          &:hover {
+            border-color: $light-color;
+          }
+          &:active {
+            color: rgba($light-color, 0.3);
+            border-color: rgba($light-color, 0.3);
           }
         }
       }
@@ -265,31 +317,65 @@
       }
     }
     .intro {
-      margin: 0 130px;
       &__app {
         margin-top: 0;
         margin-bottom: 104px;
         .btn--download {
           font-size: 22px;
-          padding: 10px 0 15px;
         }
         &-list {
-          margin: 66px 43px 55px 48px;
+          margin: 66px 43px 55px 46px;
+        }
+        .application__item--android {
+          background-position: 6px 9px;
         }
       }
       &--index {
+        background-image: url('../img/iphone-hand-desktop@1x.png');
+        background-size: 1050px auto;
+        background-position: 146px 209px;
+        .container {
+          margin: 0 130px;
+        }
         .intro__slogan {
-          margin: 100px 32px 52px;
+          margin: 43px 30px 52px;
+          font-size: 50px;
+          line-height: 60px;
         }
       }
       &--contest {
-        padding-top: 105px;
         .container {
-          min-height: 290px;
+          min-height: 394px;
         }
         .intro__slogan {
-          margin: 67px auto 80px;
+          margin: 63px 85px 80px;
         }
+      }
+      &--photos {
+        .container {
+          min-height: 393px;
+        }
+        .intro__slogan {
+          margin: 63px 275px 80px;
+        }
+      }
+    }
+  }
+  @media (min-resolution: 1.5dppx) {
+    .page-header {
+      background-image: url('../img/bg-back-desktop.jpg');// 2x is absent in assets
+      .intro--index {
+        background-image: url('../img/iphone-hand-desktop@2x.png');
+      }
+    }
+  }
+}
+@media (min-width: 960px) and (max-width: 1100px) {
+  .page-header {
+    &__bar {
+      padding: 26px 70px 33px;
+      .menu {
+        width: 550px;
       }
     }
   }

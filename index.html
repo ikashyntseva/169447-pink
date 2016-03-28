@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <script scr="http://code.jquery.com/jquery-1.12.2.js"></script>
     <script src="https://api-maps.yandex.ru/1.1/index.xml" type="text/javascript"></script>
     <script type="text/javascript">
       // Создает обработчик события window.onLoad
@@ -21,6 +22,17 @@
   <body><!-- темно-серая картинка со зданием будет фоном у header, исходя из того, что она присутствует на одном и том де месте на всех страницах -->
     <header class="page-header">
       <div class="page-header__bar">
+        <script type="text/javascript">
+          function toggle(el) {
+            el.style.display = (el.style.display == 'none') ? 'block' : 'none'
+          }
+
+          function menuToggle(e) {
+            this.onclick = function() {
+              toggle(document.querySelector('.menu'));
+            }
+          }
+        </script>
         <div class="logo">
           <a href="#" class="logo-link">
             <picture>
@@ -29,7 +41,7 @@
             </picture>
           </a>
         </div>
-        <a href="#" class="menu__button menu__button--open"></a>
+        <a href="#" class="menu__button menu__button--open" onclick="menuToggle();"></a>
         <nav class="menu">
           <ul class="menu__list">
             <li class="menu__item">
@@ -90,22 +102,34 @@
             </div>
           </div>
           <div class="features__picture-wrapper">
-            <img src="img/iphone-screen-mobile.png" class="features__picture" width="100%" height="100%" alt="Всем привет! :)"/>
+            <picture>
+              <source media="(min-width:960px)" srcset="img/iphone-screen-desktop-1.png 1x, img/iphone-screen-desktop-1@2x.png 2x" />
+              <source media="(min-width:620px)" srcset="img/iphone-screen-tablet-1.png 1x, img/iphone-screen-tablet-1@2x.png 2x" />
+              <img src="img/iphone-screen-mobile.png" srccet="iphone-screen-mobile@2x.png 2x" width="157" height="320" alt="Всем привет! :)" class="features__picture" />
+            </picture>
           </div>
           <div class="features__picture-wrapper">
-            <img src="img/iphone-screen-mobile.png" class="features__picture" width="100%" height="100%" alt="Всем привет! :)"/>
+            <picture>
+              <source media="(min-width:960px)" srcset="img/iphone-screen-desktop-2.png 1x, img/iphone-screen-desktop-2@2x.png 2x" />
+              <source media="(min-width:620px)" srcset="img/iphone-screen-tablet-2.png 1x, img/iphone-screen-tablet-2@2x.png 2x" />
+              <img src="img/iphone-screen-mobile.png" srccet="iphone-screen-mobile@2x.png 2x" width="157" height="320" alt="Всем привет! :)" class="features__picture" />
+            </picture>
           </div>
           <div class="features__picture-wrapper">
-            <img src="img/iphone-screen-mobile.png" class="features__picture" width="100%" height="100%" alt="Всем привет! :)"/>
+            <picture>
+              <source media="(min-width:960px)" srcset="img/iphone-screen-desktop-3.png 1x, img/iphone-screen-desktop-3@2x.png 2x" />
+              <source media="(min-width:620px)" srcset="img/iphone-screen-tablet-3.png 1x, img/iphone-screen-tablet-3@2x.png 2x" />
+              <img src="img/iphone-screen-mobile.png" srccet="iphone-screen-mobile@2x.png 2x" width="157" height="320" alt="Всем привет! :)" class="features__picture" />
+            </picture>
           </div>
         </div>
 
       </section>
       <section class="ad">
         <div class="container">
-          <div class="ad__picture-wrapper">
+          <!--<div class="ad__picture-wrapper">
             <img src="http://placehold.it/240x277" width="240" height="277" class="ad__picture" alt="ad__picture" />
-          </div>
+          </div>-->
           <div class="ad__item">
             <p class="ad__title">Эффект на&nbsp;24 часа!</p>
             <p class="ad__text">Британские ученые провели исследования и доказали, что&nbsp;положительный эффект от&nbsp;использования приложения длится целые сутки!</p>
@@ -115,39 +139,44 @@
       </section>
       <section class="reviews">
         <div class="container">
-        <input type="radio" class="pagination-block__input" id="review-1" name="reviews-pagination" checked>
-        <input type="radio" class="pagination-block__input" id="review-2" name="reviews-pagination">
-        <input type="radio" class="pagination-block__input" id="review-3" name="reviews-pagination">
-        <div class="reviews__wrapper">
-          <blockquote class="review__item review__item--active">
-            <cite class="review__item-author">
-              Николай Петров
-              <p class="review__item-author-info">25 лет, водитель трамвая</p>
-            </cite>
-            <p class="review__item-text">Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые
-              вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!</p>
-          </blockquote>
-          <blockquote class="review__item">
-            <cite class="review__item-author">
-              Иван Иванов
-              <p class="review__item-author-info">25 лет, водитель трамвая</p>
-            </cite>
-            <p class="review__item-text">Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые
-              вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!</p>
-          </blockquote>
-          <blockquote class="review__item">
-            <cite class="review__item-author">
-              Виктор Сидоров
-              <p class="review__item-author-info">25 лет, водитель трамвая</p>
-            </cite>
-            <p class="review__item-text">Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!</p>
-          </blockquote>
+          <input type="radio" class="pagination-block__input" id="review-1" name="reviews-pagination" checked>
+          <input type="radio" class="pagination-block__input" id="review-2" name="reviews-pagination">
+          <input type="radio" class="pagination-block__input" id="review-3" name="reviews-pagination">
+          <div class="reviews__wrapper">
+            <blockquote class="review__item review__item--active">
+              <cite class="review__item-author">
+                Николай Петров
+                <p class="review__item-author-info">25 лет, водитель трамвая</p>
+              </cite>
+              <p class="review__item-text">Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые
+                вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!</p>
+            </blockquote>
+            <blockquote class="review__item">
+              <cite class="review__item-author">
+                Иван Иванов
+                <p class="review__item-author-info">25 лет, водитель трамвая</p>
+              </cite>
+              <p class="review__item-text">Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые
+                вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!</p>
+            </blockquote>
+            <blockquote class="review__item">
+              <cite class="review__item-author">
+                Виктор Сидоров
+                <p class="review__item-author-info">25 лет, водитель трамвая</p>
+              </cite>
+              <p class="review__item-text">Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!</p>
+            </blockquote>
+          </div>
+          <div class="reviews__controls">
+            <label for="review-1" class="pagination-block__label"></label>
+            <label for="review-2" class="pagination-block__label"></label>
+            <label for="review-3" class="pagination-block__label"></label>
+          </div>
         </div>
-        <div class="reviews__controls">
-          <label for="review-1" class="pagination-block__label"></label>
-          <label for="review-2" class="pagination-block__label"></label>
-          <label for="review-3" class="pagination-block__label"></label>
-        </div></div>
+        <div class="reviews__arrows">
+          <a href="#" class="review-arrow review-arrow--left"></a>
+          <a href="#" class="review-arrow review-arrow--right"></a>
+        </div>
       </section>
       <section class="price-slider">
         <input type="radio" class="pagination-block__input" id="slide-price-1" name="pagination">
@@ -175,12 +204,15 @@
             </li>
             <li class="price-slider__item">
               <span>Розовый фильтр</span>
+              <img src="img/icon-yes.svg" alt="yes" width="33" height="22" />
             </li>
             <li class="price-slider__item">
               <span>Смайлики</span>
+              <img src="img/icon-no.svg" alt="no" width="27" height="27" />
             </li>
             <li class="price-slider__item">
               <span>Комментарии</span>
+              <img src="img/icon-no.svg" alt="no" width="27" height="27" />
             </li>
           </ul>
           <ul class="price-slider__list price-slider__list--hit price-slider__list--active">
@@ -192,12 +224,15 @@
             </li>
             <li class="price-slider__item">
               <span>Розовый фильтр</span>
+              <img src="img/icon-yes.svg" alt="yes" width="33" height="22" />
             </li>
             <li class="price-slider__item">
               <span>Смайлики</span>
+              <img src="img/icon-yes.svg" alt="yes" width="33" height="22" />
             </li>
             <li class="price-slider__item">
               <span>Комментарии</span>
+              <img src="img/icon-no.svg" alt="no" width="27" height="27" />
             </li>
           </ul>
           <ul class="price-slider__list">
@@ -209,12 +244,15 @@
             </li>
             <li class="price-slider__item">
               <span>Розовый фильтр</span>
+              <img src="img/icon-yes.svg" alt="yes" width="33" height="22" />
             </li>
             <li class="price-slider__item">
               <span>Смайлики</span>
+              <img src="img/icon-yes.svg" alt="yes" width="33" height="22" />
             </li>
             <li class="price-slider__item">
               <span>Комментарии</span>
+              <img src="img/icon-yes.svg" alt="yes" width="33" height="22" />
             </li>
           </ul>
         </div>
@@ -245,7 +283,7 @@
         </div>
       </section>
     </main>
-    <footer class="page-footer">
+    <footer class="page-footer page-footer--index">
       <div class="container">
         <div class="logo logo--bottom">
           <a href="#" class="logo__link">
