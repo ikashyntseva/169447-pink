@@ -12,7 +12,10 @@
       <div class="page-header__bar">
         <div class="logo">
           <a href="#" class="logo-link">
-            <img src="img/logo-pink-white-mobile.svg" alt="Pink" width="75" height="23" class="logo__picture">
+            <picture>
+              <source media="(min-width:620px)" srcset="img/logo-pink-white-tablet.svg">
+              <img src="img/logo-pink-white-mobile.svg" alt="Pink" width="75" height="23" class="logo__picture" />
+            </picture>
           </a>
         </div>
         <a href="#" class="menu__button menu__button--open"></a>
@@ -36,20 +39,20 @@
           </ul>
         </nav>
       </div>
-      <div class="container">
-        <div class="intro">
+      <div class="intro intro--photos">
+        <div class="container">
           <h1 class="intro__slogan">Фотографии пользователей</h1>
         </div>
       </div>
     </header>
     <main class="main">
       <div class="container">
-        <p class="promo-text">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</p>
+        <p class="promo-text promo-text--photos">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</p>
         <div class="photos">
           <article class="photo-post photo-post--pano photo-post--best"><!--Ярлык с надписью Панорама дня будет псевдоэлементом-->
             <div class="photo-post__picture-wrapper">
               <a href="#" class="photo-post__picture-link">
-                <img src="http://placehold.it/320x140" width="100%" height="100%" alt="Photo" class="photo" />
+                <img src="http://placehold.it/320x137" width="320" height="137" alt="Photo" class="photo" />
               </a>
             </div>
             <blockquote class="photo__info">
@@ -57,7 +60,7 @@
               <time class="photo__date" datetime="">(5 минут назад)</time>
               <p class="photo__comment">Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую транслацию в перископе, задавайте свои вопросы!</p>
               <a href="#" class="photo-like__btn">
-                <img src="img/icon-heart.svg" alt="Like" />
+                <img src="img/icon-heart.svg" width="14" height="13" alt="Like" />
                 <span class="photo-like__quantity">Нравится: 215</span>
               </a>
             </blockquote>
@@ -159,12 +162,11 @@
             </blockquote>
           </article>
         </div>
-        <p class="promo-text promo-text--bottom">Затмите их всех!
-Выкладывайте все, что накопилось в телефоне!</p>
+        <p class="promo-text promo-text--bottom">Затмите их всех!<br /> Выкладывайте все, что накопилось в телефоне!</p>
         <form action="" method="" class="photos-upload">
           <div class="container">
-            <div class="photos-upload-item">
-              <img src="http://placehold.it/280x375" width="100%" height="100%" alt="Photo" class="photo">
+            <div class="photos-upload__item">
+              <img src="http://placehold.it/300x400" width="300" height="400" alt="Photo" class="photo">
             </div>
             <div class="photos-upload__edit">
               <ul class="upload-control">
@@ -188,8 +190,26 @@
                   </div>
                 </div>
               </div>
-              <div class="edit__tab edit__tab--fill"></div>
-              <div class="edit__tab edit__tab--contrast"></div>
+              <div class="edit__tab edit__tab--fill">
+                <div class="range-filter">
+                  <div class="range-controls">
+                      <div class="scale">
+                          <div class="bar"></div>
+                      </div>
+                      <div class="toggle"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="edit__tab edit__tab--contrast">
+                <div class="range-filter">
+                  <div class="range-controls">
+                      <div class="scale">
+                          <div class="bar"></div>
+                      </div>
+                      <div class="toggle"></div>
+                  </div>
+                </div>
+              </div>
             </div>
             <div class="upload__buttons">
               <button class="btn btn--post" type="submit">Запостить</button>
@@ -200,34 +220,31 @@
     </main>
     <footer class="page-footer">
       <div class="container">
-        <div class="logo">
+        <div class="logo logo--bottom">
           <a href="#" class="logo__link">
-            <img src="http://placehold.it/150x40" alt="PINK" class="logo__picture" />
+            <picture>
+              <source media="(min-width:620px)" srcset="img/logo-pink-roze-dark-tablet.svg">
+              <img src="img/logo-pink-roze-dark-tablet.svg" alt="Pink" width="75" height="23" class="logo__picture" />
+            </picture>
           </a>
         </div>
         <div class="social">
           <ul class="social__list">
             <li class="social__item social__item--twitter">
-              <a href="#" class="social__link">
-                <img src="http://placehold.it/51x51" width="100%" height="100%" alt="Twitter" class="social__item--icon" />
-              </a>
+              <a href="#" class="social__link"></a>
             </li>
             <li class="social__item social__item--facebook">
-              <a href="#" class="social__link">
-                <img src="http://placehold.it/51x51" width="100%" height="100%" alt="Facebook" class="social__item--icon" />
-              </a>
+              <a href="#" class="social__link"></a>
             </li>
             <li class="social__item social__item--youtube">
-              <a href="#" class="social__link">
-                <img src="http://placehold.it/251x510x20" width="100%" height="100%" alt="YouTube" class="social__item--icon">
-              </a>
+              <a href="#" class="social__link"></a>
             </li>
           </ul>
         </div>
         <div class="author">
           <span class="author__text">Разработано</span>
           <a href="http://htmlacademy.ru" class="author-logo__link">
-            <img src="http://placehold.it/27x34" alt="HTML Academy" class="author-logo__picture" />
+            <img src="img/logo-htmlacademy.svg" alt="HTML Academy" class="author-logo__picture" />
           </a>
         </div>
       </div>

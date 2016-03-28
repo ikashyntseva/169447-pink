@@ -2,8 +2,10 @@
 
 body {
   margin: 0;
-  font: 400 14px/24px 'Open Sans';
   color: $base-color;
+  * {
+    font: 400 14px/24px 'Open Sans', sans-serif;
+  }
 }
 h1,
 h2 {
@@ -30,6 +32,7 @@ cite,
 a {
   text-decoration: none;
   outline: none;
+  color: $accent-color;
 }
 cite {
   font-style: normal;
@@ -45,7 +48,11 @@ img {
   vertical-align: bottom;
 }
 
-
+.container {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 959px;
+}
 /* Forms */
 
 .form-block,
@@ -77,34 +84,51 @@ img {
     margin: 0;
     position: relative;
     flex-shrink: 0;
-    &:before, {
+    &:before,
+    &:after {
       content: '';
-      width: 100%;
-      height: 100%;
       display: block;
       background: $light-color;
-      border-radius: 100%;
-      border: 2px solid $base-border-color;
       box-sizing: border-box;
+    }
+    &:before {
+      width: 100%;
+      height: 100%;
+      border: 2px solid $base-border-color;
     }
   }
   &__input[type="checkbox"] {
     &:before {
       border-radius: 3px;
     }
+    &:checked {
+      &:after {
+        width: 22px;
+        height: 10px;
+        position: absolute;
+        top: 11px;
+        left: 9px;
+        box-sizing: border-box;
+        border-left: 2px solid $accent-color;
+        border-bottom: 2px solid $accent-color;
+        transform: rotate(-45deg);
+      }
+    }
   }
-  &__input[type="radio"]:checked {
-    &:after {
-      content: '';
-      width: 15px;
-      height: 15px;
-      display: block;
-      position: absolute;
-      top: 12px;
-      left: 12px;
-      background: $accent-color;
+  &__input[type="radio"] {
+    &:before {
       border-radius: 100%;
-      box-sizing: border-box;
+    }
+    &:checked {
+      &:after {
+        width: 15px;
+        height: 15px;
+        position: absolute;
+        top: 12px;
+        left: 12px;
+        background: $accent-color;
+        border-radius: 100%;
+      }
     }
   }
   &__input[type="checkbox"] + label,
@@ -135,21 +159,54 @@ img {
 .btn {
   display: block;
   text-align: center;
-  border: none;
-  border-radius: 3px;
-
+  outline: none;
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 700;
+  background: transparent;
+  color: $light-color;
+  transition: background-color 0.2s ease-out 0.2s, color 0.2s ease-out 0.2s;
+  border: 3px solid $light-color;
+  border-radius: 50px;
   &--submit,
   &--popup {
     margin: 0 auto;
+    border: none;
     color: $light-color;
     font: inherit;
-    font-size: 18px;
-    line-height: 30px;
-    font-weight: 700;
+    border-radius: 3px;
     background: #2aab6d;
     text-transform: uppercase;
     padding: 16px 16px 17px;
     width: 100%;
+  }
+  &--post,
+  &--cancel {
+    padding: 8px 0 11px;
+  }
+  &--post {
+    border-color: $accent-color;
+    color: $accent-color;
+    &:hover {
+      background: $accent-color;
+      color: $light-color;
+    }
+    &:active {
+      color: rgba($light-color, .3);
+    }
+  }
+  &--cancel {
+    border-color: rgba($base-color, 0.1);
+    color: rgba($base-color, 0.1);
+    &:hover {
+      border-color: rgba($base-color, 0.3);
+      color: rgba($base-color, 0.3);
+    }
+    &:active {
+      border-color: transparent;
+      background: rgba($base-color, 0.3);
+      color: rgba($light-color, .3);
+    }
   }
 }
 @media (min-width: 620px) {
