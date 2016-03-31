@@ -1,32 +1,60 @@
-@media (min-width: 320px) {
-  .social {
-    &__list {
+
+.social {
+  &__list {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+  }
+  &__item {
+    list-style: none;
+    margin-right: 13px;
+    &:last-child {
       margin: 0;
-      padding: 0;
-      display: flex;
-      justify-content: center;
     }
-    &__item {
-      list-style: none;
-      margin-right: 12px;
-      &:last-child {
-        margin: 0;
+    &--twitter {
+      .social__link {
+        background-image: url(../img/icon-twitter.svg);
       }
     }
-    &__link {
-      display: block;
-      width: 51px;
-      height: 51px;
-      border-radius: 51px;
-      overflow: hidden;
-      border: 3px solid rgba($base-text-color, 0.1);
-      box-sizing: border-box;
+    &--facebook {
+      .social__link {
+        background-image: url(../img/icon-facebook.svg);
+        background-position: 17px 12px;
+      }
+    }
+    &--youtube {
+      .social__link {
+        background-image: url(../img/icon-youtube.svg);
+      }
+    }
+  }
+  &__link {
+    display: block;
+    width: 51px;
+    height: 51px;
+    border-radius: 51px;
+    overflow: hidden;
+    border: 3px solid rgba($base-color, 0.1);
+    box-sizing: border-box;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    &:hover {
+      border-color: $base-color;
+    }
+    &:active {
+      opacity: 0.3;
     }
   }
 }
 
-@media (min-width: 700px) {
-  .social {
-    width: 320px;
+@media (min-width: 620px) {
+  .social__list {
+    margin: 3px 0 0 -20px;
+  }
+}
+@media (min-width: 960px) {
+  .social__list {
+    margin: 4px 0 0 11px;
   }
 }

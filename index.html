@@ -4,29 +4,23 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <script src="https://api-maps.yandex.ru/1.1/index.xml" type="text/javascript"></script>
-    <script type="text/javascript">
-      // Создает обработчик события window.onLoad
-      YMaps.jQuery(function () {
-          // Создает экземпляр карты и привязывает его к созданному контейнеру
-          var map = new YMaps.Map(YMaps.jQuery("#YMapsID")[0]);
-
-          // Устанавливает начальные параметры отображения карты: центр карты и коэффициент масштабирования
-          map.setCenter(new YMaps.GeoPoint(30.323153, 59.939933), 15);
-      })
-    </script>
     <title>HTML Academy: Пинк - Index</title>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="css/style.css">
   </head>
-  <body><!-- темно-серая картинка со зданием будет фоном у header, исходя из того, что она присутствует на одном и том де месте на всех страницах -->
+  <body><!-- темно-ѝераѝ картинка ѝо зданием будет фоном у header, иѝходѝ из того, что она приѝутѝтвует на одном и том де меѝте на вѝех ѝтраницах -->
     <header class="page-header page-header--index">
       <div class="page-header__bar">
         <div class="logo">
           <a href="#" class="logo-link">
-            <img src="img/logo-pink-white-mobile.svg" alt="Pink" width="75" height="23" class="logo__picture">
+            <picture>
+              <source media="(min-width:960px)" srcset="img/logo-pink-white-desktop.svg">
+              <source media="(min-width:620px)" srcset="img/logo-pink-white-tablet.svg">
+              <img src="img/logo-pink-white-mobile.svg" alt="Pink" width="75" height="23" class="logo__picture" />
+            </picture>
           </a>
         </div>
-        <a href="#" class="menu__button menu__button--open"></a>
+        <a href="#" class="menu__button"></a>
         <nav class="menu">
           <ul class="menu__list">
             <li class="menu__item">
@@ -47,23 +41,25 @@
           </ul>
         </nav>
       </div>
-      <div class="intro">
-        <h1 class="intro__slogan">Взгляните на жизнь иначе!</h1>
-        <div class="intro__app">
-          <div class="intro__app-wrapper">
-            <a class="btn btn--download" href="#">Скачать приложение</a>
-            <div class="intro__app-list">
-              <a href="#" class="application__item application__item--ios"></a>
-              <a href="#" class="application__item application__item--android"></a>
-              <a href="#" class="application__item application__item--microsoft"></a>
+      <div class="intro intro--index">
+        <div class="container container--index">
+          <h1 class="intro__slogan">Взгляните на жизнь иначе!</h1>
+          <div class="intro__app">
+            <div class="intro__app-wrapper">
+              <a class="btn btn--download" href="https://www.apple.com/itunes/">Скачать приложение</a>
+              <div class="intro__app-list">
+                <a href="https://www.apple.com/itunes/" class="application__item application__item--ios"></a>
+                <a href="https://play.google.com" class="application__item application__item--android"></a>
+                <a href="http://www.microsoftstore.com/store/msru/ru_RU/home" class="application__item application__item--microsoft"></a>
+              </div>
+              <p class="intro__app-info">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
             </div>
-            <p class="intro__app-info">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
           </div>
         </div>
       </div>
     </header>
     <main class="main">
-      <p class="promo-big-text">
+      <p class="promo-big-text promo-big-text--index">
         <span class="line">Устали от серости мегаполиса?</span>
         <span class="line">Нам есть, что вам  предложить!</span>
       </p>
@@ -72,75 +68,91 @@
           <div class="features__wrapper">
             <div class="features__item">
               <h2 class="features__title">Поднимает настроение</h2>
-              <p class="features__text">Приложение позволит вам победить осеннюю хандру и деперессию буквально в
+              <p class="features__text">Приложение позволит вам победить оѝеннюю хандру и деперессию буквально в
                 несколько кликов!</p>
             </div>
             <div class="features__item">
               <h2 class="features__title">Меняет мир вокруг</h2>
-              <p class="features__text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+              <p class="features__text">Сделайте снимок и украсьте его ѝмайликом или текстовой подписью, чтобы усилить&nbsp;эффект</p>
             </div>
             <div class="features__item">
               <h2 class="features__title">Заводит новых друзей</h2>
-              <p class="features__text">Ставьте лайки, комментируете, делитесь фотографиями с друзьями и заводите новых</p>
+              <p class="features__text">Ставьте лайки, комментируете, делитесь фотографиѝми с друзьями и заводите новых</p>
             </div>
           </div>
           <div class="features__picture-wrapper">
-            <img src="img/iphone-screen-mobile.png" class="features__picture" width="100%" height="100%" alt="Всем привет! :)"/>
+            <picture>
+              <source media="(min-width:960px)" srcset="img/iphone-screen-desktop-1@1x.png 1x, img/iphone-screen-desktop-1@2x.png 2x" />
+              <source media="(min-width:620px)" srcset="img/iphone-screen-tablet-1@1x.png 1x, img/iphone-screen-tablet-1@2x.png 2x" />
+              <img src="img/iphone-screen-mobile.png" srccet="iphone-screen-mobile@2x.png 2x" width="157" height="320" alt="Вѝем привет! :)" class="features__picture" />
+            </picture>
           </div>
           <div class="features__picture-wrapper">
-            <img src="img/iphone-screen-mobile.png" class="features__picture" width="100%" height="100%" alt="Всем привет! :)"/>
+            <picture>
+              <source media="(min-width:960px)" srcset="img/iphone-screen-desktop-2@1x.png 1x, img/iphone-screen-desktop-2@2x.png 2x" />
+              <source media="(min-width:620px)" srcset="img/iphone-screen-tablet-2@1x.png 1x, img/iphone-screen-tablet-2@2x.png 2x" />
+              <img src="img/iphone-screen-mobile.png" srccet="iphone-screen-mobile@2x.png 2x" width="157" height="320" alt="Вѝем привет! :)" class="features__picture" />
+            </picture>
           </div>
           <div class="features__picture-wrapper">
-            <img src="img/iphone-screen-mobile.png" class="features__picture" width="100%" height="100%" alt="Всем привет! :)"/>
+            <picture>
+              <source media="(min-width:960px)" srcset="img/iphone-screen-desktop-3@1x.png 1x, img/iphone-screen-desktop-3@2x.png 2x" />
+              <source media="(min-width:620px)" srcset="img/iphone-screen-tablet-3@1x.png 1x, img/iphone-screen-tablet-3@2x.png 2x" />
+              <img src="img/iphone-screen-mobile.png" srccet="iphone-screen-mobile@2x.png 2x" width="157" height="320" alt="Вѝем привет! :)" class="features__picture" />
+            </picture>
           </div>
         </div>
 
       </section>
       <section class="ad">
         <div class="container">
-          <div class="ad__picture-wrapper">
-            <img src="http://placehold.it/240x277" width="240" height="277" class="ad__picture" alt="ad__picture" />
-          </div>
           <div class="ad__item">
-            <p class="ad__title">Эффект на 24 часа!</p>
-            <p class="ad__text">Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!</p>
+            <p class="ad__title">Эффект на&nbsp;24 часа!</p>
+            <p class="ad__text">Британские ученые провели исследования и доказали, что&nbsp;положительный эффект от&nbsp;использованиѝ приложения длится целые сутки!</p>
             <a href="#" class="ad__link">Узнать больше об исследовании</a>
           </div>
         </div>
       </section>
       <section class="reviews">
-        <input type="radio" class="pagination-block__input" id="review-1" name="reviews-pagination" checked>
-        <input type="radio" class="pagination-block__input" id="review-2" name="reviews-pagination">
-        <input type="radio" class="pagination-block__input" id="review-3" name="reviews-pagination">
-        <div class="reviews__wrapper">
-          <blockquote class="review__item review__item--active">
-            <cite class="review__item-author">
-              Николай Петров
-              <p class="review__item-author-info">25 лет, водитель трамвая</p>
-            </cite>
-            <p class="review__item-text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые
-              вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
-          </blockquote>
-          <blockquote class="review__item">
-            <cite class="review__item-author">
-              Иван Иванов
-              <p class="review__item-author-info">25 лет, водитель трамвая</p>
-            </cite>
-            <p class="review__item-text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые
-              вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
-          </blockquote>
-          <blockquote class="review__item">
-            <cite class="review__item-author">
-              Виктор Сидоров
-              <p class="review__item-author-info">25 лет, водитель трамвая</p>
-            </cite>
-            <p class="review__item-text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
-          </blockquote>
+        <div class="container">
+          <input type="radio" class="pagination-block__input" id="review-1" name="reviews-pagination" checked>
+          <input type="radio" class="pagination-block__input" id="review-2" name="reviews-pagination">
+          <input type="radio" class="pagination-block__input" id="review-3" name="reviews-pagination">
+          <div class="reviews__wrapper">
+            <blockquote class="review__item review__item--active">
+              <cite class="review__item-author">
+                Николай Петров
+                <p class="review__item-author-info">25 лет, водитель трамвая</p>
+              </cite>
+              <p class="review__item-text">Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые
+                вещи! Но еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!</p>
+            </blockquote>
+            <blockquote class="review__item">
+              <cite class="review__item-author">
+                Иван Иванов
+                <p class="review__item-author-info">25 лет, водитель трамвая</p>
+              </cite>
+              <p class="review__item-text">Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые
+                вещи! Но еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!</p>
+            </blockquote>
+            <blockquote class="review__item">
+              <cite class="review__item-author">
+                Виктор Сидоров
+                <p class="review__item-author-info">25 лет, водитель трамваѝ</p>
+              </cite>
+              <p class="review__item-text">Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые
+                вещи! Но еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!</p>
+            </blockquote>
+          </div>
+          <div class="reviews__controls">
+            <label for="review-1" class="pagination-block__label"></label>
+            <label for="review-2" class="pagination-block__label"></label>
+            <label for="review-3" class="pagination-block__label"></label>
+          </div>
         </div>
-        <div class="reviews__controls">
-          <label for="review-1" class="pagination-block__label"></label>
-          <label for="review-2" class="pagination-block__label"></label>
-          <label for="review-3" class="pagination-block__label"></label>
+        <div class="reviews__arrows">
+          <a href="#" class="review-arrow review-arrow--left"></a>
+          <a href="#" class="review-arrow review-arrow--right"></a>
         </div>
       </section>
       <section class="price-slider">
@@ -169,12 +181,15 @@
             </li>
             <li class="price-slider__item">
               <span>Розовый фильтр</span>
+              <img src="img/icon-yes.svg" alt="yes" width="33" height="22" />
             </li>
             <li class="price-slider__item">
               <span>Смайлики</span>
+              <img src="img/icon-no.svg" alt="no" width="27" height="27" />
             </li>
             <li class="price-slider__item">
               <span>Комментарии</span>
+              <img src="img/icon-no.svg" alt="no" width="27" height="27" />
             </li>
           </ul>
           <ul class="price-slider__list price-slider__list--hit price-slider__list--active">
@@ -186,29 +201,35 @@
             </li>
             <li class="price-slider__item">
               <span>Розовый фильтр</span>
+              <img src="img/icon-yes.svg" alt="yes" width="33" height="22" />
             </li>
             <li class="price-slider__item">
               <span>Смайлики</span>
+              <img src="img/icon-yes.svg" alt="yes" width="33" height="22" />
             </li>
             <li class="price-slider__item">
               <span>Комментарии</span>
+              <img src="img/icon-no.svg" alt="no" width="27" height="27" />
             </li>
           </ul>
           <ul class="price-slider__list">
             <li class="price-slider__list-header">
-              <div class="price-slider__list-title">Анлим</div>
+              <div class="price-slider__list-title">Ннлим</div>
               <div class="price-slider__list-cost">
                 9,99 USD
               </div>
             </li>
             <li class="price-slider__item">
               <span>Розовый фильтр</span>
+              <img src="img/icon-yes.svg" alt="yes" width="33" height="22" />
             </li>
             <li class="price-slider__item">
               <span>Смайлики</span>
+              <img src="img/icon-yes.svg" alt="yes" width="33" height="22" />
             </li>
             <li class="price-slider__item">
               <span>Комментарии</span>
+              <img src="img/icon-yes.svg" alt="yes" width="33" height="22" />
             </li>
           </ul>
         </div>
@@ -241,44 +262,45 @@
     </main>
     <footer class="page-footer page-footer--index">
       <div class="container">
-        <div class="logo">
+        <div class="logo logo--bottom">
           <a href="#" class="logo__link">
-            <img src="http://placehold.it/150x40" alt="PINK" class="logo__picture" />
+            <picture>
+              <source media="(min-width:960px)" srcset="img/logo-pink-blue-desktop.svg">
+              <img src="img/logo-pink-blue-mobile.svg" alt="Pink" width="75" height="23" class="logo__picture" />
+            </picture>
           </a>
         </div>
         <div class="social">
           <ul class="social__list">
             <li class="social__item social__item--twitter">
-              <a href="#" class="social__link">
-                <!--<img src="http://placehold.it/51x51" width="100%" height="100%" alt="Twitter" class="social__item--icon" />-->
-                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.0" id="Layer_1" x="0px" y="0px" width="17.5px" height="14.663px" viewbox="0 0 17.5 14.663" enable-background="new 0 0 17.5 14.663" xml:space="preserve">
-<g id="W6EeEF_1_">
-	<g>
-		<path fill-rule="evenodd" clip-rule="evenodd" d="M11.283,0.153c1.736-0.485,3.074,0.263,3.685,1.151    c0.694-0.226,1.372-0.47,2.072-0.691c-0.004,0.841-0.538,1.478-0.883,1.727C16.861,2.506,17.5,1.86,17.5,1.86    c-0.175,0.976-1.035,1.746-1.611,1.977C15.65,10.429,12.617,14.793,5.507,14.66c-0.538,0,0.077,0-0.46,0    c-0.422,0-4.29-0.45-5.047-1.843c2.341,0.192,4.011-0.412,4.835-1.15c-0.989-0.293-2.761-0.464-3.07-2.881    c0.362,0.105,0.583,0.223,1.228,0.117C1.757,8.067,0.385,7.366,0.461,5.218c0.294,0.32,1.1,0.523,1.381,0.461    c-0.725-0.235-2.03-3.281-0.921-4.836C2.794,2.654,4.769,4.364,8.29,4.528C8.506,2.288,9.461,0.787,11.283,0.153z"/>
-	</g>
-</g>
-</svg>
-              </a>
+              <a href="#" class="social__link"></a>
             </li>
             <li class="social__item social__item--facebook">
-              <a href="#" class="social__link">
-                <img src="http://placehold.it/51x51" width="100%" height="100%" alt="Facebook" class="social__item--icon" />
-              </a>
+              <a href="#" class="social__link"></a>
             </li>
             <li class="social__item social__item--youtube">
-              <a href="#" class="social__link">
-                <img src="http://placehold.it/251x510x20" width="100%" height="100%" alt="YouTube" class="social__item--icon">
-              </a>
+              <a href="#" class="social__link"></a>
             </li>
           </ul>
         </div>
         <div class="author">
           <span class="author__text">Разработано</span>
           <a href="http://htmlacademy.ru" class="author-logo__link">
-            <img src="http://placehold.it/27x34" alt="HTML Academy" class="author-logo__picture" />
+            <img src="img/logo-htmlacademy.svg" alt="HTML Academy" class="author-logo__picture" />
           </a>
         </div>
       </div>
     </footer>
+    <script src="js/main.js"></script>
+    <script type="text/javascript">
+      // Создает обработчик ѝобытиѝ window.onLoad
+      YMaps.jQuery(function () {
+          // Создает ѝкземплѝр карты и привѝзывает его к ѝозданному контейнеру
+          var map = new YMaps.Map(YMaps.jQuery("#YMapsID")[0]);
+
+          // Уѝтанавливает начальные параметры отображениѝ карты: центр карты и коѝффициент маѝштабированиѝ
+          map.setCenter(new YMaps.GeoPoint(30.323153, 59.939933), 15);
+      })
+    </script>
   </body>
 </html>

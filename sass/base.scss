@@ -1,67 +1,288 @@
 @import "variables";
 
-@media (min-width: 320px) {
-
-  body {
-    margin: 0;
-    font: 400 14px/24px 'Open Sans';
-    color: $base-text-color;
-  }
-  h1,
-  h2 {
-    margin: 0;
-  }
-  h1,
-  .promo-big-text,
-  .contacts__text,
-  .contacts__item-info,
-  .price-slider__list-cost {
-    font-size: 24px;
-    font-weight: 300;
-    line-height: 28px;
-  }
-  h2,
-  cite,
-  .price-slider__list-title,
-  .contacts__item-title,
-  .ad__title {
-    font-size: 18px;
-    font-weight: 700;
-    color: $dark-text-color;
-  }
-  a {
-    text-decoration: none;
-    outline: none;
-  }
-  cite {
-    font-style: normal;
-  }
-  ul {
-    margin: 0;
-    padding: 0;
-    li {
-      list-style: none;
-    }
-  }
-  img {
-    vertical-align: bottom;
-  }
-  .btn {
-    display: block;
-    text-align: center;
+body {
+  margin: 0;
+  color: $base-color;
+  font: $base-font;
+}
+h1,
+h2 {
+  margin: 0;
+}
+.intro__slogan,
+.promo-big-text,
+.contacts__text,
+.contacts__item-info,
+.price-slider__list-cost {
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 30px;
+}
+h2,
+cite,
+.price-slider__list-title,
+.contacts__item-title,
+.ad__title {
+  font-size: 18px;
+  font-weight: 700;
+  color: $dark-color;
+}
+a {
+  text-decoration: none;
+  outline: none;
+  color: $accent-color;
+  &:hover {
+    color: $base-color;
+    text-decoration: underline;
   }
 }
-@media (min-width: 700px) {
+cite {
+  font-style: normal;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  li {
+    list-style: none;
+  }
+}
+img {
+  vertical-align: bottom;
+}
 
-  h1,
+.container {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 959px;
+  box-sizing: border-box;
+}
+/* Forms */
+
+.form-block,
+.form__btns {
+  border: none;
+  width: 100%;
+  max-width: 959px;
+  box-sizing: border-box;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+.form-block {
+  &__title {
+    color: $accent-color;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 18px;
+    margin: 0 auto;
+    position: relative;
+    top: 54px;
+  }
+  &__input,
+  &__textarea {
+    outline: none;
+  }
+  &__input[type="checkbox"],
+  &__input[type="radio"] {
+    display: none;
+  }
+  &__input[type="checkbox"] + .form-block__label,
+  &__input[type="radio"] + .form-block__label {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    margin: 0;
+    position: relative;
+    &:hover {
+      cursor: pointer;
+    }
+    &:before {
+      width: 39px;
+      height: 39px;
+      margin: 0;
+      position: relative;
+      flex-shrink: 0;
+      border: 2px solid $base-border-color;
+      margin-right: 30px;
+    }
+
+    &:hover {
+      cursor: pointer;
+      &:before {
+        border-color: $base-color;
+      }
+    }
+    &:active {
+      &:before {
+        border-color: $accent-color;
+      }
+    }
+    &:before,
+    &:after {
+      content: '';
+      display: block;
+      background: $light-color;
+      box-sizing: border-box;
+    }
+  }
+  &__input[type="checkbox"] + .form-block__label {
+    &:before {
+      border-radius: 3px;
+    }
+  }
+  &__input[type="checkbox"]:checked + .form-block__label {
+    &:after {
+      width: 22px;
+      height: 10px;
+      position: absolute;
+      top: 11px;
+      left: 9px;
+      box-sizing: border-box;
+      border-left: 2px solid $accent-color;
+      border-bottom: 2px solid $accent-color;
+      transform: rotate(-45deg);
+    }
+  }
+  &__input[type="radio"] + .form-block__label {
+    &:before {
+      border-radius: 100%;
+    }
+  }
+  &__input[type="radio"]:checked + .form-block__label {
+    &:after {
+      width: 15px;
+      height: 15px;
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      background: $accent-color;
+      border-radius: 100%;
+    }
+  }
+
+  &__input[type="text"],
+  &__input[type="tel"],
+  &__input[type="email"],
+  .form-block__textarea {
+    font: 400 14px/24px 'Open Sans';
+    border: 2px solid $base-border-color;
+    padding: 17px 20px 18px;
+    font-size: 18px;
+    border-radius: 3px;
+    width: 100%;
+    box-sizing: border-box;
+    &::placeholder {
+      color: $base-color;
+    }
+    &:hover {
+      border-color: $base-color;
+    }
+    &:focus {
+      border-color: $accent-color;
+    }
+  }
+  .form-block__textarea {
+    line-height: 30px;
+    padding: 14px 18px;
+  }
+}
+.btn {
+  display: block;
+  text-align: center;
+  outline: none;
+  font: $base-font;
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 700;
+  background: transparent;
+  color: $light-color;
+  //transition: background-color 0.2s ease-out 0.2s, color 0.2s ease-out 0.2s;
+  border: 3px solid $light-color;
+  border-radius: 50px;
+  &:hover {
+    cursor: pointer;
+  }
+  &--submit,
+  &--popup {
+    margin: 0 auto;
+    border: none;
+    color: $light-color;
+    border-radius: 3px;
+    background-color: $success-color;
+    text-transform: uppercase;
+    padding: 16px 16px 17px;
+    width: 100%;
+    &:hover {
+      background-color: darken($success-color, 4.25%);
+    }
+    &:active {
+      color: rgba($light-color, .3);
+    }
+  }
+  &--inprogress {
+
+  }
+  &--post,
+  &--cancel {
+    padding: 8px 0 11px;
+  }
+  &--post {
+    border-color: $accent-color;
+    color: $accent-color;
+    &:hover {
+      background: $accent-color;
+      color: $light-color;
+    }
+    &:active {
+      color: rgba($light-color, .3);
+    }
+  }
+  &--cancel {
+    border-color: rgba($base-color, 0.1);
+    color: rgba($base-color, 0.1);
+    &:hover {
+      border-color: rgba($base-color, 0.3);
+      color: rgba($base-color, 0.3);
+    }
+    &:active {
+      border-color: transparent;
+      background: rgba($base-color, 0.3);
+      color: rgba($light-color, .3);
+    }
+  }
+}
+@media (min-width: 620px) {
+  .intro__slogan--index,
   .promo-big-text,
   .contacts__text,
   .price-slider__list-cost {
     font-size: 40px;
     line-height: 48px;
   }
+  form {
+    .form-block {
+      .form-block__title {
+        top: 0;
+        padding: 0 31px;
+        margin-bottom: 0;
+      }
+      &__input[type="checkbox"] + label,
+      &__input[type="radio"] + label {
+        margin: -2px 0 0 21px;
+      }
+      &__input[type="text"],
+      &__input[type="tel"],
+      &__input[type="email"],
+      .form-block__textarea {
+        font: 400 18px/30px 'Open Sans';
+        padding: 14px 21px 15px;
+      }
+      .form-block__textarea {
+        padding: 14px 19px;
+      }
+    }
+  }
 }
-@media (min-width: 1200px) {
+@media (min-width: 960px) {
 
   h1,
   .promo-big-text,

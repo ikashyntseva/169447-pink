@@ -4,53 +4,60 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>HTML Academy: Пинк - Photo</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body><!-- темно-серая картинка со зданием будет фоном у header, исходя из того, что она присутствует на одном и том де месте на всех страницах -->
     <header class="page-header">
       <div class="page-header__bar">
-        <div class="container">
-          <div class="logo">
-            <a href="#" class="logo-link">
-              <img src="http://placehold.it/75x22" alt="Pink" class="logo__picture">
-            </a>
-          </div>
-          <a href="#" class="menu__button menu__button--open"></a>
-          <nav class="menu">
-            <ul class="menu__list">
-              <li class="menu__item">
-                <a href="index.html" class="menu__link">Главная</a>
-              </li>
-              <li class="menu__item">
-                <a href="photo.html" class="menu__link">Фотографии
-                </a>
-              </li>
-              <li class="menu__item">
-                <a href="form.html" class="menu__link">Конкурс
-                </a>
-              </li>
-              <li class="menu__item">
-                <a href="http://htmlacademy.ru" class="menu__link">HTML Academy
-                </a>
-              </li>
-            </ul>
-          </nav>
+        <div class="logo">
+          <a href="#" class="logo-link">
+            <picture>
+              <source media="(min-width:960px)" srcset="img/logo-pink-white-desktop.svg">
+              <source media="(min-width:620px)" srcset="img/logo-pink-white-tablet.svg">
+              <img src="img/logo-pink-white-mobile.svg" alt="Pink" width="75" height="23" class="logo__picture" />
+            </picture>
+          </a>
         </div>
+        <a href="#" class="menu__button menu__button--open"></a>
+        <nav class="menu">
+          <ul class="menu__list">
+            <li class="menu__item">
+              <a href="index.html" class="menu__link">Главная</a>
+            </li>
+            <li class="menu__item">
+              <a href="photo.html" class="menu__link">Фотографии
+              </a>
+            </li>
+            <li class="menu__item">
+              <a href="form.html" class="menu__link">Конкурс
+              </a>
+            </li>
+            <li class="menu__item">
+              <a href="http://htmlacademy.ru" class="menu__link">HTML Academy
+              </a>
+            </li>
+          </ul>
+        </nav>
       </div>
-      <div class="container">
-        <div class="intro">
+      <div class="intro intro--photos">
+        <div class="container container--photos">
           <h1 class="intro__slogan">Фотографии пользователей</h1>
         </div>
       </div>
     </header>
     <main class="main">
       <div class="container">
-        <p class="promo-text">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</p>
+        <p class="promo-text promo-text--photos">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</p>
         <div class="photos">
           <article class="photo-post photo-post--pano photo-post--best"><!--Ярлык с надписью Панорама дня будет псевдоэлементом-->
             <div class="photo-post__picture-wrapper">
               <a href="#" class="photo-post__picture-link">
-                <img src="http://placehold.it/320x140" width="100%" height="100%" alt="Photo" class="photo" />
+                <picture>
+                  <source media="(min-width:960px)" srcset="img/panorama-desktop.jpg 1x, img/panorama-desktop@2x.jpg 2x" />
+                  <source media="(min-width:620px)" srcset="img/panorama-tablet.jpg 1x, img/panorama-tablet@2x.jpg 2x" />
+                  <img src="img/panorama-mobile.jpg" srccet="img/panorama-mobile@2x.jpg 2x" width="320" height="137" alt="Photo" class="photo" />
+                </picture>
               </a>
             </div>
             <blockquote class="photo__info">
@@ -58,7 +65,7 @@
               <time class="photo__date" datetime="">(5 минут назад)</time>
               <p class="photo__comment">Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую транслацию в перископе, задавайте свои вопросы!</p>
               <a href="#" class="photo-like__btn">
-                <img src="img/icon-heart.svg" alt="Like" />
+                <img src="img/icon-heart.svg" width="14" height="13" alt="Like" />
                 <span class="photo-like__quantity">Нравится: 215</span>
               </a>
             </blockquote>
@@ -66,7 +73,11 @@
           <article class="photo-post">
             <div class="photo-post__picture-wrapper">
               <a href="#" class="photo-post__picture-link">
-                <img src="http://placehold.it/280x180" width="100%" height="100%" alt="Photo" class="photo" />
+                <picture>
+                  <source media="(min-width:960px)" srcset="img/photo-1-desktop.jpg 1x, img/photo-1-desktop@2x.jpg 2x" />
+                  <source media="(min-width:620px)" srcset="img/photo-1-tablet.jpg 1x, img/photo-1-tablet@2x.jpg 2x" />
+                  <img src="img/photo-1-mobile.jpg" srccet="img/photo-1-mobile@2x.jpg 2x" width="280" height="180" alt="Photo" class="photo" />
+                </picture>
               </a>
             </div>
             <blockquote class="photo__info">
@@ -82,7 +93,11 @@
           <article class="photo-post">
             <div class="photo-post__picture-wrapper">
               <a href="#" class="photo-post__picture-link">
-                <img src="http://placehold.it/280x180" width="100%" height="100%" alt="Photo" class="photo" />
+                <picture>
+                  <source media="(min-width:960px)" srcset="img/photo-2-desktop.jpg 1x, img/photo-2-desktop@2x.jpg 2x" />
+                  <source media="(min-width:620px)" srcset="img/photo-2-tablet.jpg 1x, img/photo-2-tablet@2x.jpg 2x" />
+                  <img src="img/photo-2-mobile.jpg" srccet="img/photo-2-mobile@2x.jpg 2x" width="280" height="180" alt="Photo" class="photo" />
+                </picture>
               </a>
             </div>
             <blockquote class="photo__info">
@@ -98,7 +113,11 @@
           <article class="photo-post">
             <div class="photo-post__picture-wrapper">
               <a href="#" class="photo-post__picture-link">
-                <img src="http://placehold.it/280x180" width="100%" height="100%" alt="Photo" class="photo" />
+                <picture>
+                  <source media="(min-width:960px)" srcset="img/photo-3-desktop.jpg 1x, img/photo-3-desktop@2x.jpg 2x" />
+                  <source media="(min-width:620px)" srcset="img/photo-3-tablet.jpg 1x, img/photo-3-tablet@2x.jpg 2x" />
+                  <img src="img/photo-3-mobile.jpg" srccet="img/photo-3-mobile@2x.jpg 2x" width="280" height="180" alt="Photo" class="photo" />
+                </picture>
               </a>
             </div>
             <blockquote class="photo__info">
@@ -114,7 +133,11 @@
           <article class="photo-post">
             <div class="photo-post__picture-wrapper">
               <a href="#" class="photo-post__picture-link">
-                <img src="http://placehold.it/280x180" width="100%" height="100%" alt="Photo" class="photo" />
+                <picture>
+                  <source media="(min-width:960px)" srcset="img/photo-4-desktop.jpg 1x, img/photo-4-desktop@2x.jpg 2x" />
+                  <source media="(min-width:620px)" srcset="img/photo-4-tablet.jpg 1x, img/photo-4-tablet@2x.jpg 2x" />
+                  <img src="img/photo-2-mobile.jpg" srccet="img/photo-4-mobile@2x.jpg 2x" width="280" height="180" alt="Photo" class="photo" />
+                </picture>
               </a>
             </div>
             <blockquote class="photo__info">
@@ -130,7 +153,11 @@
           <article class="photo-post">
             <div class="photo-post__picture-wrapper">
               <a href="#" class="photo-post__picture-link">
-                <img src="http://placehold.it/280x180" width="100%" height="100%" alt="Photo" class="photo" />
+                <picture>
+                  <source media="(min-width:960px)" srcset="img/photo-5-desktop.jpg 1x, img/photo-5-desktop@2x.jpg 2x" />
+                  <source media="(min-width:620px)" srcset="img/photo-5-tablet.jpg 1x, img/photo-5-tablet@2x.jpg 2x" />
+                  <img src="img/photo-5-mobile.jpg" srccet="img/photo-5-mobile@2x.jpg 2x" width="280" height="180" alt="Photo" class="photo" />
+                </picture>
               </a>
             </div>
             <blockquote class="photo__info">
@@ -146,7 +173,11 @@
           <article class="photo-post">
             <div class="photo-post__picture-wrapper">
               <a href="#" class="photo-post__picture-link">
-                <img src="http://placehold.it/280x180" width="100%" height="100%" alt="Photo" class="photo" />
+                <picture>
+                  <source media="(min-width:960px)" srcset="img/photo-6-desktop.jpg 1x, img/photo-6-desktop@2x.jpg 2x" />
+                  <source media="(min-width:620px)" srcset="img/photo-6-tablet.jpg 1x, img/photo-2-tablet@2x.jpg 2x" />
+                  <img src="img/photo-6-mobile.jpg" srccet="img/photo-6-mobile@2x.jpg 2x" width="280" height="180" alt="Photo" class="photo" />
+                </picture>
               </a>
             </div>
             <blockquote class="photo__info">
@@ -160,26 +191,26 @@
             </blockquote>
           </article>
         </div>
-        <p class="promo-text promo-text--bottom">Затмите их всех!
-Выкладывайте все, что накопилось в телефоне!</p>
+        <p class="promo-text promo-text--bottom">Затмите их всех!<br /> Выкладывайте все, что накопилось в телефоне!</p>
         <form action="" method="" class="photos-upload">
           <div class="container">
-            <div class="photos-upload-item">
-              <img src="http://placehold.it/280x375" width="100%" height="100%" alt="Photo" class="photo">
+            <div class="photos-upload__item">
+              <picture>
+                <source media="(min-width:960px)" srcset="img/photo-7-desktop.jpg 1x, img/photo-7-desktop@2x.jpg 2x" />
+                <source media="(min-width:620px)" srcset="img/photo-7-tablet.jpg 1x, img/photo-7-tablet@2x.jpg 2x" />
+                <img src="img/photo-7-mobile.jpg" srccet="img/photo-7-mobile@2x.jpg 2x" width="280" height="374" alt="Photo" class="photo" />
+              </picture>
             </div>
             <div class="photos-upload__edit">
-              <ul class="upload-control">
-                <li class="upload-control__option upload-control__option--selected upload-control__option--crop">
-                  <a href="#" class="control__icon"></a>
-                </li>
-                <li class="upload-control__option upload-control__option--fill">
-                  <a href="#" class="control__icon"></a>
-                </li>
-                <li class="upload-control__option upload-control__option--contrast">
-                  <a href="#" class="control__icon"></a>
-                </li>
-              </ul>
-              <div class="edit__tab edit__tab--crop edit__tab--active">
+              <input type="radio" name="upload-controls" id="option-crop" class="upload-control__input" checked>
+              <input type="radio" name="upload-controls" id="option-fill" class="upload-control__input">
+              <input type="radio" name="upload-controls" id="option-contrast" class="upload-control__input">
+              <div class="upload-control">
+                <label for="option-crop" class="upload-control__option upload-control__option--crop"></label>
+                <label for="option-fill" class="upload-control__option upload-control__option--fill"></label>
+                <label for="option-contrast" class="upload-control__option upload-control__option--contrast"></label>
+              </div>
+              <div class="edit__tab edit__tab--crop">
                 <div class="range-filter">
                   <div class="range-controls">
                       <div class="scale">
@@ -189,8 +220,26 @@
                   </div>
                 </div>
               </div>
-              <div class="edit__tab edit__tab--fill"></div>
-              <div class="edit__tab edit__tab--contrast"></div>
+              <div class="edit__tab edit__tab--fill">
+                <div class="range-filter">
+                  <div class="range-controls">
+                      <div class="scale">
+                          <div class="bar"></div>
+                      </div>
+                      <div class="toggle"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="edit__tab edit__tab--contrast">
+                <div class="range-filter">
+                  <div class="range-controls">
+                      <div class="scale">
+                          <div class="bar"></div>
+                      </div>
+                      <div class="toggle"></div>
+                  </div>
+                </div>
+              </div>
             </div>
             <div class="upload__buttons">
               <button class="btn btn--post" type="submit">Запостить</button>
@@ -201,37 +250,35 @@
     </main>
     <footer class="page-footer">
       <div class="container">
-        <div class="logo">
+        <div class="logo logo--bottom">
           <a href="#" class="logo__link">
-            <img src="http://placehold.it/150x40" alt="PINK" class="logo__picture" />
+            <picture>
+              <source media="(min-width:960px)" srcset="img/logo-pink-blue-desktop.svg">
+              <img src="img/logo-pink-blue-mobile.svg" alt="Pink" width="75" height="23" class="logo__picture" />
+            </picture>
           </a>
         </div>
         <div class="social">
           <ul class="social__list">
             <li class="social__item social__item--twitter">
-              <a href="#" class="social__link">
-                <img src="http://placehold.it/51x51" width="100%" height="100%" alt="Twitter" class="social__item--icon" />
-              </a>
+              <a href="#" class="social__link"></a>
             </li>
             <li class="social__item social__item--facebook">
-              <a href="#" class="social__link">
-                <img src="http://placehold.it/51x51" width="100%" height="100%" alt="Facebook" class="social__item--icon" />
-              </a>
+              <a href="#" class="social__link"></a>
             </li>
             <li class="social__item social__item--youtube">
-              <a href="#" class="social__link">
-                <img src="http://placehold.it/251x510x20" width="100%" height="100%" alt="YouTube" class="social__item--icon">
-              </a>
+              <a href="#" class="social__link"></a>
             </li>
           </ul>
         </div>
         <div class="author">
           <span class="author__text">Разработано</span>
           <a href="http://htmlacademy.ru" class="author-logo__link">
-            <img src="http://placehold.it/27x34" alt="HTML Academy" class="author-logo__picture" />
+            <img src="img/logo-htmlacademy.svg" alt="HTML Academy" class="author-logo__picture" />
           </a>
         </div>
       </div>
     </footer>
+    <script src="js/main.js"></script>
   </body>
 </html>
