@@ -123,9 +123,11 @@
     background-color: transparent;
     color: $light-color;
     padding: 8px 0 11px;
+
     &:hover {
       background: $light-color;
       color: $accent-color;
+      text-decoration: none;
     }
     &:active {
       color: rgba($accent-color, .3);
