@@ -76,8 +76,12 @@
 }
 .ad {
   display: none;
+  padding: 58px 0 0;
   .container {
     position: relative;
+    display: flex;
+    width: 620px;
+    margin: 0 auto;
     &:before {
       content: '';
       display: block;
@@ -105,6 +109,22 @@
       font-weight: 700;
       padding: 0 46px;
     }
+  }
+
+  &__item {
+    width: 308px;
+  }
+  &__title {
+    font-size: 30px;
+    line-height: 36px;
+    margin: 38px 0 0;
+    width: 170px;
+  }
+  &__text {
+    margin: 10px 0;
+  }
+  &__link {
+    text-decoration: underline;
   }
 }
 /* Reviews begin */
@@ -248,7 +268,6 @@
 
 /* Contacts begin */
 .contacts {
-
   text-align: center;
   padding: 41px 0 0;
   .container {
@@ -346,6 +365,10 @@
     align-items: center;
     text-transform: uppercase;
     font-size: 12px;
+    &:hover {
+      color: $accent-color;
+      text-decoration: none;
+    }
   }
   .photo-like__quantity {
     margin-left: 18px;
@@ -353,6 +376,20 @@
 
   &--pano {
     width: 100%;
+    position: relative;
+    &:before {
+      content: 'Панорама дня';
+      background: $accent-color;
+      color: $light-color;
+      text-transform: uppercase;
+      display: block;
+      font-size: 12px;
+      line-height: 36px;
+      font-weight: 700;
+      padding: 0px 19px 0px 20px;
+      position: absolute;
+      right: 20px;
+    }
     .photo-post__picture-wrapper {
       height: auto;
     }
@@ -372,6 +409,7 @@
   &__item {
     width: 280px;
     height: 375px;
+    margin: 0 auto;
     .photo {
       width: 100%;
       height: 100%;
@@ -384,12 +422,11 @@
   .upload-control {
     height: 48px;
     width: 240px;
-    margin-top: 41px;
     display: flex;
     align-items: center;
     justify-content: space-around;
     padding: 0 20px;
-    margin-bottom: 3px;
+    margin: 41px auto 3px;
   }
   .upload-control__input {
     display: none;
@@ -487,7 +524,7 @@
     }
     &--index {
       width: auto;
-      padding: 48px 0 46px;
+      padding: 49px 0 45px;
       .line:first-child {
         margin: 0
       }
@@ -548,28 +585,6 @@
   }
   .ad {
     display: block;
-    padding: 58px 0 0;
-    .container {
-      display: flex;
-      width: 620px;
-      margin: 0 auto;
-    }
-    &__item {
-      width: 308px;
-    }
-    &__title {
-      font-size: 30px;
-      line-height: 36px;
-      margin: 38px 0 0;
-      width: 170px;
-    }
-    &__text {
-      margin: 10px 0;
-    }
-    &__link {
-      color: $accent-color;
-      text-decoration: underline;
-    }
   }
   /* Reviews begin */
   .reviews {
@@ -718,6 +733,10 @@
     &.photo-post--pano {
       flex: 1 100%;
       margin: 0 0 50px;
+      &:before {
+        right: 40px;
+        top: 57px;
+      }
       .photo-post__picture-wrapper {
         height: 509px;
       }

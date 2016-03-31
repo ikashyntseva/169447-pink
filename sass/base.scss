@@ -31,6 +31,10 @@ a {
   text-decoration: none;
   outline: none;
   color: $accent-color;
+  &:hover {
+    color: $base-color;
+    text-decoration: underline;
+  }
 }
 cite {
   font-style: normal;
@@ -79,11 +83,28 @@ img {
   }
   &__input[type="checkbox"],
   &__input[type="radio"] {
-    width: 39px;
-    height: 39px;
+    display: none;
+  }
+  &__input[type="checkbox"] + .form-block__label,
+  &__input[type="radio"] + .form-block__label {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
     margin: 0;
     position: relative;
-    flex-shrink: 0;
+    &:hover {
+      cursor: pointer;
+    }
+    &:before {
+      width: 39px;
+      height: 39px;
+      margin: 0;
+      position: relative;
+      flex-shrink: 0;
+      border: 2px solid $base-border-color;
+      margin-right: 30px;
+    }
+
     &:hover {
       cursor: pointer;
       &:before {
@@ -102,54 +123,42 @@ img {
       background: $light-color;
       box-sizing: border-box;
     }
-    &:before {
-      width: 100%;
-      height: 100%;
-      border: 2px solid $base-border-color;
-    }
   }
-  &__input[type="checkbox"] {
+  &__input[type="checkbox"] + .form-block__label {
     &:before {
       border-radius: 3px;
     }
-    &:checked {
-      &:after {
-        width: 22px;
-        height: 10px;
-        position: absolute;
-        top: 11px;
-        left: 9px;
-        box-sizing: border-box;
-        border-left: 2px solid $accent-color;
-        border-bottom: 2px solid $accent-color;
-        transform: rotate(-45deg);
-      }
+  }
+  &__input[type="checkbox"]:checked + .form-block__label {
+    &:after {
+      width: 22px;
+      height: 10px;
+      position: absolute;
+      top: 11px;
+      left: 9px;
+      box-sizing: border-box;
+      border-left: 2px solid $accent-color;
+      border-bottom: 2px solid $accent-color;
+      transform: rotate(-45deg);
     }
   }
-  &__input[type="radio"] {
+  &__input[type="radio"] + .form-block__label {
     &:before {
       border-radius: 100%;
     }
-    &:checked {
-      &:after {
-        width: 15px;
-        height: 15px;
-        position: absolute;
-        top: 12px;
-        left: 12px;
-        background: $accent-color;
-        border-radius: 100%;
-      }
+  }
+  &__input[type="radio"]:checked + .form-block__label {
+    &:after {
+      width: 15px;
+      height: 15px;
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      background: $accent-color;
+      border-radius: 100%;
     }
   }
-  &__input[type="checkbox"] + label,
-  &__input[type="radio"] + label {
-    font-size: 18px;
-    margin: -2px 0 0 30px;
-    &:hover {
-      cursor: pointer;
-    }
-  }
+
   &__input[type="text"],
   &__input[type="tel"],
   &__input[type="email"],
