@@ -14,8 +14,8 @@ h2 {
 .contacts__text,
 .contacts__item-info,
 .price-slider__list-cost {
+  font: $light-font;
   font-size: 24px;
-  font-weight: 300;
   line-height: 30px;
 }
 h2,
@@ -23,8 +23,8 @@ cite,
 .price-slider__list-title,
 .contacts__item-title,
 .ad__title {
+  font: $bold-font;
   font-size: 18px;
-  font-weight: 700;
   color: $dark-color;
 }
 a {
@@ -164,7 +164,7 @@ img {
   &__input[type="tel"],
   &__input[type="email"],
   .form-block__textarea {
-    font: 400 14px/24px 'Open Sans';
+    font: $base-font;
     border: 2px solid $base-border-color;
     padding: 17px 20px 18px;
     font-size: 18px;
@@ -190,10 +190,9 @@ img {
   display: block;
   text-align: center;
   outline: none;
-  font: $base-font;
+  font: $bold-font;
   font-size: 18px;
   line-height: 30px;
-  font-weight: 700;
   background: transparent;
   color: $light-color;
   //transition: background-color 0.2s ease-out 0.2s, color 0.2s ease-out 0.2s;

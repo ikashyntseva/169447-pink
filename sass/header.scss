@@ -64,8 +64,8 @@
   }
   &__link {
     position: relative;
+    font: $bold-font;
     font-size: 18px;
-    font-weight: 700;
     color: $light-color;
     padding: 19px 15px 21px;
     display: block;
@@ -99,18 +99,26 @@
   display: block;
   width: 50px;
   height: 25px;
-  background: url('../img/icon-menu-burger.svg') 0 0 no-repeat;
+  .icon-cross {
+    display: none;
+  }
   &--close {
-    background: url('../img/icon-menu-cross.svg') right 1px no-repeat;
+    margin-right: -27px;
+    .icon-burger {
+      display: none;
+    }
+    .icon-cross,
     & + .menu {
       display: block;
     }
   }
   &:hover {
-
+    path {
+      fill: $accent-color;
+    }
   }
   &:active {
-
+    opacity: 0.3;
   }
 }
 .intro {
@@ -137,7 +145,8 @@
     width: 100%;
   }
   &__app-wrapper {
-    margin: 28px 20px 30px;
+    width: 280px;
+    margin: 28px auto 30px;
   }
   .btn--download {
     background-color: transparent;
@@ -161,21 +170,19 @@
   }
   .application__item {
     display: block;
-    /*width: 57px;
-    height: 57px;*/
-    &--ios svg {
-      margin: 0px 0px 6px 0px;
-    }
-    &--android svg {
-      margin: 0 3px 8px 0;
-    }
-    &--microsoft svg {
-      margin: 0px 1px 9px 0px;
-    }
+  }
+  .logo-ios {
+    margin: 0px 0px 6px 0px;
+  }
+  .logo-android {
+    margin: 0 3px 8px 0;
+  }
+  .logo-microsoft {
+    margin: 0px 1px 9px 0px;
   }
   &__app-info {
     text-align: center;
-    font-weight: 300;
+    font: $light-font;
   }
   &--index {
     .intro__slogan {
@@ -193,10 +200,14 @@
     }
   }
 }
+@media (min-width: 370px) and (max-width: 485px) {
+  .page-header {
+    background-position: 45% 172px, top center;
+  }
+}
 @media (min-width: 486px) and (max-width: 659px) {
   .page-header {
-    background-position: 0 196px, top center;
-    //background-size: 258px auto, cover;
+    background-position: 45% 196px, top center;
   }
 }
 @media (min-width: 660px) {
@@ -227,6 +238,9 @@
     &__button {
       margin: 12px 0px 0px 0px;
     }
+    &__button--close {
+      margin-right: -27px;
+    }
     &__list {
       padding-top: 110px;
     }
@@ -256,9 +270,16 @@
       @include set-color(transparent);
       &-wrapper {
         margin: 0;
+        width: 100%;
       }
       &-list {
         margin: 46px 46px 22px;
+      }
+      .logo-android {
+        margin: 0 0 10px 0;
+      }
+      .logo-microsoft {
+        margin: 0px 3px 9px 0px;
       }
       &-info {
         font-size: 18px;
@@ -338,7 +359,8 @@
     }
     &__link {
       border-bottom: 2px solid transparent;
-      font-weight: 300;
+      font: $light-font;
+      font-size: 18px;
       text-transform: capitalize;
       padding: 10px 0;
       &:before {
@@ -370,7 +392,7 @@
       margin-top: 0;
       margin-bottom: 104px;
       .btn--download {
-        font-size: 22px;
+        font-size: 21px;
       }
       &-list {
         margin: 67px 47px 41px;
