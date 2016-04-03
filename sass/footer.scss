@@ -6,12 +6,13 @@
   .container {
     width: 280px;
     margin: 0 auto;
-    padding: 39px 0 53px;
+    padding: 41px 0 53px;
     display: flex;
     flex-direction: column;
   }
   .logo {
     width: 150px;
+    height: 41px;
     margin: 0 auto 40px;
     &__picture {
       width: 100%;
@@ -28,10 +29,21 @@
       margin-right: 15px;
       margin-top: -4px;
     }
+    &-logo__link {
+      display: inline-flex;
+    }
+    &-logo__link:hover > .author-logo__picture {
+      fill: $base-color;
+    }
+    &-logo__picture {
+      width: 27px;
+      height: 34px;
+      fill: $accent-color;
+    }
   }
 }
 
-@media (min-width: 620px) {
+@media (min-width: 660px) {
   .page-footer {
     display: block;
     .container {
@@ -49,6 +61,14 @@
         width: 100%;
         height: 100%;
       }
+      &__picture--mobile {
+        display: block;
+      }
+      &--bottom:active {
+        path {
+          opacity: 0.7;
+        }
+      }
     }
     .author {
       text-align: right;
@@ -57,13 +77,7 @@
       &__text {
         line-height: 28px;
         display: inline-block;
-        margin-right: 14px;
-      }
-      &-logo__link {
-        display: inline-block;
-        width: 27px;
-        height: 34px;
-        vertical-align: middle;
+        margin-right: 13px;
       }
     }
   }
@@ -75,7 +89,7 @@
       padding: 69px 0;
     }
     .author {
-      margin-top: 9px;
+      margin-top: 10px;
       margin-right: 23px;
       &__text {
         font-size: 18px;

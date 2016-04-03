@@ -34,6 +34,7 @@ a {
   &:hover {
     color: $base-color;
     text-decoration: underline;
+    cursor: pointer;
   }
 }
 cite {
@@ -102,7 +103,7 @@ img {
       position: relative;
       flex-shrink: 0;
       border: 2px solid $base-border-color;
-      margin-right: 30px;
+      margin-right: 21px;
     }
 
     &:hover {
@@ -250,7 +251,7 @@ img {
     }
   }
 }
-@media (min-width: 620px) {
+@media (min-width: 660px) {
   .intro__slogan--index,
   .promo-big-text,
   .contacts__text,
@@ -276,6 +277,12 @@ img {
         font: 400 18px/30px 'Open Sans';
         padding: 14px 21px 15px;
       }
+      &__input[type="tel"] {
+        background: url('../img/icon-phone.svg') 456px center no-repeat;
+      }
+      &__input[type="email"] {
+        background: url('../img/icon-mail.svg') 457px center no-repeat;
+      }
       .form-block__textarea {
         padding: 14px 19px;
       }
@@ -298,5 +305,13 @@ img {
   .ad__title {
     font-size: 30px;
     line-height: 32px;
+  }
+  form {
+    .form-block__input[type="tel"] {
+      background-position: 332px center;
+    }
+    .form-block__input[type="email"] {
+      background-position: 333px center;
+    }
   }
 }

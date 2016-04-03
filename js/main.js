@@ -14,14 +14,16 @@
           el.className = classes.join(' ');
         }
     }
-
     function menuToggle(event) {
         toggleClass(document.querySelector('.menu__button'), 'menu__button--close');
     }
-    var menuButton =  document.querySelector('.menu__button');
 
+    var menuButton =  document.querySelector('.menu__button');
     if(menuButton){
       menuButton.addEventListener('click', menuToggle);
     }
-
+    var arrow = document.querySelector('.review-arrow');
+    if(arrow){
+      arrow.addEventListener('click', function() {alert(1);});
+    }
 }());

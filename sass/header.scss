@@ -1,12 +1,12 @@
 @import "variables";
 @import "mixins";
 .page-header {
-  background: url('../img/bg-back-mobile.jpg') -193px -7px no-repeat;
-  background-size: 705px auto;
+  background: url('../img/bg-back-mobile.jpg') top center no-repeat;
+  background-size: cover;
   &--index {
     background: url('../img/iphone-hand-mobile.png') 0 172px no-repeat,
-                url('../img/bg-back-mobile.jpg') -193px -7px no-repeat;
-    background-size: 258px auto, 705px auto;
+                url('../img/bg-back-mobile.jpg') top center no-repeat;
+    background-size: 258px auto, cover; //size TBD
   }
   &__bar {
     background: rgba($dark-color, 0.3);
@@ -15,82 +15,102 @@
     width: 100%;
     padding: 20px;
     box-sizing: border-box;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
   }
-  .logo {
-    z-index: 2;
-    width: 75px;
-    &__picture {
-      width: 100%;
-      height: 100%;
+}
+.container--header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  z-index: 2;
+  width: 75px;
+  height: 23px;
+  &:hover {
+    path {
+      fill: $accent-color;
     }
   }
-  .logo-link {
-    display: block;
+  &--top:active {
+    path {
+      fill: rgba($light-color, 0.3);
+    }
   }
-  .menu {
-    position: absolute;
-    width: 100%;
-    z-index: 1;
-    top: 0;
-    left: 0;
+}
+.logo__picture {
+  width: 100%;
+  height: 100%;
+  &--tablet,
+  &--desktop {
     display: none;
-    &__list {
-      padding-top: 71px;
-      background-color: $base-color;
-      border-bottom: 1px solid $dark-color;
-    }
-    &__link {
-      position: relative;
-      font-size: 18px;
-      font-weight: 700;
-      color: $light-color;
-      padding: 19px 15px 21px;
-      display: block;
-      text-align: center;
-      text-decoration: none;
-      text-transform: uppercase;
-      &:hover {
-        color: $accent-color;
-      }
-      &:active {
-        color: rgba($accent-color, 0.3);
-      }
-      &:before {
-        content: '';
-        display: block;
-        width: 100%;
-        height: 1px;
-        border-bottom: 1px solid rgba($light-color, 0.15);
-        border-top: 1px solid $dark-color;
-        box-sizing: border-box;
-        position: absolute;
-        top: -2px;
-        left: 0;
-      }
-    }
   }
-  .menu__button {
-    position: relative;
-    z-index: 2;
-    display: block;
-    width: 50px;
-    height: 25px;
-    background: url('../img/icon-menu-burger.svg') 0 0 no-repeat;
-    &--close {
-      background: url('../img/icon-menu-cross.svg') right 1px no-repeat;
-      & + .menu {
-        display: block;
-      }
-    }
-    &:hover {
+}
 
+.logo-link {
+  display: block;
+}
+
+.menu {
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  display: none;
+  &__list {
+    padding-top: 71px;
+    background-color: $base-color;
+    border-bottom: 1px solid $dark-color;
+  }
+  &__link {
+    position: relative;
+    font-size: 18px;
+    font-weight: 700;
+    color: $light-color;
+    padding: 19px 15px 21px;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    &:hover {
+      color: $accent-color;
+      text-decoration: none;
     }
     &:active {
-
+      color: rgba($accent-color, 0.3);
     }
+    &:before {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 1px;
+      border-bottom: 1px solid rgba($light-color, 0.15);
+      border-top: 1px solid $dark-color;
+      box-sizing: border-box;
+      position: absolute;
+      top: -2px;
+      left: 0;
+    }
+  }
+}
+.menu__button {
+  position: relative;
+  z-index: 2;
+  display: block;
+  width: 50px;
+  height: 25px;
+  background: url('../img/icon-menu-burger.svg') 0 0 no-repeat;
+  &--close {
+    background: url('../img/icon-menu-cross.svg') right 1px no-repeat;
+    & + .menu {
+      display: block;
+    }
+  }
+  &:hover {
+
+  }
+  &:active {
+
   }
 }
 .intro {
@@ -136,21 +156,21 @@
   &__app-list {
     display: flex;
     justify-content: space-between;
-    margin: 33px 37px 20px;
+    margin: 32px 37px -6px;
     align-items: baseline;
   }
   .application__item {
     display: block;
-    width: 57px;
-    height: 57px;
-    &--ios {
-      background: url('../img/logo-apple.svg') no-repeat 0px -1px;
+    /*width: 57px;
+    height: 57px;*/
+    &--ios svg {
+      margin: 0px 0px 6px 0px;
     }
-    &--android {
-      background: url('../img/logo-android.svg') no-repeat 7px 7px;
+    &--android svg {
+      margin: 0 3px 8px 0;
     }
-    &--microsoft {
-      background: url('../img/logo-microsoft.svg') no-repeat 12px 11px;
+    &--microsoft svg {
+      margin: 0px 1px 9px 0px;
     }
   }
   &__app-info {
@@ -173,35 +193,42 @@
     }
   }
 }
-@media (min-width: 486px) and (max-width: 619px) {
+@media (min-width: 486px) and (max-width: 659px) {
   .page-header {
-    background-position: 0 196px, -86px 0;
-    background-size: 258px auto, 731px auto;
+    background-position: 0 196px, top center;
+    //background-size: 258px auto, cover;
   }
 }
-@media (min-width: 620px) {
+@media (min-width: 660px) {
   .page-header {
-    background: url('../img/bg-back-tablet@1x.jpg') -250px 0 no-repeat;
-    background-size: 1200px auto;
+    background: url('../img/bg-back-tablet@1x.jpg') top center no-repeat;
+    background-size: cover;
     &--index {
-      background: url('../img/iphone-hand-tablet@1x.png') 0 185px no-repeat,
-                  url('../img/bg-back-tablet@1x.jpg') -250px 0 no-repeat;
-      background-size: 700px auto,
-                      1200px auto;
+      background: url('../img/iphone-hand-tablet@1x.png') 80% bottom no-repeat,
+                  url('../img/bg-back-tablet@1x.jpg') top center no-repeat;
+      background-size: 700px auto,//size TBD
+                      cover;
     }
     &__bar {
-      padding: 25px 39px 41px;
+      padding: 29px 39px 36px;
     }
-    .logo {
-      width: 150px;
+  }
+  .logo {
+    width: 150px;
+    height: 47px;
+  }
+  .logo__picture--mobile {
+    display: none;
+  }
+  .logo__picture--tablet {
+    display: block;
+  }
+  .menu {
+    &__button {
+      margin: 12px 0px 0px 0px;
     }
-    .menu {
-      &__button {
-        margin: 19px 0px 0px 0px;
-      }
-      &__list {
-        padding-top: 110px;
-      }
+    &__list {
+      padding-top: 110px;
     }
   }
   .intro {
@@ -231,18 +258,10 @@
         margin: 0;
       }
       &-list {
-        margin: 45px 45px 36px;
+        margin: 46px 46px 22px;
       }
       &-info {
         font-size: 18px;
-      }
-    }
-    .application__item {
-      &--ios {
-        background-position: 1px 1px;
-      }
-      &--microsoft {
-        background-position: 9px 13px;
       }
     }
     &--index {
@@ -270,67 +289,73 @@
     }
   }
 }
-@media (min-width: 771px) and (max-width: 959px) {
-  .page-header--index {
-    background-position: 105px 185px, -250px 0;
-  }
-}
+
 @media (min-width: 960px) {
   .page-header {
-    background: url('../img/bg-back-desktop.jpg') -680px 0 no-repeat;
-    background-size: 2560px auto;
+    background: url('../img/bg-back-desktop.jpg') top center no-repeat;
+    background-size: cover;
     &--index {
-      background: url('../img/iphone-hand-desktop@1x.png') 146px 208px no-repeat,
-                  url('../img/bg-back-desktop.jpg') -680px 0 no-repeat;
-      background-size: 1050px auto,
-                      2560px auto;
+      background: url('../img/iphone-hand-desktop@1x.png') 97% bottom no-repeat,
+                  url('../img/bg-back-desktop.jpg') top center no-repeat;
+      background-size: 1050px auto, //size TBD
+                      cover;
     }
     &__bar {
-      padding: 27px 130px 32px;
-      .logo {
-        width: 150px;
-        height: 45px;
-        align-self: flex-start;
-      }
-      .menu {
-        display: block;
-        width: 620px;
-        position: relative;
-        margin-top: 5px;
-        &__list {
-          background: none;
-          border: none;
-          padding: 0;
-          display: flex;
-          justify-content: space-between;
-        }
-        &__item {
-          &:first-child {
-            margin-left: 0;
-          }
-        }
-        &__link {
-          border-bottom: 2px solid transparent;
-          font-weight: 300;
-          text-transform: capitalize;
-          padding: 10px 0;
-          &:before {
-            display: none;
-          }
-          &:hover {
-            color: $light-color;
-            border-color: $light-color;
-          }
-          &:active {
-            color: rgba($light-color, 0.3);
-            border-color: rgba($light-color, 0.3);
-          }
-        }
-      }
-      .menu__button {
-        display: none;
+      padding: 27px 0 32px;
+    }
+  }
+  .container--header {
+    width: 940px;
+  }
+  .logo {
+    width: 150px;
+    height: 45px;
+    align-self: flex-start;
+  }
+  .logo__picture--mobile,
+  .logo__picture--tablet {
+    display: none;
+  }
+  .logo__picture--desktop {
+    display: block;
+  }
+  .menu {
+    display: block;
+    width: 620px;
+    position: relative;
+    margin-top: 5px;
+    &__list {
+      background: none;
+      border: none;
+      padding: 0;
+      display: flex;
+      justify-content: space-between;
+    }
+    &__item {
+      &:first-child {
+        margin-left: 0;
       }
     }
+    &__link {
+      border-bottom: 2px solid transparent;
+      font-weight: 300;
+      text-transform: capitalize;
+      padding: 10px 0;
+      &:before {
+        display: none;
+      }
+      &:hover {
+        color: $light-color;
+        border-color: $light-color;
+      }
+      &:active {
+        color: rgba($light-color, 0.3);
+        border-color: rgba($light-color, 0.3);
+      }
+    }
+  }
+  .menu__button {
+    display: none;
   }
   .intro {
     width: 940px;
@@ -348,7 +373,7 @@
         font-size: 22px;
       }
       &-list {
-        margin: 66px 43px 55px 46px;
+        margin: 67px 47px 41px;
       }
       .application__item--android {
         background-position: 6px 9px;
@@ -378,16 +403,6 @@
       &--index {
         background-image: url('../img/iphone-hand-desktop@2x.png'),
                     url('../img/bg-back-desktop.jpg');// 2x is absent in assets
-      }
-    }
-  }
-}
-@media (min-width: 960px) and (max-width: 1100px) {
-  .page-header {
-    &__bar {
-      padding: 26px 70px 33px;
-      .menu {
-        width: 550px;
       }
     }
   }

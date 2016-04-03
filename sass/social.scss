@@ -12,17 +12,7 @@
     &:last-child {
       margin: 0;
     }
-    &--twitter {
-      .social__link {
-        background-image: url(../img/icon-twitter.svg);
-      }
-    }
-    &--facebook {
-      .social__link {
-        background-image: url(../img/icon-facebook.svg);
-        background-position: 17px 12px;
-      }
-    }
+
     &--youtube {
       .social__link {
         background-image: url(../img/icon-youtube.svg);
@@ -30,7 +20,9 @@
     }
   }
   &__link {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 51px;
     height: 51px;
     border-radius: 51px;
@@ -46,9 +38,24 @@
       opacity: 0.3;
     }
   }
+  .icon {
+    fill: $accent-color;
+  }
+  .icon--twitter {
+    width: 18px;
+    height: 15px;
+  }
+  .icon--facebook {
+    width: 9px;
+    height: 19px;
+  }  
+  .icon--youtube {
+    width: 15px;
+    height: 14px;
+  }
 }
 
-@media (min-width: 620px) {
+@media (min-width: 660px) {
   .social__list {
     margin: 3px 0 0 -20px;
   }

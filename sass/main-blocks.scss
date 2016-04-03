@@ -14,7 +14,7 @@
   }
   &--photos {
     width: 250px;
-    margin: 46px auto 49px;
+    margin: 46px auto 48px;
   }
   &--bottom {
     width: 250px;
@@ -140,10 +140,13 @@
     margin-left: 0;
     transition: margin-left 1s ease-out 0.5s;
   }
-  #review-2:checked ~ &__wrapper {
+  &__controls svg {
+    display: none;
+  }
+  #review-2:checked ~  .container > &__wrapper {
     margin-left: -100%;
   }
-  #review-3:checked ~ &__wrapper {
+  #review-3:checked ~  .container > &__wrapper {
     margin-left: -200%;
   }
   .review__item {
@@ -370,8 +373,12 @@
       text-decoration: none;
     }
   }
+  .photo-like__btn .icon--heart {
+    fill: $accent-color;
+    margin: -2px 0 0 1px;
+  }
   .photo-like__quantity {
-    margin-left: 18px;
+    margin-left: 17px;
   }
 
   &--pano {
@@ -401,121 +408,144 @@
 }
 .photos-upload {
   background-color: $light-bg-color;
-  padding: 21px 0;
+  padding: 20px 0;
   &__item,
   &__edit {
     padding: 0 20px;
+    position: relative;
   }
   &__item {
     width: 280px;
-    height: 375px;
+    height: 374px;
     margin: 0 auto;
     .photo {
       width: 100%;
       height: 100%;
     }
   }
-  &__edit {
-    border-bottom: 1px solid rgba($base-color, 0.1);
+}
+.range-filter {
+  position: relative;
+  .scale,
+  .bar {
+    width: 100%;
+    height: 2px;
+    background: $dark-color;
   }
-
-  .upload-control {
-    height: 48px;
-    width: 240px;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    padding: 0 20px;
-    margin: 41px auto 3px;
-  }
-  .upload-control__input {
+  .bar {
     display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
   }
-  .upload-control__option {
-    display: inline-block;
-    vertical-align: middle;
-    width: 48px;
-    height: 48px;
-    background-repeat: no-repeat;
-    background-image: url(../img/icon-editor-crop.svg);
-    &--fill {
-      background-image: url(../img/icon-editor-fill.svg);
+  .toggle {
+    position: absolute;
+    background: $light-color;
+    border: 2px solid $accent-color;
+    width: 14px;
+    height: 14px;
+    border-radius: 100%;
+    box-sizing: border-box;
+    top: -6px;
+    left: 80.5%;
+    &:hover {
+      cursor: pointer;
     }
-    &--contrast {
-      background-image: url(../img/icon-editor-contrast.svg);
-      background-position: 8px 7px;
+    &:active {
+      background: $accent-color
     }
   }
-  .upload-control__input:nth-of-type(1):checked ~ .upload-control .upload-control__option:nth-of-type(1),
-  .upload-control__input:nth-of-type(2):checked ~ .upload-control .upload-control__option:nth-of-type(2),
-  .upload-control__input:nth-of-type(3):checked ~ .upload-control .upload-control__option:nth-of-type(3) {
-    background-color: $accent-color; // to be updated when i  have svg sprite
-  }
-  .upload-control__input:nth-of-type(1):checked ~ .edit__tab:nth-of-type(2),
-  .upload-control__input:nth-of-type(2):checked ~ .edit__tab:nth-of-type(3),
-  .upload-control__input:nth-of-type(3):checked ~ .edit__tab:nth-of-type(4) {
-    display: block;
-  }
-
-  .range-filter {
-    position: relative;
-    .scale,
-    .bar {
-      width: 100%;
-      height: 2px;
-      background: $dark-color;
-    }
-    .bar {
-      display: none;
-      position: absolute;
-      top: 0;
-      left: 0;
-    }
+}
+.edit__tab {
+  padding: 33px 40px;
+  &--fill {
     .toggle {
-      position: absolute;
-      background: $light-color;
-      border: 2px solid $accent-color;
-      width: 14px;
-      height: 14px;
-      border-radius: 100%;
-      box-sizing: border-box;
-      top: -6px;
-      left: 80.5%;
-      &:hover {
-        cursor: pointer;
-      }
-      &:active {
-        background: $accent-color
-      }
+      left: 30.5%;
     }
   }
-  .edit__tab {
-    padding: 33px 20px;
-    display: none;
-    &--fill {
-      .toggle {
-        left: 30.5%;
-      }
-    }
-    &--contrast {
-      .toggle {
-        left: 53.5%;
-      }
+  &--contrast {
+    .toggle {
+      left: 53.5%;
     }
   }
-  .upload__buttons {
-    margin-top: 19px;
-    padding: 20px;
-    .btn {
-      width: 100%;
-      &--post {
-        margin-bottom: 12px;
-      }
+}
+.upload__buttons {
+  margin-top: 19px;
+  padding: 20px;
+  .btn {
+    width: 100%;
+    &--post {
+      margin-bottom: 12px;
     }
   }
 }
 
-@media (min-width: 620px) {
+@media (max-width: 659px) {
+  .photos-upload__edit {
+    border-bottom: 1px solid rgba($base-color, 0.1);
+    width: 280px;
+    margin: 0 auto;
+    min-height: 160px;
+  }
+  .edit__tab {
+    position: absolute;
+    width: 100%;
+    box-sizing: border-box;
+    left: 0;
+    svg {
+      position: absolute;
+      top: 40px;
+      left: 56px;
+      visibility: visible;
+      fill: rgba($base-color, 0.3);
+    }
+    &:hover {
+      svg {
+        fill: rgba($base-color, 0.5);
+      }
+    }
+    &--selected,
+    &--selected:hover {
+      svg {
+        fill: $accent-color;
+      }
+    }
+    &--fill {
+      visibility: hidden;
+      svg {
+        top: 42px;
+        left: 50%;
+        margin-left: -24px;
+      }
+    }
+    &--contrast {
+      visibility: hidden;
+      svg {
+        top: 48px;
+        left: auto;
+        right: 64px;
+      }
+      path {
+        fill: rgba($base-color, 0.3);
+      }
+    }
+    &--contrast:hover {
+      path {
+        fill: rgba($base-color, 0.5);
+      }
+    }
+    &--contrast.edit__tab--selected,
+    &--contrast.edit__tab--selected:hover {
+      path {
+        fill: $accent-color;
+      }
+    }
+  }
+  .range-filter {
+    margin-top: 92px;
+  }
+}
+@media (min-width: 660px) {
   .promo-big-text {
     width: 72%;
     margin: 0 auto;
@@ -532,11 +562,6 @@
         width: 55%;
         margin: 0 auto;
       }
-    }
-    &:after {
-      height: 125px;
-      bottom: -125px;
-      background-size: 100% auto;
     }
   }
   .promo-text {
@@ -588,11 +613,13 @@
   }
   /* Reviews begin */
   .reviews {
-    width: 620px;
+    width: 635px;
     margin: 80px auto 19px;
+    &__controls svg {
+      display: block;
+    }
     .review__item {
       flex-direction: column-reverse;
-
       &-author {
         font-size: 20px;
         margin: 20px 0 0;
@@ -603,7 +630,6 @@
           margin: 0
         }
       }
-
       &-text {
         font-size: 18px;
       }
@@ -632,9 +658,9 @@
       }
     }
     &__item {
-      height: 21px;
+      height: 25px;
       text-transform: none;
-      padding: 10px 14px;
+      padding: 10px 14px 11px;
       border-left: 2px solid $base-border-color;
       background: $light-color;
       justify-content: center;
@@ -801,62 +827,61 @@
       padding: 19px 0 0;
       border: none;
     }
-    .upload-control {
-      display: none;
-    }
-    .edit__tab {
+  }
+  .upload-control {
+    display: none;
+  }
+  .edit__tab {
+    display: block;
+    padding: 0 18px 34px 55px;
+    margin-bottom: 36px;
+    border-bottom: 1px solid rgba($base-color, 0.1);
+    position: relative;
+    svg {
+      width: 26px;
+      height: 24px;
       display: block;
-      padding: 0 18px 34px 55px;
-      margin-bottom: 36px;
-      border-bottom: 1px solid rgba($base-color, 0.1);
-      position: relative;
-      &:before {
-        content: '';
-        width: 26px;
+      position: absolute;
+      left: 1px;
+      top: -11px;
+      fill: $accent-color;
+    }
+    .toggle {
+      left: 72.5%;
+    }
+    &--fill {
+      margin-bottom: 33px;
+      svg {
+        width: 24px;
         height: 24px;
-        display: block;
-        position: absolute;
-        left: 1px;
-        top: -11px;
-        background-image: url(../img/icon-editor-crop.svg);
-        background-size: 100% 100%;
+        left: 3px;
+        top: -9px;
       }
       .toggle {
-        left: 72.5%;
-      }
-      &--fill {
-        margin-bottom: 33px;
-        &:before {
-          width: 24px;
-          height: 24px;
-          left: 3px;
-          top: -9px;
-          background-image: url(../img/icon-editor-fill.svg);
-        }
-        .toggle {
-          left: 12.5%;
-        }
-      }
-      &--contrast {
-        &:before {
-          background-image: url(../img/icon-editor-contrast.svg);
-          width: 16px;
-          height: 22px;
-          left: 8px;
-          top: -10px;
-        }
-        .toggle {
-          left: 47.5%;
-        }
+        left: 12.5%;
       }
     }
-    .upload__buttons {
-      width: 260px;
-      margin: 0 0 0 2px;
-      padding: 0;
-      .btn--post {
-        margin-bottom: 24px;
+    &--contrast {
+      svg {
+        width: 16px;
+        height: 22px;
+        left: 8px;
+        top: -10px;
       }
+      path {
+        fill: $accent-color;
+      }
+      .toggle {
+        left: 47.5%;
+      }
+    }
+  }
+  .upload__buttons {
+    width: 260px;
+    margin: 0 0 0 2px;
+    padding: 0;
+    .btn--post {
+      margin-bottom: 24px;
     }
   }
 }
@@ -870,7 +895,7 @@
   }
   .promo-text {
     &--contest {
-      margin: 91px auto 86px;
+      margin: 92px auto 86px;
       width: 796px;
       &:after {
         display: inline-block;
@@ -999,24 +1024,32 @@
       }
     }
     .reviews__controls {
-      display: none;
-    }
-    .reviews__arrows {
       position: relative;
-      .review-arrow {
-        position: absolute;
-        top: -161px;
-        left: -125px;
-        display: block;
-        width: 22px;
-        height: 41px;
-        background: url('../img/icon-review-arrow-left.svg') 0 0 no-repeat;
-        &--right {
-          background-image: url('../img/icon-review-arrow-right.svg');
-          left: auto;
-          right: -125px;
-        }
-      }
+    }
+    .reviews__controls .pagination-block__label {
+      display: none;
+      width: 22px;
+      height: 41px;
+      margin: 0;
+      border-radius: 0;
+      background: none;
+      fill: rgba($base-color, 0.3);
+      position: absolute;
+      top: -190px;
+      left: -125px;
+    }
+    #review-1:checked ~ .reviews__controls .pagination-block__label:nth-child(3),
+    #review-2:checked ~ .reviews__controls .pagination-block__label:nth-child(1),
+    #review-3:checked ~ .reviews__controls .pagination-block__label:nth-child(2) {
+      display: block;
+    }
+    #review-1:checked ~ .container + .reviews__controls .pagination-block__label:nth-child(2),
+    #review-2:checked ~ .container + .reviews__controls .pagination-block__label:nth-child(3),
+    #review-3:checked ~ .container + .reviews__controls .pagination-block__label:nth-child(1) {
+      display: block;
+      transform: rotate(180deg);
+      left: auto;
+      right: -125px;
     }
   }
   .price-slider {
@@ -1053,7 +1086,6 @@
         }
       }
     }
-
   }
   .contacts {
     padding-top: 64px;
@@ -1115,14 +1147,13 @@
     }
   }
   .container {
-    justify-content: flex-start;
+    //justify-content: flex-start;
     max-width: 100%;
   }
   .photos-upload {
     box-sizing: border-box;
     padding: 58px 60px 56px 81px;
     margin-bottom: 29px;
-
     &__item {
       margin-right: 90px;
     }
@@ -1130,51 +1161,51 @@
       width: 410px;
       padding-top: 18px;
     }
-    .edit__tab {
-      padding: 0 29px 34px 91px;
-      &:before {
+  }
+  .edit__tab {
+    padding: 0 29px 34px 91px;
+    svg {
+      width: 48px;
+      height: 48px;
+      left: -2px;
+      top: -23px;
+    }
+    .toggle {
+      left: 24.5%;
+    }
+    &--fill {
+      svg {
         width: 48px;
         height: 48px;
-        left: -2px;
-        top: -23px;
+        left: 0;
+        top: -21px;
       }
       .toggle {
-        left: 24.5%;
-      }
-      &--fill {
-        &:before {
-          width: 48px;
-          height: 48px;
-          left: 0;
-          top: -21px;
-        }
-        .toggle {
-          left: 85.5%;
-        }
-      }
-      &--contrast {
-        &:before {
-          width: 32px;
-          height: 32px;
-          left: 6px;
-          top: -15px;
-        }
-        .toggle {
-          left: 55.5%;
-        }
+        left: 85.5%;
       }
     }
-    .upload__buttons {
-      display: flex;
-      justify-content: space-between;
-      width: 410px;
-      margin: 0 0 1px -1px;
-      .btn {
-        width: 182px;
+    &--contrast {
+      svg {
+        width: 32px;
+        height: 32px;
+        left: 6px;
+        top: -15px;
       }
-      .btn--post {
-        margin-bottom: 0;
+      .toggle {
+        left: 55.5%;
       }
+    }
+  }
+  .upload__buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 410px;
+    margin: 0 0 1px -1px;
+    .btn {
+      width: 182px;
+    }
+    .btn--post {
+      margin-bottom: 0;
     }
   }
 }
