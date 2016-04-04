@@ -1,5 +1,6 @@
 @import "variables";
 @import "mixins";
+
 .page-header {
   background: url('../img/bg-back-mobile.jpg') top center no-repeat;
   background-size: cover;
@@ -191,7 +192,7 @@
   }
 }
 
-@media (min-resolution: 1.5dppx) {
+@media (min-resolution: 1.5dppx) and (max-width: 659px) {
   .page-header {
     background-image: url('../img/bg-back-mobile@2x.jpg');
     &--index {
@@ -200,14 +201,14 @@
     }
   }
 }
-@media (min-width: 370px) and (max-width: 485px) {
+/*@media (min-width: 370px) and (max-width: 485px) {
   .page-header {
     background-position: 45% 172px, top center;
   }
-}
+}*/
 @media (min-width: 486px) and (max-width: 659px) {
-  .page-header {
-    background-position: 45% 196px, top center;
+  .page-header--index {
+    background-position: 45% 172px, top center;
   }
 }
 @media (min-width: 660px) {
@@ -299,7 +300,6 @@
       }
     }
   }
-
   @media (min-resolution: 1.5dppx) {
     .page-header {
       background-image: url('../img/bg-back-tablet@2x.jpg');
@@ -403,7 +403,7 @@
     }
     &--index {
       .intro__slogan {
-        margin: 108px 30px 52px;
+        margin: 108px 30px 51px;
         font-size: 50px;
         line-height: 60px;
       }

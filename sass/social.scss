@@ -11,13 +11,7 @@
     margin-right: 13px;
     &:last-child {
       margin: 0;
-    }
-
-    &--youtube {
-      .social__link {
-        background-image: url(../img/icon-youtube.svg);
-      }
-    }
+    }    
   }
   &__link {
     display: flex;
@@ -48,7 +42,7 @@
   .icon--facebook {
     width: 9px;
     height: 19px;
-  }  
+  }
   .icon--youtube {
     width: 15px;
     height: 14px;
@@ -62,6 +56,6 @@
 }
 @media (min-width: 960px) {
   .social__list {
-    margin: 4px 0 0 11px;
+    margin: 4px 0 0 5px;
   }
 }

@@ -919,7 +919,7 @@
   .promo-big-text {
     &--index {
       width: auto;
-      padding: 67px 0 74px;
+      padding: 67px 0 75px;
     }
   }
   .promo-text {
@@ -974,7 +974,7 @@
     }
   }
   .ad {
-    padding: 10px 0 65px;
+    padding: 10px 0 67px;
     background: $light-bg-color;
     .container{
       width: 940px;
@@ -1023,7 +1023,7 @@
   }
   .reviews {
     width: 690px;
-    margin: 169px auto 40px;
+    margin: 167px auto 40px;
     position: relative;
     &:before {
       content: '';
@@ -1094,7 +1094,7 @@
     }
   }
   .price-slider {
-    padding: 148px 0 96px;
+    padding: 149px 0 95px;
     &:before {
       height: 82px;
       background-size: 100% 82px;
@@ -1104,14 +1104,14 @@
     }
     &__list {
       &-header {
-        padding: 19px 0 23px;
+        padding: 15px 0 23px;
       }
       &-title {
         font-size: 18px;
       }
       &-cost {
         font-size: 24px;
-        margin-top: 8px;
+        margin-top: 4px;
       }
       .price-slider__item {
         font-size: 18px;
@@ -1119,7 +1119,7 @@
       }
       &--column {
         .price-slider__list-header {
-          height: 54px;
+          height: 58px;
         }
       }
       &--hit {
