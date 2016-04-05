@@ -14,7 +14,7 @@
   }
   &--photos {
     width: 250px;
-    margin: 46px auto 48px;
+    margin: 46px auto 49px;
   }
   &--bottom {
     width: 250px;
@@ -141,7 +141,7 @@
     margin-left: 0;
     transition: margin-left 1s ease-out 0.5s;
   }
-  &__controls svg {
+  &__controls .icon {
     display: none;
   }
   #review-2:checked ~  .container > &__wrapper {
@@ -506,27 +506,27 @@
     width: 100%;
     box-sizing: border-box;
     left: 0;
-    svg {
+    .icon {
       position: absolute;
       top: 40px;
       left: 56px;
       visibility: visible;
       fill: rgba($base-color, 0.3);
-    }
-    &:hover {
-      svg {
+      &:hover {
         fill: rgba($base-color, 0.5);
+        cursor: pointer;
       }
     }
-    &--selected,
-    &--selected:hover {
-      svg {
+
+    &--selected, {
+      .icon,
+      .icon:hover {
         fill: $accent-color;
       }
     }
     &--fill {
       visibility: hidden;
-      svg {
+      .icon {
         top: 42px;
         left: 50%;
         margin-left: -24px;
@@ -534,7 +534,7 @@
     }
     &--contrast {
       visibility: hidden;
-      svg {
+      .icon {
         top: 48px;
         left: auto;
         right: 64px;
@@ -587,7 +587,7 @@
     width: 500px;
     font-size: 18px;
     &--contest {
-      margin: 92px auto 71px;
+      margin: 93px auto 71px;
       &:after {
         display: block;
       }
@@ -866,7 +866,7 @@
     margin-bottom: 36px;
     border-bottom: 1px solid rgba($base-color, 0.1);
     position: relative;
-    svg {
+    .icon {
       width: 26px;
       height: 24px;
       display: block;
@@ -880,7 +880,7 @@
     }
     &--fill {
       margin-bottom: 33px;
-      svg {
+      .icon {
         width: 24px;
         height: 24px;
         left: 3px;
@@ -891,7 +891,7 @@
       }
     }
     &--contrast {
-      svg {
+      .icon {
         width: 16px;
         height: 22px;
         left: 8px;
@@ -1036,7 +1036,7 @@
       left: 50%;
       margin-left: -37px;
     }
-    &__controls svg {
+    &__controls .icon {
       display: block;
     }
     .review__item {
@@ -1209,7 +1209,7 @@
   }
   .edit__tab {
     padding: 0 29px 34px 91px;
-    svg {
+    .icon {
       width: 48px;
       height: 48px;
       left: -2px;
@@ -1219,7 +1219,7 @@
       left: 24.5%;
     }
     &--fill {
-      svg {
+      .icon {
         width: 48px;
         height: 48px;
         left: 0;
@@ -1230,7 +1230,7 @@
       }
     }
     &--contrast {
-      svg {
+      .icon {
         width: 32px;
         height: 32px;
         left: 6px;

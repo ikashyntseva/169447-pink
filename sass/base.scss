@@ -239,6 +239,9 @@ img {
       color: rgba($light-color, .3);
     }
   }
+  &--submit:disabled {
+    background-color: $base-border-color;
+  }
   &--inprogress {
 
   }

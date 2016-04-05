@@ -105,8 +105,8 @@ gulp.task("serve", ["style"], function() {
     open: true,
     ui: false
   });
-  gulp.watch(paths.scripts, ["script"]);
-  gulp.watch(paths.sass, ["style"]);
+  gulp.watch(paths.scripts, ["build-js"]);
+  gulp.watch(paths.sass, ["build-style"]);
   gulp.watch(paths.html, ["html"]);
   gulp.watch(paths.html).on("change", server.reload);// пишет Reloading browsers но не перегружает
   //gulp.watch(paths.html, ["html"]).on("change", server.reload); // почему-то не работает

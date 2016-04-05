@@ -52,14 +52,14 @@
 }
 
 .menu {
-  position: absolute;
+  position: fixed;
   width: 100%;
   z-index: 1;
   top: 0;
   left: 0;
   display: none;
   &__list {
-    padding-top: 71px;
+    padding-top: 66px;
     background-color: $base-color;
     border-bottom: 1px solid $dark-color;
   }
@@ -92,6 +92,25 @@
       top: -2px;
       left: 0;
     }
+  }
+}
+.menu--open {
+  display: block;
+  position: static;
+
+  & ~ .page-header--index {
+    //background-position: 0 493px, top center;
+  }
+  & ~ header .page-header__bar {
+    position: absolute;
+    top: 0;
+    min-height: 65px;
+  }
+  & ~ header .menu__button {
+    display: none;
+  }
+  & ~ .intro {
+    padding-top: 321px;
   }
 }
 .menu__button {
@@ -243,14 +262,14 @@
       margin-right: -27px;
     }
     &__list {
-      padding-top: 110px;
+      padding-top: 113px;
     }
   }
   .intro {
     width: 620px;
     margin: 0 auto;
     .container {
-      padding-top: 110px;
+      padding-top: 112px;
     }
     .container--index {
       min-height: 619px;
@@ -322,7 +341,7 @@
                       cover;
     }
     &__bar {
-      padding: 27px 0 32px;
+      padding: 26px 0 38px;
     }
   }
   .container--header {
@@ -342,13 +361,16 @@
   }
   .menu {
     display: block;
-    width: 620px;
-    position: relative;
-    margin-top: 5px;
+    width: 100%;
+    position: absolute;
+    top: 31px;
+    z-index: 1000;
     &__list {
+      width: 620px;
+      margin: 0 auto;
       background: none;
       border: none;
-      padding: 0;
+      padding: 0 0 0 319px;
       display: flex;
       justify-content: space-between;
     }
@@ -382,6 +404,9 @@
   .intro {
     width: 940px;
     margin: 0 auto;
+    .container--index {
+      padding-top: 109px;
+    }
     .container--contest {
       min-height: 394px;
     }
@@ -397,13 +422,16 @@
       &-list {
         margin: 67px 47px 41px;
       }
-      .application__item--android {
-        background-position: 6px 9px;
+      .logo-android {
+        margin: 0 2px 8px 0;
+      }
+      .logo-microsoft {
+        margin: 0 1px 9px 0;
       }
     }
     &--index {
       .intro__slogan {
-        margin: 108px 30px 51px;
+        margin: 108px 30px 52px;
         font-size: 50px;
         line-height: 60px;
       }

@@ -15,15 +15,14 @@
         }
     }
     function menuToggle(event) {
+        var menuDisplay = document.querySelector('.menu').style.display;
         toggleClass(document.querySelector('.menu__button'), 'menu__button--close');
+        menuDisplay == '' ||  menuDisplay == 'none' ? menuDisplay = 'block' : menuDisplay = 'none';
+        document.querySelector('.menu').style.display =  menuDisplay;
     }
 
     var menuButton =  document.querySelector('.menu__button');
     if(menuButton){
       menuButton.addEventListener('click', menuToggle);
-    }
-    var arrow = document.querySelector('.review-arrow');
-    if(arrow){
-      arrow.addEventListener('click', function() {alert(1);});
     }
 }());

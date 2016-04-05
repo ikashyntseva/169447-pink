@@ -1,7 +1,7 @@
 .popup {
-  position: absolute;
+  position: fixed;
   width: 100%;
-  top: 0;
+  top: 50%;
   z-index: 1000;
   display: none;
   &__wrapper {
@@ -18,6 +18,7 @@
 }
 
 .popup--failure {
+  margin-top: -144.5px;
   .popup__wrapper {
     padding: 38px 0 0
   }
@@ -26,6 +27,7 @@
   }
 }
 .popup--success {
+  margin-top: -190px;
   .popup__wrapper {
     padding: 37px 0 0;
   }
@@ -42,7 +44,6 @@
   margin-bottom: 24px;
 }
 
-
 @media (min-width: 660px) {
   .popup {
     &__wrapper {
@@ -54,11 +55,13 @@
       padding: 0 80px;
     }
     &--failure {
+      margin-top:  -173.5px;
       .popup__btn-wrapper {
         padding: 24px 80px 52px;
       }
     }
     &--success {
+      margin-top: -204px;
       .popup__btn-wrapper {
         padding: 48px 80px 53px;
       }
@@ -76,6 +79,7 @@
 }
 @media (min-width:960px) {
   .popup--success {
+    margin-top: -178px;
     .popup__wrapper {
       width: 780px;
     }
