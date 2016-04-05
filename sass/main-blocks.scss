@@ -141,7 +141,7 @@
     margin-left: 0;
     transition: margin-left 1s ease-out 0.5s;
   }
-  &__controls .icon {
+  &__controls svg {
     display: none;
   }
   #review-2:checked ~  .container > &__wrapper {
@@ -154,7 +154,8 @@
     width: 100%;
     margin: 0;
     display: flex;
-    flex-flow: row wrap;
+    flex-direction: column;
+    justify-content: center;
     &-author {
       flex: 1 100%;
       margin-bottom: 2px;
@@ -167,14 +168,13 @@
       &:before,
       &:after {
         display: inline-block;
+        vertical-align: top;
       }
       &:before {
         content: '«';
-        display: inline-block;
       }
       &:after {
         content: '»';
-        display: inline-block;
       }
     }
   }
@@ -1036,7 +1036,7 @@
       left: 50%;
       margin-left: -37px;
     }
-    &__controls .icon {
+    &__controls svg {
       display: block;
     }
     .review__item {

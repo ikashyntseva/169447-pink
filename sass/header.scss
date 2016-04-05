@@ -2,7 +2,7 @@
 @import "mixins";
 
 .page-header {
-  background: url('../img/bg-back-mobile.jpg') top center no-repeat;
+  background: $base-color url('../img/bg-back-mobile.jpg') top center no-repeat;
   background-size: cover;
   &--index {
     background: url('../img/iphone-hand-mobile.png') 0 172px no-repeat,
@@ -361,8 +361,6 @@
   }
   .menu {
     display: block;
-    width: 100%;
-    position: absolute;
     top: 31px;
     z-index: 1000;
     &__list {
