@@ -97,10 +97,6 @@
 .menu--open {
   display: block;
   position: static;
-
-  & ~ .page-header--index {
-    //background-position: 0 493px, top center;
-  }
   & ~ header .page-header__bar {
     position: absolute;
     top: 0;
@@ -159,7 +155,6 @@
     width: 100%;
   }
   &__app {
-    //@include set-color(spin(darken($base-color, 0.065), 2) + 1);
     @include set-color($base-color);
     align-self: flex-end;
     width: 100%;
