@@ -158,13 +158,14 @@
     justify-content: center;
     &-author {
       flex: 1 100%;
-      margin-bottom: 2px;
+      //margin-bottom: 2px;
     }
     &-author-info {
       display: none;
     }
     &-text {
       line-height: 30px;
+      margin: 16px 0 14px;
       &:before,
       &:after {
         display: inline-block;
@@ -638,7 +639,7 @@
       flex-direction: column-reverse;
       &-author {
         font-size: 20px;
-        margin: 20px 0 0;
+        margin: 0;
         &-info {
           font: $light-font;
           font-size: 14px;
@@ -648,6 +649,7 @@
       }
       &-text {
         font-size: 18px;
+        margin: 14px 0 34px;
       }
     }
     .review__item-author-info {
@@ -1041,6 +1043,7 @@
     }
     .review__item {
       &-text {
+        margin: 18px 0 35px;
         &:before,
         &:after {
           display: none;
@@ -1048,7 +1051,6 @@
       }
       &-author {
         font-size: 24px;
-        margin: 17px 0 0;
         &-info {
           font-size: 18px;
           line-height: 30px;

@@ -358,12 +358,13 @@
     display: block;
     top: 31px;
     z-index: 1000;
+    width: 620px;
+    left: auto;
+    right: 15%;
     &__list {
-      width: 620px;
-      margin: 0 auto;
       background: none;
       border: none;
-      padding: 0 0 0 319px;
+      padding: 0;
       display: flex;
       justify-content: space-between;
     }
@@ -374,7 +375,7 @@
     }
     &__link {
       border-bottom: 2px solid transparent;
-      font: $light-font;
+      font: $base-font;
       font-size: 18px;
       text-transform: capitalize;
       padding: 10px 0;

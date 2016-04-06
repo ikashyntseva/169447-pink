@@ -205,13 +205,13 @@
     flex-flow: row wrap;
     .form-block,
     .form__btns {
-      flex: 100%;
+      flex-grow: 1;
     }
     .form-block {
       &--member,
       &--trip-app {
-        flex: 1;
-        min-width: 435px;
+        flex-grow: 0;
+        width: 435px;
       }
       &--member {
         margin-right: 70px;
