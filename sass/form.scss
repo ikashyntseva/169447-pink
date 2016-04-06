@@ -156,13 +156,13 @@
         &:after {
           display: inline-block;
           visibility: visible;
-          content: 'Номер телефона';
+          content: "Номер телефона";
           position: absolute;
           left: 0;
         }
       }
       .form-block__label[for="email"]:after {
-        content: 'Адрес почты';
+        content: "Адрес почты";
       }
     }
     &.form-block--trip-achivements {

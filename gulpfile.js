@@ -1,7 +1,7 @@
 "use strict";
 
 var gulp = require("gulp");
-var cleanBuild = require('gulp-clean');
+var cleanBuild = require("gulp-clean");
 var sass = require("gulp-sass");
 var plumber = require("gulp-plumber");
 var postcss = require("gulp-postcss");
@@ -12,7 +12,7 @@ var uglify = require("gulp-uglify");
 var rename = require("gulp-rename");
 var imagemin = require("gulp-imagemin");
 var server = require("browser-sync");
-var runSequence = require('run-sequence');
+var runSequence = require("run-sequence");
 
 //Paths to files
 var paths = {

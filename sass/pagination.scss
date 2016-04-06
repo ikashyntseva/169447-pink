@@ -1,5 +1,5 @@
 @media (min-width: 320px) {
-  div[class*='__controls'] {
+  div[class*="__controls"] {
     text-align: center;
     margin: 18px auto;
     display: flex;
@@ -22,9 +22,9 @@
   .pagination-block__input {
     display: none;
   }
-  .pagination-block__input:nth-of-type(1):checked ~ div[class*='__controls'] .pagination-block__label:nth-of-type(1),
-  .pagination-block__input:nth-of-type(2):checked ~ div[class*='__controls'] .pagination-block__label:nth-of-type(2),
-  .pagination-block__input:nth-of-type(3):checked ~ div[class*='__controls'] .pagination-block__label:nth-of-type(3) {
+  .pagination-block__input:nth-of-type(1):checked ~ div[class*="__controls"] .pagination-block__label:nth-of-type(1),
+  .pagination-block__input:nth-of-type(2):checked ~ div[class*="__controls"] .pagination-block__label:nth-of-type(2),
+  .pagination-block__input:nth-of-type(3):checked ~ div[class*="__controls"] .pagination-block__label:nth-of-type(3) {
     background-color: $light-color;
     border: 3px solid $base-color;
     margin: 0 6.5px

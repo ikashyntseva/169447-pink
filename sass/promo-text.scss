@@ -1,0 +1,111 @@
+.promo-text,
+.promo-big-text {
+  text-align: center;
+}
+.promo-text {
+  line-height: 30px;
+  &--contest {
+    width: 280px;
+    margin: 45px auto 37px;
+    &:after {
+      content: "Пожалуйста, заполните форму ниже:";
+      display: none;
+    }
+  }
+  &--photos {
+    width: 250px;
+    margin: 46px auto 49px;
+  }
+  &--bottom {
+    width: 250px;
+    margin: 40px auto 42px;
+  }
+}
+.promo-big-text {
+  margin: 0 auto;
+  padding: 40px 0 30px;
+  position: relative;;
+  &:after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    bottom: -33px;
+    left: 0;
+    width: 100%;
+    height: 33px;
+    background: url(../img/bg-triangle-white.svg) 0 0 no-repeat;
+    background-size: 100% 33px;
+  }
+  .line {
+    display: block;
+    &:first-child {
+      margin-bottom: 26px;
+    }
+  }
+}
+@media (min-width: 660px) {
+  .promo-big-text {
+    width: 72%;
+    margin: 0 auto;
+    .line {
+      display: block;
+    }
+    &--index {
+      width: auto;
+      padding: 49px 0 45px;
+      .line:first-child {
+        margin: 0
+      }
+      .line:last-child {
+        width: 55%;
+        margin: 0 auto;
+      }
+      &:after {
+        bottom: -95px;
+        height: 95px;
+        background-size: 100% 95px;
+      }
+    }
+  }
+  .promo-text {
+    width: 500px;
+    font-size: 18px;
+    &--contest {
+      margin: 93px auto 71px;
+      &:after {
+        display: block;
+      }
+    }
+    &--photos {
+      margin: 92px auto 76px;
+    }
+    &--bottom {
+      margin: 45px auto 69px;
+    }
+  }
+}
+
+@media (min-width: 960px) {
+  .promo-big-text {
+    &--index {
+      width: auto;
+      padding: 67px 0 75px;
+    }
+  }
+  .promo-text {
+    &--contest {
+      margin: 92px auto 86px;
+      width: 796px;
+      &:after {
+        display: inline-block;
+      }
+    }
+    &--photos {
+      width: 575px;
+      margin-bottom: 88px;
+    }
+    &--bottom {
+      margin: 5px auto 66px;
+    }
+  }
+}

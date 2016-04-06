@@ -1,21 +1,21 @@
 @import "variables";
 
 @font-face {
-  font-family: 'Open Sans';
+  font-family: "Open Sans";
   font-style: normal;
   font-weight: 400;
   src: url(../fonts/opensans.woff2) format(woff2),
       url(../fonts/opensans.woff) format(woff);
 }
 @font-face {
-  font-family: 'Open Sans Light';
+  font-family: "Open Sans Light";
   font-style: normal;
   font-weight: 300;
   src: url(../fonts/opensanslight.woff2) format(woff2),
       url(../fonts/opensanslight.woff) format(woff);
 }
 @font-face {
-  font-family: 'Open Sans Bold';
+  font-family: "Open Sans Bold";
   font-style: normal;
   font-weight: 700;
   src: url(../fonts/opensansbold.woff2) format(woff2),
@@ -140,7 +140,7 @@ img {
     }
     &:before,
     &:after {
-      content: '';
+      content: "";
       display: block;
       background: $light-color;
       box-sizing: border-box;
@@ -297,14 +297,14 @@ img {
       &__input[type="tel"],
       &__input[type="email"],
       .form-block__textarea {
-        font: 400 18px/30px 'Open Sans';
+        font: 400 18px/30px "Open Sans";
         padding: 14px 21px 15px;
       }
       &__input[type="tel"] {
-        background: url('../img/icon-phone.svg') 456px center no-repeat;
+        background: url("../img/icon-phone.svg") 456px center no-repeat;
       }
       &__input[type="email"] {
-        background: url('../img/icon-mail.svg') 457px center no-repeat;
+        background: url("../img/icon-mail.svg") 457px center no-repeat;
       }
       .form-block__textarea {
         padding: 14px 19px;

@@ -1,0 +1,218 @@
+.price-slider {
+  background-color: $light-bg-color;
+  overflow: hidden;
+  padding: 91px 20px 29px;
+  position: relative;
+  &:before {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 25px;
+    background: url("../img/bg-triangle-white.svg") 0 0 no-repeat;
+    background-size: 100% 25px;
+  }
+  &__wrapper {
+    width: 300%;
+    display: flex;
+    margin-bottom: 40px;
+    transition: margin-left 1s ease-out 0.5s;
+    border-left: 1px solid $base-border-color;
+    border-right: 1px solid $base-border-color;
+    box-sizing: border-box;
+  }
+  &__list-header {
+    @include set-color($base-color);
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    padding: 19px 0 20px;
+  }
+  &__list-title {
+    color: inherit;
+  }
+  &__list-cost {
+    margin-top: 5px;
+  }
+  #slide-price-2:checked ~ &__wrapper {
+    margin-left: -100%;
+  }
+  #slide-price-3:checked ~ &__wrapper {
+    margin-left: -200%;
+  }
+  &__list {
+    width: 100%;
+    border-left: 1px solid $base-border-color;
+    border-right: 1px solid $base-border-color;
+    box-sizing: border-box;
+    text-transform: uppercase;
+    &--column {
+      display: none;
+      .price-slider__list-header {
+        @include set-color(transparent);
+        height: 49px;
+        border-bottom: 2px solid $base-border-color;
+      }
+    }
+    &--hit {
+      .price-slider__list-header {
+        &:before {
+          content: "Хит";
+          display: block;
+          background-color: $accent-color;
+          transform: rotate(-45deg);
+          width: 98px;
+          height: 28px;
+          position: absolute;
+          top: 12px;
+          left: -25px;
+          font: $bold-font;
+          line-height: 26px;
+        }
+      }
+    }
+  }
+  &__item {
+    border-bottom: 2px solid $base-border-color;
+    padding: 17.5px 16px 17.5px 22px;
+    max-height: 24px;
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 238px;
+    }
+  }
+  .icon--yes {
+    fill: #3dc644;
+  }
+  .icon--no {
+    fill: #f36534;
+  }
+}
+@media (min-width: 660px) {
+  .price-slider {
+    padding: 90px 0 68px;
+    &__wrapper {
+      width: 620px;
+      border: none;
+      & + .price-slider__controls {
+        display: none;
+      }
+    }
+    #slide-price-1,
+    #slide-price-2,
+    #slide-price-3 {
+      &:checked ~ .price-slider__wrapper {
+        margin: 0 auto;
+      }
+    }
+    &__item {
+      height: 25px;
+      text-transform: none;
+      padding: 10px 14px 11px;
+      border-left: 2px solid $base-border-color;
+      background: $light-color;
+      .container {
+        justify-content: center;
+        width: 100%;
+      }
+      &:first-letter {
+        text-transform: capitalize;
+      }
+      span {
+        display: none;
+      }
+    }
+    &__list {
+      border: 0;
+      &:not(:nth-of-type(1)):not(:nth-of-type(2)) {
+        .price-slider__list-header {
+          border-left: 2px solid $base-border-color;
+        }
+      }
+      &:last-child {
+        .price-slider__item {
+          border-right: 2px solid $base-border-color;
+        }
+      }
+      &-header {
+        padding: 15px 0 13px;
+      }
+      &--column {
+        display: block;
+        .price-slider__item {
+          justify-content: flex-start;
+        }
+      }
+      &--hit {
+        .price-slider__list-header:before {
+          top: 6px;
+          left: -29px;
+        }
+      }
+      &-title {
+        font: $bold-font;
+        font-size: 16px;
+      }
+      &-cost {
+        margin-top: 3px;
+        font-size: 18px;
+        line-height: 24px;
+      }
+    }
+    &__list:nth-of-type(2) {
+      .price-slider__list-header {
+        border-radius: 3px 0px 0px 3px;
+      }
+    }
+    &__list:nth-last-of-type(1){
+      .price-slider__list-header {
+        border-radius: 0px 3px 3px 0px;
+      }
+    }
+  }
+}
+@media (min-width: 960px) {
+  .price-slider {
+    padding: 149px 0 95px;
+    &:before {
+      height: 82px;
+      background-size: 100% 82px;
+    }
+    &__wrapper {
+      width: 944px;
+    }
+    &__list {
+      &-header {
+        padding: 15px 0 23px;
+      }
+      &-title {
+        font-size: 18px;
+      }
+      &-cost {
+        font-size: 24px;
+        margin-top: 4px;
+      }
+      .price-slider__item {
+        font-size: 18px;
+        padding: 17px 22px 18px;
+      }
+      &--column {
+        .price-slider__list-header {
+          height: 58px;
+        }
+      }
+      &--hit {
+        .price-slider__list-header:before {
+          top: 10px;
+          left: -30px;
+          width: 115px;
+          height: 28px;
+        }
+      }
+    }
+  }
+}
