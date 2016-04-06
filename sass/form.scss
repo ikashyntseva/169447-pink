@@ -24,7 +24,7 @@
       margin-top: 8px;
     }
   }
-  &.form-block--member {
+  &--member {
     margin-bottom: 25px;
     .form-block__wrapper:nth-child(2) {
       margin-bottom: 22px;
@@ -36,7 +36,7 @@
       display: none;
     }
   }
-  &.form-block--trip-achivements {
+  &--trip-achivements {
     background-color: $light-bg-color;
     padding-bottom: 49px;
     .form-block__title {
@@ -51,8 +51,8 @@
       align-items: center;
     }
   }
-  &.form-block--trip-app {
-    background-color:: $light-bg-color;
+  &--trip-app {
+    background-color: $light-bg-color;
     padding-bottom: 42px;
     .form-block__title {
       margin-bottom: 89px;
@@ -69,11 +69,6 @@
     .form-block__textarea {
       min-height: 201px;
     }
-  }
-
-  .form-block__title {
-    background-color: $light-color;
-    padding: 0 25px;
   }
 }
 
@@ -188,6 +183,10 @@
         min-height: 194px;
       }
     }
+  }
+  .form-block__title {
+    background-color: $light-color;
+    padding: 0 25px;
   }
   .form__btns {
     width: 619px;

@@ -4,22 +4,22 @@
   font-family: "Open Sans";
   font-style: normal;
   font-weight: 400;
-  src: url(../fonts/opensans.woff2) format(woff2),
-      url(../fonts/opensans.woff) format(woff);
+  src: url("../fonts/opensans.woff2") format(woff2),
+      url("../fonts/opensans.woff") format(woff);
 }
 @font-face {
   font-family: "Open Sans Light";
   font-style: normal;
   font-weight: 300;
-  src: url(../fonts/opensanslight.woff2) format(woff2),
-      url(../fonts/opensanslight.woff) format(woff);
+  src: url("../fonts/opensanslight.woff2") format(woff2),
+      url("../fonts/opensanslight.woff") format(woff);
 }
 @font-face {
   font-family: "Open Sans Bold";
   font-style: normal;
   font-weight: 700;
-  src: url(../fonts/opensansbold.woff2) format(woff2),
-      url(../fonts/opensansbold.woff) format(woff);
+  src: url("../fonts/opensansbold.woff2") format(woff2),
+      url("../fonts/opensansbold.woff") format(woff);
 }
 body {
   margin: 0;
@@ -124,7 +124,7 @@ img {
       position: relative;
       flex-shrink: 0;
       border: 2px solid $base-border-color;
-      margin-right: 21px;
+      margin-right: 30px;
     }
 
     &:hover {
@@ -289,9 +289,9 @@ img {
         padding: 0 31px;
         margin-bottom: 0;
       }
-      &__input[type="checkbox"] + label,
-      &__input[type="radio"] + label {
-        margin: -2px 0 0 21px;
+      &__input[type="checkbox"] + .form-block__label:before,
+      &__input[type="radio"] + .form-block__label:before {
+        margin-right: 21px;
       }
       &__input[type="text"],
       &__input[type="tel"],

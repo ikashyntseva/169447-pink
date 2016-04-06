@@ -38,10 +38,10 @@
         vertical-align: top;
       }
       &:before {
-        content: '«';
+        content: "«";
       }
       &:after {
-        content: '»';
+        content: "»";
       }
     }
   }
@@ -78,7 +78,7 @@
     margin: 167px auto 40px;
     position: relative;
     &:before {
-      content: '';
+      content: "";
       width: 80px;
       height: 62px;
       background: url(../img/icon-quotes.svg) 0 0 no-repeat;

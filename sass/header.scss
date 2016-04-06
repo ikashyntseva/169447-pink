@@ -6,9 +6,23 @@
   background-size: cover;
   &--index {
     background: url("../img/iphone-hand-mobile.png") 0 172px no-repeat,
-                url("../img/bg-back-mobile.jpg") top center no-repeat;
+                $base-color url("../img/bg-back-mobile.jpg") top center no-repeat;
     background-size: 258px auto, cover; //size TBD
   }
+  &.page-header--no-js {
+    .page-header__bar {
+      position: absolute;
+      top: 0;
+      min-height: 65px;
+    }
+    .icon-button {
+      display: none;
+    }
+    .container {
+      padding: 0;
+    }
+  }
+
   &__bar {
     background: rgba($dark-color, 0.3);
     position: fixed;
@@ -97,17 +111,6 @@
 .menu--open {
   display: block;
   position: static;
-  & ~ header .page-header__bar {
-    position: absolute;
-    top: 0;
-    min-height: 65px;
-  }
-  & ~ header .menu__button {
-    display: none;
-  }
-  & ~ .intro {
-    padding-top: 321px;
-  }
 }
 .menu__button {
   position: relative;
@@ -227,11 +230,11 @@
 }
 @media (min-width: 660px) {
   .page-header {
-    background: url("../img/bg-back-tablet@1x.jpg") top center no-repeat;
+    background: $base-color url("../img/bg-back-tablet@1x.jpg") top center no-repeat;
     background-size: cover;
     &--index {
       background: url("../img/iphone-hand-tablet@1x.png") 80% bottom no-repeat,
-                  url("../img/bg-back-tablet@1x.jpg") top center no-repeat;
+                  $base-color url("../img/bg-back-tablet@1x.jpg") top center no-repeat;
       background-size: 700px auto,//size TBD
                       cover;
     }
@@ -264,7 +267,7 @@
     width: 620px;
     margin: 0 auto;
     .container {
-      padding-top: 112px;
+      padding-top: 113px;
     }
     .container--index {
       min-height: 619px;
@@ -327,13 +330,20 @@
 
 @media (min-width: 960px) {
   .page-header {
-    background: url("../img/bg-back-desktop.jpg") top center no-repeat;
+    background: $base-color url("../img/bg-back-desktop.jpg") top center no-repeat;
     background-size: cover;
     &--index {
       background: url("../img/iphone-hand-desktop@1x.png") 97% bottom no-repeat,
-                  url("../img/bg-back-desktop.jpg") top center no-repeat;
+                  $base-color url("../img/bg-back-desktop.jpg") top center no-repeat;
       background-size: 1050px auto, //size TBD
                       cover;
+    }
+    &.page-header--no-js {
+      .container--index,
+      .container--photos,
+      .container--contest {
+        padding-top: 110px;
+      }
     }
     &__bar {
       padding: 26px 0 38px;
@@ -360,7 +370,7 @@
     z-index: 1000;
     width: 620px;
     left: auto;
-    right: 15%;
+    right: 11%;
     &__list {
       background: none;
       border: none;
@@ -392,14 +402,17 @@
       }
     }
   }
+  .menu--open {
+    position: absolute;
+  }
   .menu__button {
     display: none;
   }
   .intro {
     width: 940px;
     margin: 0 auto;
-    .container--index {
-      padding-top: 109px;
+    .container {
+      padding-top: 110px;
     }
     .container--contest {
       min-height: 394px;
@@ -443,10 +456,10 @@
   }
   @media (min-resolution: 1.5dppx) {
     .page-header {
-      background-image: url("../img/bg-back-desktop.jpg");// 2x is absent in assets
+      background-image: $base-color url("../img/bg-back-desktop.jpg");// 2x is absent in assets
       &--index {
         background-image: url("../img/iphone-hand-desktop@2x.png"),
-                    url("../img/bg-back-desktop.jpg");// 2x is absent in assets
+                    $base-color url("../img/bg-back-desktop.jpg");// 2x is absent in assets
       }
     }
   }
