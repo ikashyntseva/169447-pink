@@ -156,10 +156,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    &-author {
-      flex: 1 100%;
-      //margin-bottom: 2px;
-    }
+
     &-author-info {
       display: none;
     }
@@ -270,6 +267,12 @@
       align-items: center;
       width: 238px;
     }
+  }
+  .icon--yes {
+    fill: #3dc644;
+  }
+  .icon--no {
+    fill: #f36534;
   }
 }
 /* Price slider ends */
@@ -779,17 +782,19 @@
   .photos {
     display: flex;
     flex-flow: row wrap;
-    justify-content: center;
+    justify-content: space-between;;
     overflow: hidden;
+    width: 620px;
+    margin: 0 auto;
   }
   .photo-post {
     width: 300px;
-    margin: 0 10px 20px;
+    margin: 0 0 20px;
     .photo-post__picture-wrapper {
       height: 300px;
     }
     &.photo-post--pano {
-      flex: 1 100%;
+      width: 100%;
       margin: 0 0 50px;
       &:before {
         right: 40px;
@@ -1168,6 +1173,9 @@
     }
   }
   /* Photos begin */
+  .photos {
+    width: 940px;
+  }
   .photo-post {
     margin-bottom: 53px;
     .photo-post__picture-wrapper {

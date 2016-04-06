@@ -264,8 +264,30 @@
     <main class="main">
       <div class="container">
         <p class="promo-text promo-text--photos">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</p>
+        <article class="photo-post photo-post--pano photo-post--best"><!--Ярлык с надписью Панорама дня будет псевдоэлементом-->
+          <div class="photo-post__picture-wrapper">
+            <a href="#" class="photo-post__picture-link">
+              <picture>
+                <source media="(min-width:960px)" srcset="img/panorama-desktop.jpg 1x, img/panorama-desktop@2x.jpg 2x" />
+                <source media="(min-width:620px)" srcset="img/panorama-tablet.jpg 1x, img/panorama-tablet@2x.jpg 2x" />
+                <img src="img/panorama-mobile.jpg" srcset="img/panorama-mobile@2x.jpg 2x" width="320" height="137" alt="Photo" class="photo" />
+              </picture>
+            </a>
+          </div>
+          <blockquote class="photo__info">
+            <cite class="photo__author">Анна</cite>
+            <time class="photo__date" datetime="2016-03-23T08:23:11+07:00">(5 минут назад)</time>
+            <p class="photo__comment">Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую транслацию в перископе, задавайте свои вопросы!</p>
+            <a href="#" class="photo-like__btn">
+              <svg class="icon icon--heart" width="14" height="13">
+                <use xlink:href="#heart"></use>
+              </svg>
+              <span class="photo-like__quantity">Нравится: 215</span>
+            </a>
+          </blockquote>
+        </article>
         <div class="photos">
-          <article class="photo-post photo-post--pano photo-post--best"><!--Ярлык с надписью Панорама дня будет псевдоэлементом-->
+          <!--<article class="photo-post photo-post--pano photo-post--best">
             <div class="photo-post__picture-wrapper">
               <a href="#" class="photo-post__picture-link">
                 <picture>
@@ -286,7 +308,7 @@
                 <span class="photo-like__quantity">Нравится: 215</span>
               </a>
             </blockquote>
-          </article>
+          </article>-->
           <article class="photo-post">
             <div class="photo-post__picture-wrapper">
               <a href="#" class="photo-post__picture-link">
